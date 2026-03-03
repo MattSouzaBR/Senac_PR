@@ -16,6 +16,15 @@ programa
 
 			Variável guarda apenas uma coisa por vês,
 			Vetor guarda mais de uma coisa por vês.
+
+
+
+			Resolver problemas lógicas e atirméticos
+			Representar expressões lógicas e matemáticas
+			Interpretar textos técnicos
+			Comunicar-se de maneira assertiva
+			Mediar conflitos nas situações de trabalho
+			Selecionar informações necessárias ao desenvolvimento do seu trabalho
 			
 		*/ 
 	}
@@ -25,7 +34,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 853; 
+ * @POSICAO-CURSOR = 1131; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
