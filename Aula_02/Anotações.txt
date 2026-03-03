@@ -64,6 +64,23 @@
 					Regras de Gatilho
 						Ativam ações automáticas
 
+				Características das Regras de Negócios
+					Claras e Concisas
+						Devem ser fáceis de entender e interpretar, sem ambiguidades
+					
+					Consistentes
+						Aplicadas uniformemente em todos os processos, garantindo coerência nas decisões
+					
+					Adaptáveis
+						Devem ser revisadas e atualizadas periodicamente para se adaptare às mudanças do mercado e às novas necessidades da empresa
+
+				Complexidade
+					Definir e implementar regras de negócio pode ser complexo, especialmente em empresas com processos abrangentes
+				Comunicação
+					Comunicar as regras de forma clara e concisa para todos os envolvidos é crucial para garantir a adesão e o entendimento
+				Manutenção (Manutenabilidade)
+					As regras devem ser revisadas e atualizadas periodicamente para se manterem relevantes.
+
 				
 
 		*/ 
