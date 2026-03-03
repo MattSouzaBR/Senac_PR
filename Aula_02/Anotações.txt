@@ -34,4 +34,36 @@
 
 			Slide 4
 			Regras de Negócio
+				Definição
+					São instrumentos que definem como uma organização deve operar, garantindo consistência e conformidade em suas operações.
+					São baseadas em políticas, processos e diretrizes internas.
+				
+				Exemplo
+					Uma regra de negócio pode determinar o limite de crédito de um cliente com base em sua pontuação de crédito e histórico de pagamentos.
+
+				Importância das Regras de negócio
+					1- Consistência (Não pode ter ambiguidade, não pode ter duplo sentido)
+						Asseguram consistência nas operações, garantindo que todas as decisões sejam tomadas da esma forma, independente de quem as tome.
+					
+					2- Conformidade
+						Ajudam a garantir conformidade com leis, regulamentos e políticas internas, reduzindo o risco de erros e penalidades
+
+					3 - Eficiência
+						Automatizam processos, eliminando tarefas manuais repetitivas e liberando tempo para atividades mais estratégicas.
+				
+				Tipos de Regras de negócio
+					Regras Operacionais
+						Definem processos internos
+					
+					Regras Derivadas
+						Baseadas em outras regras ou cálculos
+
+					Regras de Restrições
+						Limitam ações dentro do sistema
+					
+					Regras de Gatilho
+						Ativam ações automáticas
+
+				
+
 		*/ 
