@@ -81,6 +81,44 @@
 				Manutenção (Manutenabilidade)
 					As regras devem ser revisadas e atualizadas periodicamente para se manterem relevantes.
 
-				
+				Boas Práticas para Definir Regras de Negócio
+					Entenda o Negócio
+						Analise as necessidades e os processos específicos da sua empresa para definir regras que realmente agreguem valor
+					
+					Documente
+						Documente as regras de forma clara e concisa, usando linguagem simples e exemplos práticos.
+					
+					Teste
+						Implemente e teste as regras antes de colocá-las em produção para garantir que funcionem como esperado.
+
+					Comunicação
+						Comunique as regras par todos os envolvidos de forma clara e completa.
+
+				Por que ter as regras de negócio
+					Padronizam e ajudam os processos a fluírem de forma mais rápida e automatizada
+					Auxiliam no controle dos processos, pois falhas podem ser rapidamente detectadas e corrigidas
+					Ajudam na tomada de decisão e no cumprimento das estratégias pré-estabelecidas
+
+				Requisito de software
+				- Requisito Funcional
+				- Regra de Negócio
+				- Requisito Não Funcional
+					O que
+					Por que 
+					Como
+
+				Agendamento de consultas e serviços
+					Criar um istema para gerenciar a marcação, alteração e cancelamento de consultas ou serviços, considerando políticas como horários disponíveis, limite de cancelamentos e regras de confirmação.
+				Processo de Devolução  e tradicionais
+					Criar um sistema para gerenciar devoluções de produtos, estabelecendo prazos, condições do item devolvido e opções de reembolso ou troca
+				Gerenciamento de Decontos e Promoções
+					Simular a criação de políticas de desconto baseadas em  volume de compra, fidelidade do cliente, datas comemorativas ou cupons promocionais
+				Gestão de Contratos ou Assinaturas
+					Deselvolver um sistema de assinatura com renovação automática, cancelamento e opções de downgrade, incluindo a definição de prazos e notificação
+				Gestão de Orçamentos e Cotações
+					Simular a criação e  aprovação de orçamentos para clientes, com regras para descontos, prazos de validade e aprovação interna.
+				Processamento de Pedidos Online
+					Criar fluxo para processamento de pedidos desde a entrada no sistema até a confirmação do pagamento e a entrega, incluindo regras para pedidos pendentes ou inválidos. 
+
 
 		*/ 
