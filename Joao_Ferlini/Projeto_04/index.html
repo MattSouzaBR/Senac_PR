@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .linha {
+            display: flex;
+        }
+
+        .coluna-3 {
+            width: 33%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="linha">
+                <div class="coluna-3">
+                    <label for="firstName">Nome:</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    <!-- 
+                    ---- O 'for' do Label faz referência para o 'id' do input
+                    ---- Recomenda-se usar o name igual o id, para facilitar a manutenção
+                    ---- id => Identificador único no DOM (CSS, JS, label for, âncoras)
+                    ---- name => Chave enviada no formulário (POST / GET)
+                     -->
+                </div>
+
+                <div class="coluna-3">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="custom@domain.tld">
+                </div>
+
+                <div class="coluna-3">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" placeholder="••••••••••••••">
+                </div>
+
+                <div class="linha">
+                    <button>Salvar</button>
+                    <!-- 
+                    ---- A tag 'button'
+                    ---- Input button
+                    -->
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
