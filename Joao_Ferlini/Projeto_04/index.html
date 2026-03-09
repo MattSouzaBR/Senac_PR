@@ -14,20 +14,46 @@
         .linha {
             display: flex;
         }
-
+        
         .coluna-3 {
             width: 33%;
+            margin-right: 20px;
+        }
+
+        .coluna-2 {
+            width: 77%;
+            margin-right: 20px;
+        }
+
+        .coluna-3 input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+
+            /* Alteração Pessoal */
+            transition: 1s;
+        }
+
+        .coluna-3 input:hover, /* Quando o mouse está sobre o input (mouse em cima) */
+        .coluna-3 input:focus, /* Campo selecionado para digitação */
+        .coluna-3 input:focus-visible, /* Foco via teclado (TAB) */
+        .coluna-3 input:active /* Quando o botão do mouse está pressionado (enquanto o clique está pressionado) */
+        {
+            border: 1px solid black;
         }
 
         .botoes {
             margin-top: 10px;
-            cursor: pointer;
         }
 
         .botao-salvar {
             background-color: blue;
             color: #fff;
             border: 1px solid blue;
+            border-radius: 5px;  /*  Professor recomenda de 5~7px */
+            padding: 5px;
+            cursor: pointer;
         }
 
     </style>
@@ -93,7 +119,9 @@
 
             </div>
             <div class="linha">
-                <button class="botoes botao-salvar">Salvar</button>
+                <div class="botoes">
+                    <button class="botao-salvar">Salvar</button>
+                </div>
                 <!-- 
                 <button type="submit"></button>
                 <button type="reset"></button>
