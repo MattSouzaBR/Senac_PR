@@ -18,40 +18,108 @@
         .coluna-3 {
             width: 33%;
         }
+
+        .botoes {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .botao-salvar {
+            background-color: blue;
+            color: #fff;
+            border: 1px solid blue;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <form action="">
+        <!--
+        ---- O método padrão do formulário é GET.
+
+        GET envia os dados na URL:
+        exemplo.com/pagina?nome=Teu
+
+        POST envia os dados no corpo da requisição.
+
+        Ao atualizar a página (F5):
+        - GET apenas recarrega a URL com os parâmetros.
+        - POST pode mostrar um aviso para confirmar o reenvio do formulário.
+
+        Melhores Práticas segundo a convenção (regra simples)
+        Use:
+            CASO	        MÉTODO
+            Busca de dados	GET
+            Login	        POST
+            Cadastro	    POST
+            Upload	        POST
+        
+        Resumo executivo:
+            GET = leitura
+            POST = alteração de estado
+
+        Métodos de evitar abusos
+            CSRF Token
+            Rate Limit
+            PRG Pattern
+            Idempotency Key
+            CAPTCHA
+            Token de formulário único
+            Validação de Origem
+        -->
             <div class="linha">
                 <div class="coluna-3">
-                    <label for="firstName">Nome:</label>
-                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    <label for="nome_pessoa">Nome:</label>
+                    <input type="text" name="nome_pessoa" id="nome_pessoa" placeholder="Nome da Pessoa" required>
                     <!-- 
                     ---- O 'for' do Label faz referência para o 'id' do input
                     ---- Recomenda-se usar o name igual o id, para facilitar a manutenção
                     ---- id => Identificador único no DOM (CSS, JS, label for, âncoras)
                     ---- name => Chave enviada no formulário (POST / GET)
+                    ---- required => Força o usuário a preencher aquele campo, antes de enviar. 'Pode ser editado via Console, logo não deve ser a única opção de restrição.'
                      -->
                 </div>
 
                 <div class="coluna-3">
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="custom@domain.tld">
+                    <input type="email" name="email" id="email" placeholder="custom@domain.tld" required>
                 </div>
 
                 <div class="coluna-3">
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" id="password" placeholder="••••••••••••••">
+                    <input type="password" name="password" id="password" placeholder="••••••••••••••" required>
                 </div>
 
-                <div class="linha">
-                    <button>Salvar</button>
-                    <!-- 
-                    ---- A tag 'button'
-                    ---- Input button
-                    -->
-                </div>
+            </div>
+            <div class="linha">
+                <button class="botoes botao-salvar">Salvar</button>
+                <!-- 
+                <button type="submit"></button>
+                <button type="reset"></button>
+                <button type="button"></button>
+                <button name="acao" value="salvar">Salvar</button>
+
+                <input type="button" value="Botão comum">
+                <input type="submit" value="Enviar formulário">
+
+                ---- A tag 'button' pode ter o atributo type e conteúdo interno (texto, ícone, HTML).
+
+                <button type="submit">
+                    <span>💾</span> Salvar
+                </button>
+
+                Se um <button> estiver dentro de um <form> e não tiver type definido,
+                o navegador assume automaticamente type="submit".
+
+                ---- A tag <input> é auto-fechada e não aceita conteúdo interno.
+
+                <input type="button" value="Salvar">
+
+                REGRA PRÁTICA:
+                99% dos projetos modernos → usar <button>
+                <input type="button"> é legado ou casos simples.
+                -->
             </div>
         </form>
     </div>
