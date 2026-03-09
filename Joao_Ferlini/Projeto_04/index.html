@@ -30,9 +30,15 @@
             margin-right: 20px;
         }
 
+        .coluna100 {
+            width: 100%;
+            margin-right: 20px;
+        }
+
         .coluna30 input,
         .coluna50 input,
-        .coluna70 input {
+        .coluna70 input,
+        .coluna100 input {
             width: 100%;
             padding: 5px;
             border-radius: 5px;
@@ -228,6 +234,34 @@
                     <input type="text" name="telefone_mae" id="telefone_mae" placeholder="00 00000-0000">
                 </div>
             </div>
+
+            <div class="linha">
+                <div class="coluna100">
+                    <label for="escolaridade">Escolaridade</label>
+                    <input type="text" name="escolaridade" id="escolaridade" placeholder="Escolaridade">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna30">
+                    <label for="curso_1">Curso A</label>
+                    <input type="text" name="curso_1" id="curso_1" placeholder="Curso....">
+                </div>
+                <div class="coluna30">
+                    <label for="curso_2">Curso B</label>
+                    <input type="text" name="curso_2" id="curso_2" placeholder="Curso....">
+                </div>
+                <div class="coluna30">
+                    <label for="curso_3">Curso C</label>
+                    <input type="text" name="curso_3" id="curso_3" placeholder="Curso....">
+                </div>
+            </div>
+            
+            <div class="linha">
+                <div class="botoes">
+                    <button class="botao-salvar">Salvar</button>
+                </div>
+            </div> 
         </form>
     </div>
 </body>
