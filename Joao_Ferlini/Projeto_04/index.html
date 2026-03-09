@@ -16,7 +16,7 @@
         }
 
         .coluna30 {
-            width: 30%;
+            width: 33%; /* O do professor está 30% */
             margin-right: 20px;
         }
 
@@ -42,6 +42,7 @@
             transition: 1s;
         }
 
+        /* Alteração Pessoal */
         .coluna30 input:hover, /* Quando o mouse está sobre o input (mouse em cima) */
         .coluna30 input:focus, /* Campo selecionado para digitação */
         .coluna30 input:focus-visible, /* Foco via teclado (TAB) */
@@ -121,12 +122,20 @@
             </div>
 
             <div class="linha">
-                <div class="coluna50">
+                <div class="coluna30">
+                    <label for="password">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="coluna30">
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" id="password" placeholder="••••••••••••••" required>
+                    <input type="password" name="senha" id="senha" placeholder="••••••••••••••" required>
+                </div>
+                <div class="coluna30">
+                    <label for="password">Confirme sua Senha:</label>
+                    <input type="password" name="senha_confirmar" id="senha_confirmar" placeholder="••••••••••••••" required>
                 </div>
             </div>
-            
+
             <div class="linha">
                 <div class="botoes">
                     <button class="botao-salvar">Salvar</button>
