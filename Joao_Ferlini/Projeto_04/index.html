@@ -14,18 +14,25 @@
         .linha {
             display: flex;
         }
-        
-        .coluna-3 {
-            width: 33%;
+
+        .coluna30 {
+            width: 30%;
             margin-right: 20px;
         }
 
-        .coluna-2 {
-            width: 77%;
+        .coluna50 {
+            width: 50%;
             margin-right: 20px;
         }
 
-        .coluna-3 input {
+        .coluna70 {
+            width: 70%;
+            margin-right: 20px;
+        }
+
+        .coluna30 input,
+        .coluna50 input,
+        .coluna70 input {
             width: 100%;
             padding: 5px;
             border-radius: 5px;
@@ -35,10 +42,10 @@
             transition: 1s;
         }
 
-        .coluna-3 input:hover, /* Quando o mouse está sobre o input (mouse em cima) */
-        .coluna-3 input:focus, /* Campo selecionado para digitação */
-        .coluna-3 input:focus-visible, /* Foco via teclado (TAB) */
-        .coluna-3 input:active /* Quando o botão do mouse está pressionado (enquanto o clique está pressionado) */
+        .coluna30 input:hover, /* Quando o mouse está sobre o input (mouse em cima) */
+        .coluna30 input:focus, /* Campo selecionado para digitação */
+        .coluna30 input:focus-visible, /* Foco via teclado (TAB) */
+        .coluna30 input:active /* Quando o botão do mouse está pressionado (enquanto o clique está pressionado) */
         {
             border: 1px solid black;
         }
@@ -95,7 +102,7 @@
             Validação de Origem
         -->
             <div class="linha">
-                <div class="coluna-3">
+                <div class="coluna70">
                     <label for="nome_pessoa">Nome:</label>
                     <input type="text" name="nome_pessoa" id="nome_pessoa" placeholder="Nome da Pessoa" required>
                     <!-- 
@@ -107,17 +114,19 @@
                      -->
                 </div>
 
-                <div class="coluna-3">
+                <div class="coluna30">
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" placeholder="custom@domain.tld" required>
-                </div>
+                </div>    
+            </div>
 
-                <div class="coluna-3">
+            <div class="linha">
+                <div class="coluna50">
                     <label for="password">Senha:</label>
                     <input type="password" name="password" id="password" placeholder="••••••••••••••" required>
                 </div>
-
             </div>
+            
             <div class="linha">
                 <div class="botoes">
                     <button class="botao-salvar">Salvar</button>
