@@ -40,14 +40,29 @@
         Especificação de Requisitos
             Os requisitos devem ser claros, sem ambiguidades, de fácil compreensão, completos e consistentes
 
-
+        Desafios
+            - Imprecisão na especificação é a causa de muitos problemas
+            - Desenvolver pode interpretar um requisito de uma maneira diferente da necessidade do cliente
+            - Características principais
+                - Completude: Devem incluir a descrição de todos os itens requeridos
+                - Consistência: Não deve haver conflitos ou contradições
 
     
+        Deixar de atender um requisito não funcional pode inutilizar o sistema
+
+        Classificação:
+            Requisito de produto: Comportamento do software
+            Requisito organizacional: Derivado das políticas e procedimentos da organização do cliente e do desenvolvedor
+            Requisitos externos: Todos que derivam de fatores externos. Exemplo: Reguladores legais, éticos
 
 
-        Requisitos Funcionais
+        Requisitos Funcionais (RF)
+            Tudo o que vou codar é funcional
+            Declarações de serviços que o sistema deve fornecer, como o sistema deve reagir a entradas específicas e como deve se comportar em determinadas situações.
             
-        Requisitos Não Funcionais
+        Requisitos Não Funcionais (RNF)
+            - Exemplo: De que horas a que horas seu sistema vai ficar no ar? Quando vai fazer o backup? Qual a linguagem? Qual navegador? Que horas vai atualização do sistema? Em que momento?
+            Restrições ou funções oferecidas pelo sistema, como restrições de timing, processo de desenvolvimento, e restrições impostas pelas normas
 
 
 
