@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+    <style>
+        body {
+            background-color: rgb(221, 221, 221);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .cabecalho,
+        .navegacao-cabecalho ul {
+            display: flex;
+        }
+
+        .cabecalho {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navegacao-cabecalho ul {
+            text-decoration: none;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .navegacao-cabecalho ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        
+        .conteudo-principal {
+            background-color: rgb(238, 238, 238);
+            padding: 10px 40px;
+            border-radius: 7px;
+        }
+
+        .secao-conteudo-principal {
+            text-align: justify;
+        }
+
+        .primeira-secao-conteudo-principal {
+            display: block;
+        }
+
+        .segunda-secao-conteudo-principal {
+            display: block;
+        }
+
+        .segunda-secao-conteudo-principal .artigos {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .secao-destaque {
+            background-color: beige;
+            padding: 10px 40px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .secao-destaque h2,
+        .secao-destaque h3 {
+            text-align: center;
+        }
+
+        .secao-destaque h2 {
+            text-transform: uppercase;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .rodape {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Título do Site</h1>
+            <span>Uma breve descrição do site</span>
+            <nav class="navegacao-cabecalho">
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/">Notícias</a></li>
+                    <li><a href="/">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="conteudo-principal">
+            <section class="secao-conteudo-principal primeira-secao-conteudo-principal">
+                <h2>Título da primeira seção</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente fuga, eum debitis libero, laborum sunt dicta et itaque quisquam illum cupiditate doloribus provident aspernatur voluptates veniam tempore! Veniam, officiis!
+                Ullam facere fugit, beatae nostrum voluptas architecto nobis facilis esse deleniti. Accusantium, debitis amet in, dicta perspiciatis enim, labore corporis aut omnis voluptate incidunt consectetur error maiores illum explicabo voluptatum!</span>
+            </section>
+    
+            <section class="secao-conteudo-principal segunda-secao-conteudo-principal">
+                <div class="titulo-segunda-secao">
+                    <h2>Título da segunda seção</h2>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente fuga, eum debitis libero, laborum sunt dicta et itaque quisquam illum cupiditate doloribus provident aspernatur voluptates veniam tempore! Veniam, officiis!
+                    Ullam facere fugit, beatae nostrum voluptas architecto nobis facilis esse deleniti. Accusantium, debitis amet in, dicta perspiciatis enim, labore corporis aut omnis voluptate incidunt consectetur error maiores illum explicabo voluptatum!</span>
+                </div>
+    
+                <div class="artigos">
+                    <article class="primeiro-artigo-segunda-secao-conteudo-principal">
+                        <h3>Primeiro título do artigo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia harum quas, libero, voluptas enim, numquam architecto modi obcaecati earum ipsam similique eum quaerat delectus magni veniam odit consequuntur omnis!
+                        Vel ipsum sint non asperiores aspernatur perferendis ratione molestiae doloremque assumenda eum nisi error, minima dolorem totam blanditiis provident? Corrupti, fugit ex obcaecati doloribus iusto deserunt minus porro aliquid vitae!
+                        Molestiae quae tempore libero consequatur, numquam debitis nesciunt repudiandae aperiam autem harum. Quaerat totam repudiandae nostrum, sint vitae iste, molestiae maiores cupiditate rerum doloremque quidem. Culpa quo porro libero omnis!</p>
+                    </article>
+        
+                    <article class="segundo-artigo-segunda-secao-conteudo-principal">
+                        <img src="https://wallpapers.com/images/hd/spiderman-1366x768-ky0fktoshot3v4u6.jpg" alt="Homem Aranha no Espaço">
+                        <h3>Segundo título do artigo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia harum quas, libero, voluptas enim, numquam architecto modi obcaecati earum ipsam similique eum quaerat delectus magni veniam odit consequuntur omnis!
+                        Vel ipsum sint non asperiores aspernatur perferendis ratione molestiae doloremque assumenda eum nisi error, minima dolorem totam blanditiis provident? Corrupti, fugit ex obcaecati doloribus iusto deserunt minus porro aliquid vitae!
+                        Molestiae quae tempore libero consequatur, numquam debitis nesciunt repudiandae aperiam autem harum. Quaerat totam repudiandae nostrum, sint vitae iste, molestiae maiores cupiditate rerum doloremque quidem. Culpa quo porro libero omnis!</p>
+                    </article>
+                </div>
+            </section>
+    
+            <section class="secao-conteudo-principal secao-destaque terceira-secao-conteudo-principal">
+                <h2>Destaques</h2>
+                <article>
+                    <h3>Primeiro título do artigo em destaque</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia harum quas, libero, voluptas enim, numquam architecto modi obcaecati earum ipsam similique eum quaerat delectus magni veniam odit consequuntur omnis!
+                    Vel ipsum sint non asperiores aspernatur perferendis ratione molestiae doloremque assumenda eum nisi error, minima dolorem totam blanditiis provident? Corrupti, fugit ex obcaecati doloribus iusto deserunt minus porro aliquid vitae!
+                    Molestiae quae tempore libero consequatur, numquam debitis nesciunt repudiandae aperiam autem harum. Quaerat totam repudiandae nostrum, sint vitae iste, molestiae maiores cupiditate rerum doloremque quidem. Culpa quo porro libero omnis!</p>
+                </article>
+            </section>
+        </main>
+        <footer class="rodape">
+            <span>Matheus Souza 2026</span>
+            <span>Site criado para aula de HTML</span>
+        </footer>
+    </div>
+</body>
+</html>
