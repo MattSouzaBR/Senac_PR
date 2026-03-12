@@ -108,7 +108,7 @@
 					Como
 
 				Agendamento de consultas e serviços
-					Criar um istema para gerenciar a marcação, alteração e cancelamento de consultas ou serviços, considerando políticas como horários disponíveis, limite de cancelamentos e regras de confirmação.
+					Criar um sistema para gerenciar a marcação, alteração e cancelamento de consultas ou serviços, considerando políticas como horários disponíveis, limite de cancelamentos e regras de confirmação.
 
 				Processo de Devolução  e tradicionais
 					Criar um sistema para gerenciar devoluções de produtos, estabelecendo prazos, condições do item devolvido e opções de reembolso ou troca
