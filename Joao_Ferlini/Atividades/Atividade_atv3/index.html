@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico em Informática</title>
+    <style>
+        /* Estilos Globais */
+        :root {
+            --cor-primaria: #2c3e50;
+            --cor-secundaria: #34495e;
+            --cor-destaque: ;
+
+            --preenchimento-tela: 50.5%;
+        }
+
+        /* Reset */
+        * {
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        .linha {
+            margin: 0 auto;
+        }
+
+        .fundo-primario {
+            background-color: var(--cor-primaria);
+        }
+        
+        .fundo-secundario {
+            background-color: var(--cor-secundaria);
+        }
+
+        .tela {
+            width: var(--preenchimento-tela);
+            margin: 0 auto;
+        }
+        
+        /* Personalização */
+        header {
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 1.7em;
+        }
+
+        header span {
+            font-size: .88em;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 7px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: .88em;
+        }
+
+        section.primario {
+            margin-bottom: 20px;
+        }
+
+        section.primario h2 {
+           margin: 20px 0;
+        }
+
+        section.primario p {
+           font-size: 0.88em;
+        }
+
+        section.primario-alinhado {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        section.primario-alinhado h3 {
+            margin-top: 25px;
+            padding: 20px 0;
+            font-size: 1em;
+        }
+
+        section.primario-alinhado p {
+            font-size: .88em;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: .88em;
+        }
+    </style>
+</head>
+<body>
+    <div class="linha fundo-primario">
+        <header class="tela">
+            <h1>Curso Técnico em Informática</h1>
+            <span>Disciplina: Desenvolver e Organizar Elementos Estruturais de Sites</span>
+        </header>
+    </div>
+    <div class="linha fundo-secundario">
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre o Curso</a></li>
+                <li><a href="#disciplinas">Disciplinas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="linha">
+        <main class="tela">
+            <section class="primario">
+                <h2>Sobre o Curso</h2>
+                <p>O curso Técnico em Informática prepara os alunos para atuar no desenvolvimento de sistemas, manutenção de computadores e criação de páginas web.</p>
+            </section>
+            <h2>Principais Disciplinas</h2>
+            <section class="primario-alinhado">
+                <section class="secundario">
+                    <h3>HTML e CSS</h3>
+                    <p>Aprenda a desenvolver páginas web utilizando HTML e estilização com CSS.</p>
+                </section>
+                <section class="secundario">
+                    <h3>Lógica de Programação</h3>
+                    <p>Desenvolva o pensamento lógico para resolver problemas utilizando algotítmos.</p>
+                </section>
+                <section class="secundario">
+                    <h3>Banco de Dados</h3>
+                    <p>Aprenda a modelar e manipular dados utilizando sistemas gerenciadores de banco de dados.</p>
+                </section>
+            </section>
+        </main>
+        <footer class="fundo-primario">
+            <span>Curso Técnico em Informática - 2026</span>
+        </footer>
+    </div>
+</body>
+</html>
