@@ -1,10 +1,3 @@
-<!-- 
----- Lembrar de usar o clamp () no CSS ou min font-size para garantir a responsividade do texto.
----- Aprender sobre 'prefers-color-scheme'
----- Estudar WCAG, SEO e Acessibilidade (WCAG 2.x, W3C, WebAIM, Deque, Section508, ARIA)
----- screen reader (NVDA, VoiceOver, JAWS)
----- <time datetime="2026-...">
--->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -180,6 +173,19 @@
             flex-direction: column;
             gap: 10px;
             padding-bottom: 30px;
+        }
+
+        main div.container article section.titulo-postagem h2 {
+            padding: var(--espacamento-padrao) 0;
+        }
+
+        main div.container article section.imagem-principal img {
+            width: 100%;
+            height: auto;
+        }
+
+        main div.container article section.conteudo-postagem p {
+            margin-top: var(--espacamento-padrao);
         }
 
         /* FOOTER */
