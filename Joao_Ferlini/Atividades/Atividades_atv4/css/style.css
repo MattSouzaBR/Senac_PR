@@ -1,0 +1,75 @@
+@import url('variables.css');
+@import url('reset.css');
+@import url('normalize.css');
+
+/* Estilos Pessoal Personalizado */
+
+    /* HEADER */
+    header {
+        background-color: var(--cor-primaria);
+        padding: var(--espacamento-padrao);
+    }
+
+    header span {
+        display: block;
+        text-align: center;
+        margin-top: var(--espacamento-padrao);
+    }
+
+    /* NAV */
+    nav {
+        background-color: var(--cor-secundaria);
+    }
+
+    nav ul.lista-menu {
+        display: flex;
+        justify-content: center;
+        gap: var(--espacamento-padrao);
+        padding: 10px 0;
+    }
+
+    nav ul.lista-menu li a {
+        font-size: .8em;
+    }
+
+    /* MAIN */
+    main #sobre {
+        padding-top: 10px;
+    }
+
+    main ul#listagem-disciplinas {
+        display: flex;
+        gap: var(--espacamento-padrao);
+    }
+
+    main ul#listagem-disciplinas li{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* ASIDE */
+    aside .largura-maxima-conteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: var(--espacamento-padrao);
+    }
+
+    aside span {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: var(--espacamento-padrao);
+        background-color: var(--cor-secundaria);
+        text-align: center;
+        padding: var(--espacamento-padrao);
+    }

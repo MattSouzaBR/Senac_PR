@@ -1,0 +1,95 @@
+@import url('variables.css');
+@import url('reset.css');
+@import url('normalize.css');
+
+/* Estilos Pessoal Personalizado */
+
+    /* HEADER */
+    header {
+        background-color: var(--cor-primaria);
+        padding: var(--espacamento-padrao);
+    }
+
+    header span {
+        display: block;
+        text-align: center;
+        margin-top: var(--espacamento-padrao);
+    }
+
+    /* NAV */
+    nav {
+        background-color: var(--cor-secundaria);
+    }
+
+    nav ul.lista-menu {
+        display: flex;
+        justify-content: center;
+        gap: var(--espacamento-padrao);
+        padding: 10px 0;
+    }
+
+    nav ul.lista-menu li a {
+        font-size: .8em;
+    }
+
+    /* MAIN */
+        /* BLOG */
+        main section.lista-artigos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--espacamento-padrao);
+            padding-top: var(--espacamento-padrao);
+        }
+
+        main section.chamada-postagem {
+            padding: var(--espacamento-padrao) 0;
+        }
+
+        main section.lista-artigos article {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* POST */
+        main article.artigo-principal {
+            background-color: #fff;
+            padding: 0 var(--espacamento-padrao);
+            padding-bottom: var(--espacamento-padrao);
+        }
+
+        main section.imagem-principal img{
+            width: 100%;
+            height: auto;
+        }
+
+        main section.titulo-postagem h2 {
+            padding: var(--espacamento-padrao) 0;
+        }
+
+        main section.conteudo-postagem p {
+            padding-top: var(--espacamento-padrao)
+        }
+
+    /* ASIDE */
+    aside .largura-maxima-conteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: var(--espacamento-padrao);
+    }
+
+    aside span {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: var(--espacamento-padrao);
+        background-color: var(--cor-secundaria);
+        text-align: center;
+        padding: var(--espacamento-padrao);
+    }
