@@ -51,18 +51,11 @@
         border-spacing: 0;
     }
 
-    /* Adicionado (Sugestões do Claude IA) */
+    /* Adicionado (Sugestões do Claude */
     *, *::before, *::after {
         box-sizing: border-box;
     }
-
-    /* Elementos de bloco — comportamento esperado */
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Página sempre ocupa a tela toda */
-    }
-
+    
     /* Imagens e mídia — inline por padrão do browser, mas quase sempre queremos block */
     img, video, svg, canvas {
         display: block;

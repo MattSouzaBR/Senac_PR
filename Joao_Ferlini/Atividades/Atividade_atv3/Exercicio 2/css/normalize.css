@@ -139,6 +139,12 @@
         text-decoration: none;
     }
 
+    h1 a:visited,
+    a:visited h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
     /* === h2 - Subtítulo ==================== */
     h2 {
         font-family: var(--fonte-padrao);

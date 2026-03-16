@@ -7,6 +7,9 @@
         --hover-cor-primaria: #34495e;
         --hover-cor-secundaria: #2c3e50;
         --hover-cor-destaque: #e74c3c;
+        --cor-link-visitado-escuro: #fa2904;
+        --cor-link-visitado-claro: #b8d1ea;
+        --cor-link: #2d7fd1;
 
         --cor-fundo-escuro: #212121; /* Não é recomendado usar preto absoluto */
         --cor-fundo-claro: #f4f4f4; /* Não é recomendado usar branco absoluto */
@@ -26,6 +29,8 @@
 
         /* Links */
         --texto-decoracao-link: none; /* none, underline, overline, line-through */
+        --texto-decoracao-link-hover: underline; /* none, underline, overline, line-through */
+
 
         /* Efeitos */
         --tempo-transicao: 0.3s; /* s, ms */
