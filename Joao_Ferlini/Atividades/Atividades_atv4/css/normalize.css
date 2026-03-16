@@ -1,0 +1,400 @@
+/* Estilos Pessoal Padronizado */
+
+/* === Largura Máxima do Conteúdo ==================== */
+    .largura-maxima-conteudo {
+        width: var(--largura-maxima-conteudo);
+        max-width: var(--largura-maxima-conteudo-limite);
+        margin: 0 auto;
+    }
+
+    a.button {
+        display: inline-block;
+        background-color: var(--cor-primaria);
+        color: var(--cor-texto-claro);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition:
+            background-color var(--tempo-transicao) var(--funcao-transicao),
+            transform var(--tempo-transicao) var(--funcao-transicao),
+            box-shadow var(--tempo-transicao) var(--funcao-transicao);
+    }
+    
+    a.button:hover,
+    a.button:active,
+    a.button:focus,
+    a.button:focus-visible {
+        background-color: var(--hover-cor-primaria);
+    }
+
+    a.button.destaque {
+        background-color: var(--cor-destaque);
+        color: var(--cor-texto-claro);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* Botão padrão — faltava o hover com transform */
+    a.button:hover,
+    a.button:focus,
+    a.button:focus-visible {
+        background-color: var(--hover-cor-primaria);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    a.button:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+
+/* === Texto Claro ====================  */
+    .texto-claro { 
+        color: var(--cor-texto-claro); 
+    }
+
+    a .texto-claro,
+    a.texto-claro { 
+        color: var(--cor-texto-claro); 
+    }
+
+    a .texto-claro:hover,
+    a.texto-claro:hover { 
+        color: var(--hover-cor-fundo-claro);
+    }
+
+    a .texto-claro:focus,
+    a.texto-claro:focus { 
+        color: var(--hover-cor-fundo-claro); 
+    }
+
+    a .texto-claro:focus-visible,
+    a.texto-claro:focus-visible { 
+        color: var(--hover-cor-fundo-claro);
+    }
+
+    a .texto-claro:active,
+    a.texto-claro:active { 
+        color: var(--hover-cor-fundo-claro);
+    }
+
+    a.ativo {
+        font-weight: bold;
+    }
+
+    a:visited,
+    a:visited .texto-claro {
+        color: var(--cor-link-visitado-claro);
+        text-decoration: none;
+    }
+    
+/* === Texto Escuro ==================== */
+    .texto-escuro { 
+        color: var(--cor-texto-escuro); 
+    }
+
+    a .texto-escuro,
+    a.texto-escuro { 
+        color: var(--cor-texto-escuro);
+    }
+    
+    a .texto-escuro:hover { 
+        color: var(--hover-cor-fundo-escuro); 
+    }
+
+    a .texto-escuro:focus { 
+        color: var(--hover-cor-fundo-escuro); 
+    }
+
+    a .texto-escuro:focus-visible { 
+        color: var(--hover-cor-fundo-escuro); 
+    }
+
+    a .texto-escuro:active { 
+        color: var(--hover-cor-fundo-escuro); 
+    }
+
+    a:visited .texto-escuro { 
+        color: var(--cor-link-visitado-escuro); 
+    }
+
+/* === Hierarquia de Títulos e Textos ==================== */
+    /* === h1 - Título Principal ==================== */
+    h1 {
+        font-family: var(--fonte-padrao);
+        font-size: 1.5em; /* clamp(min, preferido, max), px, em, rem, %, cm */
+        font-weight: bold; /* normal, bold, 100~900 */
+        text-align: center; /* start, center, end */
+        background-color: transparent; /* var(), transparent, color-name, color-value */
+        color: var(--cor-texto-escuro);
+        line-height: 1.2; /* normal, number, length, percentage */
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+    }
+
+    h1 a,
+    a h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h1 a:hover,
+    a:hover h1 {
+        color: var(--hover-cor-primaria);
+        text-decoration: none;
+    }
+
+    h1 a:focus,
+    a:focus h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h1 a:focus-visible,
+    a:focus-visible h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h1 a:active,
+    a:active h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h1 a:visited,
+    a:visited h1 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    /* === h2 - Subtítulo ==================== */
+    h2 {
+        font-family: var(--fonte-padrao);
+        font-size: 1.1rem; /* clamp(min, preferido, max), px, em, rem, %, cm */
+        font-weight: bold; /* normal, bold, 100~900 */
+        text-align: start; /* start, center, end */
+        background-color: transparent; /* var(), transparent, color-name, color-value */
+        color: var(--cor-texto-escuro);
+        line-height: 1.3; /* normal, number, length, percentage */
+        margin-block-start: 10px;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;;
+        padding-block-start: 10px;
+        padding-block-end: 10px;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+    }
+
+    h2 a,
+    a h2 {
+        color: var(--cor-texto-escuro);
+        text-decoration: none;
+    }
+
+    h2 a:hover,
+    a:hover h2 {
+        color: var(--cor-primaria);
+        text-decoration: none;
+    }
+
+    h2 a:focus,
+    a:focus h2 {
+        color: var(--cor-secundaria);
+        text-decoration: none;
+    }
+
+    h2 a:focus-visible,
+    a:focus-visible h2 {
+        color: var(--cor-secundaria);
+        text-decoration: none;
+    }
+
+    h2 a:active,
+    a:active h2 {
+        color: var(--cor-secundaria);
+        text-decoration: none;
+    }
+
+    h2 a:visited,
+    a:visited h2 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    /* === h3 - Título de Seção ==================== */
+    h3 {
+        font-family: var(--fonte-padrao);
+        font-size: .9em; /* clamp(min, preferido, max), px, em, rem, %, cm */
+        font-weight: 700; /* normal, bold, 100~900 */
+        text-align: start; /* start, center, end */
+        background-color: transparent; /* var(), transparent, color-name, color-value */
+        color: var(--cor-texto-escuro);
+        line-height: 1.4; /* normal, number, length, percentage */
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+
+        padding-top: 10px;
+    }
+
+    h3 a,
+    a h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h3 a:hover,
+    a:hover h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h3 a:focus,
+    a:focus h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h3 a:focus-visible,
+    a:focus-visible h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h3 a:active,
+    a:active h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    h3 a:visited,
+    a:visited h3 {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    /* === p - Parágrafo - Texto Semântico ==================== */
+    p {
+        font-family: var(--fonte-padrao);
+        font-size: .8em; /* clamp(min, preferido, max), px, em, rem, %, cm */
+        font-weight: normal; /* normal, bold, 100~900 */
+        text-align: start; /* start, center, end */
+        background-color: transparent; /* var(), transparent, color-name, color-value */
+        color: var(--cor-texto-escuro);
+        line-height: 1.5; /* normal, number, length, percentage */
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+    }
+
+    p a,
+    a p {
+        color: var(--cor-texto-escuro);
+        text-decoration: none;
+    }
+
+    p a:hover,
+    a:hover p {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    p a:focus,
+    a:focus p {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    p a:focus-visible,
+    a:focus-visible p {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    p a:active,
+    a:active p {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    p a:visited,
+    a:visited p {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    /* === span - Texto de adorno, enfeite, decorativo (Não Semântico) ==================== */
+    span {
+        font-family: var(--fonte-padrao);
+        font-size: .78em; /* clamp(min, preferido, max), px, em, rem, %, cm */
+        font-weight: normal; /* normal, bold, 100~900 */
+        text-align: start; /* start, center, end */
+        background-color: transparent; /* var(), transparent, color-name, color-value */
+        color: var(--cor-texto-escuro);
+        line-height: 1.5; /* normal, number, length, percentage */
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+    }
+
+    span a,
+    a span {
+        color: var(--cor-texto-escuro);
+        text-decoration: none;
+    }
+
+    span a:hover,
+    a:hover span {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    span a:focus,
+    a:focus span {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    span a:focus-visible,
+    a:focus-visible span {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    span a:active,
+    a:active span {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
+
+    span a:visited,
+    a:visited span {
+        color: var(--hover-cor-fundo-escuro);
+        text-decoration: none;
+    }
