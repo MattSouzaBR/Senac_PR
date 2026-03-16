@@ -1,4 +1,7 @@
 /* Estilos Pessoal Padronizado */
+    footer {
+        margin-top: var(----espacamento-padrao);
+    }
 
 /* === Largura Máxima do Conteúdo ==================== */
     .largura-maxima-conteudo {
