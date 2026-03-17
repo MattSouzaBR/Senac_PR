@@ -19,3 +19,4 @@ O que é Lógica?
 
         (1 Verbo por Frase, exemplo: Aperta, Pressione, Fará, Terá, Veja, Espere)
     
+    
