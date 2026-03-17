@@ -1,3 +1,11 @@
+<!-- 
+-- https://www.dhl.com/br-pt/home.html 
+-- https://www.alianca.com.br/a-alianca
+-- https://wireframe.cc/4g7pKc
+
+-- https://alunos.techone.dev.br/login.php
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,15 +19,157 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Atividade 4</title>
+    <title>AutoTravel</title>
+    <!-- 
+    Fonte: https://www.w3schools.com/W3CSS/tryit.asp?filename=tryw3css_slideshow_self
+    -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+    .mySlides {display:none;}
+    </style>
 </head>
 <body>
-    <p>Texto</p>
-    <p>Texto</p>
-    <p>Texto</p>
-    <p>Texto</p>
-    
-    <a href="#" class="button texto-claro">Botão</a>
+    <header>
+        <div class="lmc">
+            <div class="bloco">
+                <a hre><img src="img/logo.png" alt=""></a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="">Institucional</a></li>
+                        <li><a href="#" class="">Notícias e Comunicado</a></li>
+                        <li><a href="#" class="">Carreira</a></li>
+                        <li><a href="#" class="">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bloco">
+                <a href="#" class="button">Teste</a>
+                <a href="#" class="button destaque">Teste</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-slideshow">
+            <!-- 
+            Fonte: https://www.w3schools.com/W3CSS/tryit.asp?filename=tryw3css_slideshow_self
+            O código foi copiado e adaptado para o desafio. Acesse o site para comparar as diferenças.
+            -->
+            <div class="w3-content w3-display-container">
+                <div class="w3-display-container mySlides">
+                    <img src="img/at-entregador-confirmando-dados-esperando-cliente-assinar-digitalmente.png" style="width:100%">
+                    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                        French Alps
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_lights.jpg" style="width:100%">
+                    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                        Northern Lights
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_mountains.jpg" style="width:100%">
+                    <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                        Beautiful Mountains
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_forest.jpg" style="width:100%">
+                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+                        The Rain Forest
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_mountains.jpg" style="width:100%">
+                    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+                        Mountains!
+                    </div>
+                </div>
+
+                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                }
+            </script>
+            <!-- Fim código W3C -->
+        </section>
+        <section>
+
+        </section>
+    </main>
+    <footer class="fundo-secundario">
+        <div class="lmc">
+            <div class="d-f">
+                <div class="bloco">
+                    <img src="img/logo.png" alt="">
+                    <span class="texto-claro">Acompanhe a AutoTravell</span>
+                    <!-- Link + Ícones Redes Sociais -->
+                </div>
+                <div class="bloco">
+                    <h2>Navegue</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="texto-claro">A AutoTravell</a></li>
+                            <li><a href="#" class="texto-claro">Sustentabilidade</a></li>
+                            <li><a href="#" class="texto-claro">Logística em foco</a></li>
+                            <li><a href="#" class="texto-claro">Carreira</a></li>
+                            <li><a href="#" class="texto-claro">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bloco">
+                    <h2>Soluções</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="texto-claro">De ponta a ponta</a></li>
+                            <li><a href="#" class="texto-claro">Cabotagem</a></li>
+                            <li><a href="#" class="texto-claro">Ferroviário</a></li>
+                            <li><a href="#" class="texto-claro">Armazenagem</a></li>
+                            <li><a href="#" class="texto-claro">Cargas e Containers</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bloco">
+                    <h2>Termos e Condições</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Programação de Serviços</a></li>
+                            <li><a href="#">Termos e Condições</a></li>
+                            <li><a href="#">Regulamento de Tarifas para Sobre-estadia</a></li>
+                            <li><a href="#">Taxas de câmbio</a></li>
+                            <li><a href="#">FreeTime</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <span class="d-block texto-centralizado texto-claro padding-2">
+                Copyright © 2026 Auto Travell
+            </span>
+        </div>
+    </footer>
 </body>
 </html>
 

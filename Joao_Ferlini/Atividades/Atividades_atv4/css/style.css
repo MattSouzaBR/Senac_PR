@@ -1,1 +1,47 @@
 /* Estilos Pessoal Personalizado */
+header {
+    background: 
+        linear-gradient(
+            118deg,
+            rgba(255, 255, 255, 1) 65%,
+            rgba(14, 79, 168, 1) 89%
+        );
+}
+
+header img {
+    height: 60px;
+}
+
+header .lmc,
+header .lmc .bloco,
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul, .bloco {
+    gap: var(--espacamento-padrao-minimo);
+    justify-content: center;
+    align-items: center;
+}
+
+main .hero-slideshow {
+    background: #0E4FA8;
+    background: 
+    radial-gradient(
+        circle, 
+        rgba(14, 79, 168, 1) 0%, 
+        rgba(26, 73, 138, 1) 44%,
+        rgb(0, 0, 0) 85%);
+    }
+main .hero-slideshow img {
+    object-fit: cover;
+    width: 100%;
+}
+
+footer img {
+    height: 100px;
+    
+}
+

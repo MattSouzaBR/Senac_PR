@@ -1,11 +1,11 @@
 /* Variáveis CSS */
     :root {
         /* Cores */
-        --cor-primaria: #2c3e50;
-        --cor-secundaria: #34495e;
+        --cor-primaria: #1554aa;
+        --cor-secundaria: #021b58;
         --cor-destaque: #e67e22; /* A Cor destaque deve ser usada em menos de 10% da identidade visual do site. Regra 60-30-10 */
-        --hover-cor-primaria: #34495e;
-        --hover-cor-secundaria: #2c3e50;
+        --hover-cor-primaria: #021b58;
+        --hover-cor-secundaria: #021b58;
         --hover-cor-destaque: #e74c3c;
         --cor-link-visitado-escuro: #fa2904;
         --cor-link-visitado-claro: #b8d1ea;
@@ -23,8 +23,10 @@
 
         /* Tamanho */
         --largura-maxima-conteudo: 80%;
-        --largura-maxima-conteudo-limite: 800px;
+        --largura-maxima-conteudo-limite: 1100px;
+        --espacamento-padrao-maximo: 40px;
         --espacamento-padrao: 20px;
+        --espacamento-padrao-minimo: 10px;
         --espacamento-secoes: var(--espacamento-padrao);
 
         /* Links */

@@ -3,11 +3,87 @@
         margin-top: var(----espacamento-padrao);
     }
 
+    .d-block,
+    .d-b {
+        display: block;
+    }
+
+    .d-flex,
+    .d-f {
+        display: flex;
+    }
+
+    .d-grid,
+    .d-g {
+        display: grid;
+    }
+
+    .padding-1 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*0.0), 
+            var(---spacamento-padrao-maximo)
+        );
+    }
+    .padding-2 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*0.2), 
+            var(--espacamento-padrao-maximo)
+        );
+    }
+    .padding-3 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*0.4), 
+            var(--espacamento-padrao-maximo)
+        );
+    }
+    .padding-4 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*0.6), 
+            var(--espacamento-padrao-maximo)
+        );
+    }
+    .padding-5 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*0.8), 
+            var(--espacamento-padrao-maximo)
+        );
+    }
+    .padding-6 {
+        padding: 
+        clamp(
+            var(--espacamento-padrao-minimo), 
+            calc(var(--espacamento-padrao-maximo)*1), 
+            var(--espacamento-padrao-maximo)
+        );
+    }
 /* === Largura Máxima do Conteúdo ==================== */
+    .lmc,
     .largura-maxima-conteudo {
         width: var(--largura-maxima-conteudo);
         max-width: var(--largura-maxima-conteudo-limite);
         margin: 0 auto;
+    }
+
+    .fundo-primario {
+        background-color: var(--cor-primaria);
+    }
+
+    .fundo-secundario {
+        background-color: var(--cor-secundaria);
+    }
+
+    .texto-centralizado {
+        text-align: center;
     }
 
     a.button {
@@ -33,6 +109,17 @@
 
     a.button.destaque {
         background-color: var(--cor-destaque);
+        color: var(--cor-texto-claro);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    a.button.destaque:hover,
+    a.button.destaque:active,
+    a.button.destaque:focus,
+    a.button.destaque:focus-visible {
+        background-color: var(--hover-cor-destaque);
         color: var(--cor-texto-claro);
         border: none;
         padding: 10px 20px;
