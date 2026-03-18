@@ -3,16 +3,16 @@
         /* Cores */
         --cor-primaria: #1554aa;
         --cor-secundaria: #021b58;
-        --cor-destaque: #e67e22; /* A Cor destaque deve ser usada em menos de 10% da identidade visual do site. Regra 60-30-10 */
-        --hover-cor-primaria: #021b58;
-        --hover-cor-secundaria: #021b58;
-        --hover-cor-destaque: #e74c3c;
+        --cor-destaque: #00c2ff; /* A Cor destaque deve ser usada em menos de 10% da identidade visual do site. Regra 60-30-10 */
+        --hover-cor-primaria: #0f3e80;
+        --hover-cor-secundaria: #01143f;
+        --hover-cor-destaque: #029fcf;
         --cor-link-visitado-escuro: #fa2904;
-        --cor-link-visitado-claro: #b8d1ea;
+        --cor-link-visitado-claro: none;
         --cor-link: #2d7fd1;
 
-        --cor-fundo-escuro: #212121; /* Não é recomendado usar preto absoluto */
-        --cor-fundo-claro: #f4f4f4; /* Não é recomendado usar branco absoluto */
+        --cor-fundo-escuro: #010b2b; /* Não é recomendado usar preto absoluto */
+        --cor-fundo-claro: #f4f7fb; /* Não é recomendado usar branco absoluto */
         --hover-cor-fundo-escuro: #424242;
         --hover-cor-fundo-claro: #e0e0e0;
 
@@ -22,8 +22,8 @@
         --hover-cor-texto-claro: var(--hover-cor-fundo-claro);
 
         /* Tamanho */
-        --largura-maxima-conteudo: 80%;
-        --largura-maxima-conteudo-limite: 1100px;
+        --largura-maxima-conteudo: 90%;
+        --largura-maxima-conteudo-limite: 1200px;
         --espacamento-padrao-maximo: 40px;
         --espacamento-padrao: 20px;
         --espacamento-padrao-minimo: 10px;
@@ -40,4 +40,9 @@
 
         /* Fonte */
         --fonte-padrao: Arial, sans-serif;
+
+
+        html {
+            scroll-behavior: smooth;
+        }
     }

@@ -1,0 +1,79 @@
+    <!-- 
+    Fonte: https://www.w3schools.com/W3CSS/tryit.asp?filename=tryw3css_slideshow_self
+    -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+    .mySlides {display:none;}
+    </style>
+
+
+
+
+
+
+<section class="hero-slideshow">
+            <!-- 
+            Fonte: https://www.w3schools.com/W3CSS/tryit.asp?filename=tryw3css_slideshow_self
+            O código foi copiado e adaptado para o desafio. Acesse o site para comparar as diferenças.
+            -->
+            <div class="w3-content w3-display-container">
+                <div class="w3-display-container mySlides">
+                    <img src="img/at-entregador-confirmando-dados-esperando-cliente-assinar-digitalmente.png" style="width:100%">
+                    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                        French Alps
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_lights.jpg" style="width:100%">
+                    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                        Northern Lights
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_mountains.jpg" style="width:100%">
+                    <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                        Beautiful Mountains
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_forest.jpg" style="width:100%">
+                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+                        The Rain Forest
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img_mountains.jpg" style="width:100%">
+                    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+                        Mountains!
+                    </div>
+                </div>
+
+                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                }
+            </script>
+            <!-- Fim código W3C -->

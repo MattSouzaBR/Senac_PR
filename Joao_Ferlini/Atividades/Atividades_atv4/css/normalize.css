@@ -8,9 +8,16 @@
         display: block;
     }
 
-    .d-flex,
-    .d-f {
+    .d-flex-c,
+    .d-fc {
         display: flex;
+        flex-direction: column;
+    }
+
+    .d-flex-l,
+    .d-fl {
+        display: flex;
+        flex-direction: row;
     }
 
     .d-grid,
@@ -173,6 +180,7 @@
 
     a.ativo {
         font-weight: bold;
+        color: var(--cor-principal) !important;
     }
 
     a:visited,
@@ -487,4 +495,12 @@
     a:visited span {
         color: var(--hover-cor-fundo-escuro);
         text-decoration: none;
+    }
+
+    .gap {
+        gap: var(----espacamento-padrao);
+    }
+
+    .texto-claro-important {
+        color: white !important;
     }
