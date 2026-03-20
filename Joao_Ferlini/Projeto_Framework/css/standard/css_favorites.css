@@ -1,0 +1,9 @@
+@import url(css_default.css);
+
+/* Favorites */
+@import url(../library/margin.css);
+@import url(../library/padding.css);
+@import url(../library/display-flex.css);
+@import url(../library/justify-content.css);
+@import url(../library/align-items.css);
+@import url(../library/gap.css);

@@ -1,0 +1,27 @@
+:root {
+
+    /* CSS Default */
+    --default-background-color: #e8eaed;
+    --default-text-color: #22242a;
+    --default-font-family: Arial, Sans-serif;
+    --default-font-size: 14px;
+
+    --default-justify-content: center;
+    --default-align-items: center;
+    
+    --default-gap: 10px;
+    --default-gap-minimum: 5px;
+    --default-gap-maximum: 30px;
+
+    --default-margin: 10px;
+    --default-margin-minimum: 5px;
+    --default-margin-maximum: 30px;
+
+    --default-padding: 10px;
+    --default-padding-minimum: 5px;
+    --default-padding-maximum: 30px;
+
+    --default-list-style: none;
+    --default-text-decoration: none;
+    --default-hover-text-decoration: underline;
+}

@@ -1,0 +1,67 @@
+.justify-content,
+.jc, .j-c, .jfc, .j-f-c {
+    justify-content: var(--default-justify-content);
+}
+
+.justify-content-start,
+.jc.start, .j-c.start, .jc-start, .j-c-start,
+.jfc.start, .j-f-c.start, .jfc-start, .j-f-c-start {
+    justify-content: start;
+}
+
+.justify-content-center,
+.jc.center, .j-c.center, .jc-center, .j-c-center,
+.jfc.center, .j-f-c.center, .jfc-center, .j-f-c-center {
+    justify-content: center;
+}
+
+.justify-content-end,
+.jc.end, .j-c.end, .jc-end, .j-c-end,
+.jfc.end, .j-f-c.end, .jfc-end, .j-f-c-end {
+    justify-content: end;
+}
+
+.justify-content-left, 
+.jc.left, .j-c.left, .jc-left, .j-c-left,
+.jfc.left, .j-f-c.left, .jfc-left, .j-f-c-left {
+    justify-content: left;
+}
+
+.justify-content-right,
+.jc.right, .j-c.right, .jc-right, .j-c-right,
+.jfc.right, .j-f-c.right, .jfc-right, .j-f-c-right {
+    justify-content: right;
+}
+
+.justify-content-baseline,
+.jc.baseline, .j-c.baseline, .jc-baseline, .j-c-baseline,
+.jfc.baseline, .j-f-c.baseline, .jfc-baseline, .j-f-c-baseline {
+    justify-content: baseline;
+}
+
+.justify-content-stretch,
+.jc.stretch, .j-c.stretch, .jc-stretch, .j-c-stretch,
+.jfc.stretch, .j-f-c.stretch, .jfc-stretch, .j-f-c-stretch {
+    justify-content: stretch;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+

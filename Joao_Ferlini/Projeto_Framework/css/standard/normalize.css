@@ -1,0 +1,11 @@
+* {
+    list-style: var(--default-list-style);
+}
+
+a {
+    text-decoration: var(--default-text-decoration);
+}
+
+a:hover {
+    text-decoration: var(--default-hover-text-decoration);
+}
