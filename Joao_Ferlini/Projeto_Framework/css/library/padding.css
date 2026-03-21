@@ -23,14 +23,14 @@
     padding-right: var(--default-padding);
 }
 
-.padding-x,
-.px {
+.padding-y,
+.py {
     padding-top: var(--default-padding);
     padding-bottom: var(--default-padding);
 }
 
-.padding-y,
-.py {
+.padding-x,
+.px {
     padding-left: var(--default-padding);
     padding-right: var(--default-padding);
 }
@@ -315,136 +315,147 @@
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum)), var(--default-padding-maximum));
 }
 
+
+/*
+    y
+    │
+    │ eixo x y
+    │
+    └───────── x
+    https://www.i2symbol.com/pt/symbols/line
+
+    ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ │ ║ ┃ ─ ━ ── ━━ ☰
+*/
 /* PADDING X */
-.padding-x-0,
-.px-0, .px0 {
+.padding-y-0,
+.py-0, .py0 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.0), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.0), var(--default-padding-maximum));
 }
 
-.padding-x-1,
-.px-1, .px1 {
+.padding-y-1,
+.py-1, .py1 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.1), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.1), var(--default-padding-maximum));
 }
 
-.padding-x-2,
-.px-2, .px2 {
+.padding-y-2,
+.py-2, .py2 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.2), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.2), var(--default-padding-maximum));
 }
 
-.padding-x-3,
-.px-3, .px3 {
+.padding-y-3,
+.py-3, .py3 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.3), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.3), var(--default-padding-maximum));
 }
 
-.padding-x-4,
-.px-4, .px4 {
+.padding-y-4,
+.py-4, .py4 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.4), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.4), var(--default-padding-maximum));
 }
 
-.padding-x-5,
-.px-5, .px5 {
+.padding-y-5,
+.py-5, .py5 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.5), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.5), var(--default-padding-maximum));
 }
 
-.padding-x-6,
-.px-6, .px6 {
+.padding-y-6,
+.py-6, .py6 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.6), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.6), var(--default-padding-maximum));
 }
 
-.padding-x-7,
-.px-7, .px7 {
+.padding-y-7,
+.py-7, .py7 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.7), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.7), var(--default-padding-maximum));
 }
 
-.padding-x-8,
-.px-8, .px8 {
+.padding-y-8,
+.py-8, .py8 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.8), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.8), var(--default-padding-maximum));
 }
 
-.padding-x-9,
-.px-9, .px9 {
+.padding-y-9,
+.py-9, .py9 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.9), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.9), var(--default-padding-maximum));
 }
 
-.padding-x-10,
-.px-10, .px10 {
+.padding-y-10,
+.py-10, .py10 {
     padding-top: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum)), var(--default-padding-maximum));
     padding-bottom: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum)), var(--default-padding-maximum));
 }
 
 /* PADDING Y */
-.padding-y-0,
-.py-0, .py0 {
+.padding-x-0,
+.px-0, .px0 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.0), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.0), var(--default-padding-maximum));
 }
 
-.padding-y-1,
-.py-1, .py1 {
+.padding-x-1,
+.px-1, .px1 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.1), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.1), var(--default-padding-maximum));
 }
 
-.padding-y-2,
-.py-2, .py2 {
+.padding-x-2,
+.px-2, .px2 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.2), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.2), var(--default-padding-maximum));
 }
 
-.padding-y-3,
-.py-3, .py3 {
+.padding-x-3,
+.px-3, .px3 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.3), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.3), var(--default-padding-maximum));
 }
 
-.padding-y-4,
-.py-4, .py4 {
+.padding-x-4,
+.px-4, .px4 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.4), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.4), var(--default-padding-maximum));
 }
 
-.padding-y-5,
-.py-5, .py5 {
+.padding-x-5,
+.px-5, .px5 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.5), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.5), var(--default-padding-maximum));
 }
 
-.padding-y-6,
-.py-6, .py6 {
+.padding-x-6,
+.px-6, .px6 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.6), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.6), var(--default-padding-maximum));
 }
 
-.padding-y-7,
-.py-7, .py7 {
+.padding-x-7,
+.px-7, .px7 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.7), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.7), var(--default-padding-maximum));
 }
 
-.padding-y-8,
-.py-8, .py8 {
+.padding-x-8,
+.px-8, .px8 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.8), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.8), var(--default-padding-maximum));
 }
 
-.padding-y-9,
-.py-9, .py9 {
+.padding-x-9,
+.px-9, .px9 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.9), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum) * 0.9), var(--default-padding-maximum));
 }
 
-.padding-y-10,
-.py-10, .py10 {
+.padding-x-10,
+.px-10, .px10 {
     padding-left: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum)), var(--default-padding-maximum));
     padding-right: clamp(var(--default-padding-minimum), calc(var(--default-padding-maximum)), var(--default-padding-maximum));
 }

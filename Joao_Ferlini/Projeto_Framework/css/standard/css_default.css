@@ -1,14 +1,148 @@
 :root {
 
-    /* CSS Default */
-    --default-background-color: #e8eaed;
-    --default-text-color: #22242a;
-    --default-font-family: Arial, Sans-serif;
-    --default-font-size: 14px;
+    /* ==============================================
+       CSS DEFAULT — Baseado nas normas ABNT
+       NBR 14724:2024 (trabalhos acadêmicos)
+       NBR 6024:2012  (numeração progressiva / hierarquia de seções)
+       ============================================== */
 
+    /* ----------------------------------------------
+       CORES
+    ---------------------------------------------- */
+    --default-background-color: #f5f5f5;    /* Papel branco (NBR 14724) */
+    --default-text-color: #1f1f1f;          /* Texto na cor preta (NBR 14724) */
+
+    /* ----------------------------------------------
+       TIPOGRAFIA GERAL
+       Fonte recomendada: Arial ou Times New Roman
+       Tamanho padrão: 12pt = 16px
+       (NBR 14724, seção 5.1)
+    ---------------------------------------------- */
+    --default-font-family: Arial, sans-serif;
+    --default-font-size: 16px;              /* 12pt ≈ 16px */
+    --default-font-size-small: 13.33px;     /* 10pt ≈ 13.33px — notas de rodapé, legendas, citações longas */
+
+    /* ----------------------------------------------
+       HEADINGS — Hierarquia tipográfica
+       h1 = Títulos sem numeração (capa, resumo, sumário, referências)
+            centralizado + MAIÚSCULAS + negrito (NBR 14724 / NBR 6024)
+       h2 = Seção primária:    MAIÚSCULAS + negrito      (NBR 6024)
+       h3 = Seção secundária:  negrito                   (NBR 6024)
+       h4 = Seção terciária:   itálico                   (NBR 6024)
+       h5 = Seção quaternária: sem destaque              (NBR 6024)
+       h6 = Seção quinária:    itálico + sublinhado      (NBR 6024)
+       Todos no tamanho 12pt conforme NBR 14724
+    ---------------------------------------------- */
+
+    /* font-size: todos 12pt = 16px */
+    --default-font-size-h1: var(--default-font-size);
+    --default-font-size-h2: var(--default-font-size);
+    --default-font-size-h3: var(--default-font-size);
+    --default-font-size-h4: var(--default-font-size);
+    --default-font-size-h5: var(--default-font-size);
+    --default-font-size-h6: var(--default-font-size);
+
+    /* font-weight */
+    --default-font-weight-h1: 700;          /* Negrito */
+    --default-font-weight-h2: 700;          /* Negrito */
+    --default-font-weight-h3: 700;          /* Negrito */
+    --default-font-weight-h4: 400;          /* Normal (destaque via itálico) */
+    --default-font-weight-h5: 400;          /* Normal */
+    --default-font-weight-h6: 400;          /* Normal (destaque via itálico + sublinhado) */
+
+    /* text-transform */
+    --default-text-transform-h1: uppercase; /* MAIÚSCULAS */
+    --default-text-transform-h2: uppercase; /* MAIÚSCULAS */
+    --default-text-transform-h3: none;
+    --default-text-transform-h4: none;
+    --default-text-transform-h5: none;
+    --default-text-transform-h6: none;
+
+    /* font-style */
+    --default-font-style-h1: normal;
+    --default-font-style-h2: normal;
+    --default-font-style-h3: normal;
+    --default-font-style-h4: italic;        /* Itálico */
+    --default-font-style-h5: normal;
+    --default-font-style-h6: italic;        /* Itálico */
+
+    /* text-decoration */
+    --default-text-decoration-h1: none;
+    --default-text-decoration-h2: none;
+    --default-text-decoration-h3: none;
+    --default-text-decoration-h4: none;
+    --default-text-decoration-h5: none;
+    --default-text-decoration-h6: underline; /* Sublinhado */
+
+    /* text-align */
+    --default-text-align-h1: center;        /* Títulos sem numeração: centralizado */
+    --default-text-align-h2: left;          /* Seções numeradas: esquerda */
+    --default-text-align-h3: left;
+    --default-text-align-h4: left;
+    --default-text-align-h5: left;
+    --default-text-align-h6: left;
+
+    /* line-height: espaçamento 1,5 (NBR 14724, seção 5.2) */
+    --default-line-height-h1: 1.5;
+    --default-line-height-h2: 1.5;
+    --default-line-height-h3: 1.5;
+    --default-line-height-h4: 1.5;
+    --default-line-height-h5: 1.5;
+    --default-line-height-h6: 1.5;
+
+    /* ----------------------------------------------
+       PARÁGRAFO (NBR 14724, seção 5.2 e 5.3)
+       Espaçamento 1,5 entre linhas
+       Recuo de 1,25cm na primeira linha
+       Texto justificado
+    ---------------------------------------------- */
+    --default-font-size-p: var(--default-font-size);
+    --default-line-height-p: 1.5;
+    --default-display-p: block;
+    --default-text-indent-p: 1.25cm;        /* Recuo de parágrafo */
+    --default-text-align-p: justify;        /* Texto justificado */
+
+    /* ----------------------------------------------
+       LISTAS (NBR 14724)
+       Sem marcadores visuais, só recuo
+       Aplicado apenas dentro de .conteudo-abnt
+    ---------------------------------------------- */
+    --default-list-style: none;
+    --default-list-padding-left: 1.25cm;    /* Mesmo recuo do parágrafo */
+
+    /* ----------------------------------------------
+       BODY
+    ---------------------------------------------- */
+    --default-body-background-color: var(--default-background-color);
+    --default-body-color: var(--default-text-color);
+    --default-body-font-family: var(--default-font-family);
+    --default-body-font-size: var(--default-font-size);
+    --default-body-line-height: 1.5;
+
+    /* ----------------------------------------------
+       MARGENS DE PÁGINA (NBR 14724, seção 5.1)
+       Superior: 3cm | Esquerda: 3cm
+       Inferior: 2cm | Direita:  2cm
+    ---------------------------------------------- */
+    --default-margin-page-top:    113px;    /* 3cm ≈ 113px */
+    --default-margin-page-left:   113px;    /* 3cm ≈ 113px */
+    --default-margin-page-bottom: 76px;     /* 2cm ≈  76px */
+    --default-margin-page-right:  76px;     /* 2cm ≈  76px */
+
+    /* ----------------------------------------------
+       TAG: A
+    ---------------------------------------------- */
+    --default-a-text-decoration: none;
+    --default-a-hover-text-decoration: underline;
+    --default-a-color: inherit;
+    --default-a-hover-color: inherit;
+
+    /* ----------------------------------------------
+       LAYOUT (utilitários internos do framework)
+    ---------------------------------------------- */
     --default-justify-content: center;
     --default-align-items: center;
-    
+
     --default-gap: 10px;
     --default-gap-minimum: 5px;
     --default-gap-maximum: 30px;
@@ -20,8 +154,4 @@
     --default-padding: 10px;
     --default-padding-minimum: 5px;
     --default-padding-maximum: 30px;
-
-    --default-list-style: none;
-    --default-text-decoration: none;
-    --default-hover-text-decoration: underline;
 }

@@ -1,4 +1,266 @@
 :root {
-    --primary-color: red;
-    
+
+    /* ==============================================
+       VARIABLES.CSS
+       Template de customização por projeto.
+       Descomente e preencha o que precisar.
+       Fallbacks vêm do css_default.css.
+       ============================================== */
+
+    /* ----------------------------------------------
+       CORES PRINCIPAIS
+    ---------------------------------------------- */
+    /* --primary-color: ; */
+    /* --hover-primary-color: ; */
+    /* --active-primary-color: ; */
+    /* --disabled-primary-color: ; */
+
+    /* --secondary-color: ; */
+    /* --hover-secondary-color: ; */
+    /* --active-secondary-color: ; */
+    /* --disabled-secondary-color: ; */
+
+    /* --tertiary-color: ; */
+    /* --hover-tertiary-color: ; */
+    /* --active-tertiary-color: ; */
+    /* --disabled-tertiary-color: ; */
+
+    /* --accent-color: ; */
+    /* --hover-accent-color: ; */
+    /* --active-accent-color: ; */
+    /* --disabled-accent-color: ; */
+
+    /* ----------------------------------------------
+       ESTADOS SEMÂNTICOS
+    ---------------------------------------------- */
+
+    /* Success */
+    /* --background-color-success: ; */
+    /* --hover-background-color-success: ; */
+    /* --text-color-success: ; */
+    /* --hover-text-color-success: ; */
+    /* --border-color-success: ; */
+    /* --hover-border-color-success: ; */
+    /* --font-size-success: ; */
+    /* --font-family-success: ; */
+    /* --font-weight-success: ; */
+    /* --hover-font-weight-success: ; */
+    /* --line-height-success: ; */
+    /* --letter-spacing-success: ; */
+    /* --text-transform-success: ; */
+    /* --text-align-success: ; */
+    /* --text-decoration-success: ; */
+    /* --hover-text-decoration-success: ; */
+
+    /* Warning */
+    /* --background-color-warning: ; */
+    /* --hover-background-color-warning: ; */
+    /* --text-color-warning: ; */
+    /* --hover-text-color-warning: ; */
+    /* --border-color-warning: ; */
+    /* --hover-border-color-warning: ; */
+    /* --font-size-warning: ; */
+    /* --font-family-warning: ; */
+    /* --font-weight-warning: ; */
+    /* --hover-font-weight-warning: ; */
+    /* --line-height-warning: ; */
+    /* --letter-spacing-warning: ; */
+    /* --text-transform-warning: ; */
+    /* --text-align-warning: ; */
+    /* --text-decoration-warning: ; */
+    /* --hover-text-decoration-warning: ; */
+
+    /* Error */
+    /* --background-color-error: ; */
+    /* --hover-background-color-error: ; */
+    /* --text-color-error: ; */
+    /* --hover-text-color-error: ; */
+    /* --border-color-error: ; */
+    /* --hover-border-color-error: ; */
+    /* --font-size-error: ; */
+    /* --font-family-error: ; */
+    /* --font-weight-error: ; */
+    /* --hover-font-weight-error: ; */
+    /* --line-height-error: ; */
+    /* --letter-spacing-error: ; */
+    /* --text-transform-error: ; */
+    /* --text-align-error: ; */
+    /* --text-decoration-error: ; */
+    /* --hover-text-decoration-error: ; */
+
+    /* Info */
+    /* --background-color-info: ; */
+    /* --hover-background-color-info: ; */
+    /* --text-color-info: ; */
+    /* --hover-text-color-info: ; */
+    /* --border-color-info: ; */
+    /* --hover-border-color-info: ; */
+    /* --font-size-info: ; */
+    /* --font-family-info: ; */
+    /* --font-weight-info: ; */
+    /* --hover-font-weight-info: ; */
+    /* --line-height-info: ; */
+    /* --letter-spacing-info: ; */
+    /* --text-transform-info: ; */
+    /* --text-align-info: ; */
+    /* --text-decoration-info: ; */
+    /* --hover-text-decoration-info: ; */
+
+    /* Light */
+    /* --background-color-light: ; */
+    /* --hover-background-color-light: ; */
+    /* --text-color-light: ; */
+    /* --hover-text-color-light: ; */
+    /* --border-color-light: ; */
+    /* --hover-border-color-light: ; */
+    /* --font-size-light: ; */
+    /* --font-family-light: ; */
+    /* --font-weight-light: ; */
+    /* --hover-font-weight-light: ; */
+    /* --line-height-light: ; */
+    /* --letter-spacing-light: ; */
+    /* --text-transform-light: ; */
+    /* --text-align-light: ; */
+    /* --text-decoration-light: ; */
+    /* --hover-text-decoration-light: ; */
+
+    /* Dark */
+    /* --background-color-dark: ; */
+    /* --hover-background-color-dark: ; */
+    /* --text-color-dark: ; */
+    /* --hover-text-color-dark: ; */
+    /* --border-color-dark: ; */
+    /* --hover-border-color-dark: ; */
+    /* --font-size-dark: ; */
+    /* --font-family-dark: ; */
+    /* --font-weight-dark: ; */
+    /* --hover-font-weight-dark: ; */
+    /* --line-height-dark: ; */
+    /* --letter-spacing-dark: ; */
+    /* --text-transform-dark: ; */
+    /* --text-align-dark: ; */
+    /* --text-decoration-dark: ; */
+    /* --hover-text-decoration-dark: ; */
+
+    /* ----------------------------------------------
+       LAYOUT
+       (os defaults ficam no css_default.css)
+    ---------------------------------------------- */
+    /* --justify-content: ; */
+    /* --align-items: ; */
+
+    /* --gap: ; */
+    /* --gap-minimum: ; */
+    /* --gap-maximum: ; */
+
+    /* --margin: ; */
+    /* --margin-minimum: ; */
+    /* --margin-maximum: ; */
+
+    /* --padding: ; */
+    /* --padding-minimum: ; */
+    /* --padding-maximum: ; */
+
+    /* ----------------------------------------------
+       TAG: BODY
+    ---------------------------------------------- */
+    /* --body-background-color: ; */
+    /* --body-color: ; */
+    /* --body-font-family: ; */
+    /* --body-font-size: ; */
+    /* --body-line-height: ; */
+
+    /* ----------------------------------------------
+       TAG: A
+    ---------------------------------------------- */
+    /* --a-text-decoration: ; */
+    /* --a-hover-text-decoration: ; */
+    /* --a-color: ; */
+    /* --a-hover-color: ; */
+
+    /* ----------------------------------------------
+       TAG: P
+    ---------------------------------------------- */
+    /* --p-font-size: ; */
+    /* --p-line-height: ; */
+    /* --p-display: ; */
+
+    /* ----------------------------------------------
+       TAG: H1
+    ---------------------------------------------- */
+    /* --h1-font-size: ; */
+    /* --h1-font-weight: ; */
+    /* --h1-line-height: ; */
+    /* --h1-letter-spacing: ; */
+    /* --h1-text-transform: ; */
+    /* --h1-color: ; */
+    /* --h1-text-align: ; */
+    /* --h1-font-family: ; */
+    /* --h1-font-style: ; */
+
+    /* ----------------------------------------------
+       TAG: H2
+    ---------------------------------------------- */
+    /* --h2-font-size: ; */
+    /* --h2-font-weight: ; */
+    /* --h2-line-height: ; */
+    /* --h2-letter-spacing: ; */
+    /* --h2-text-transform: ; */
+    /* --h2-color: ; */
+    /* --h2-text-align: ; */
+    /* --h2-font-family: ; */
+    /* --h2-font-style: ; */
+
+    /* ----------------------------------------------
+       TAG: H3
+    ---------------------------------------------- */
+    /* --h3-font-size: ; */
+    /* --h3-font-weight: ; */
+    /* --h3-line-height: ; */
+    /* --h3-letter-spacing: ; */
+    /* --h3-text-transform: ; */
+    /* --h3-color: ; */
+    /* --h3-text-align: ; */
+    /* --h3-font-family: ; */
+    /* --h3-font-style: ; */
+
+    /* ----------------------------------------------
+       TAG: H4
+    ---------------------------------------------- */
+    /* --h4-font-size: ; */
+    /* --h4-font-weight: ; */
+    /* --h4-line-height: ; */
+    /* --h4-letter-spacing: ; */
+    /* --h4-text-transform: ; */
+    /* --h4-color: ; */
+    /* --h4-text-align: ; */
+    /* --h4-font-family: ; */
+    /* --h4-font-style: ; */
+
+    /* ----------------------------------------------
+       TAG: H5
+    ---------------------------------------------- */
+    /* --h5-font-size: ; */
+    /* --h5-font-weight: ; */
+    /* --h5-line-height: ; */
+    /* --h5-letter-spacing: ; */
+    /* --h5-text-transform: ; */
+    /* --h5-color: ; */
+    /* --h5-text-align: ; */
+    /* --h5-font-family: ; */
+    /* --h5-font-style: ; */
+
+    /* ----------------------------------------------
+       TAG: H6
+    ---------------------------------------------- */
+    /* --h6-font-size: ; */
+    /* --h6-font-weight: ; */
+    /* --h6-line-height: ; */
+    /* --h6-letter-spacing: ; */
+    /* --h6-text-transform: ; */
+    /* --h6-color: ; */
+    /* --h6-text-align: ; */
+    /* --h6-font-family: ; */
+    /* --h6-font-style: ; */
+
 }
