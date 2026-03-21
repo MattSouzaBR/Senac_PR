@@ -1,0 +1,119 @@
+@import url(justify-content.css);
+@import url(align-content.css);
+
+/* Display Utilities */
+.d-block, .d-b, .display-block, .block {
+    display: block;
+}
+
+.d-contents, .d-c, .display-contents, .contents {
+    display: contents;
+}
+
+.d-flex, .d-f, .display-flex, .flex {
+    display: flex;
+}
+
+.d-flexbox, .d-fb, .display-flexbox, .flexbox {
+    display: flexbox;
+}
+
+.d-flow-root, .d-fr, .display-flow-root, .flow-root {
+    display: flow-root;
+}
+
+.d-grid, .d-g, .display-grid, .grid {
+    display: grid;
+}
+
+.d-inline, .d-i, .display-inline, .inline {
+    display: inline;
+}
+
+.d-inline-block, .d-ib, .display-inline-block, .inline-block {
+    display: inline-block;
+}
+
+.d-inline-flex, .d-if, .display-inline-flex, .inline-flex {
+    display: inline-flex;
+}
+
+.d-inline-flexbox, .d-ifb, .display-inline-flexbox, .inline-flexbox {
+    display: inline-flexbox;
+}
+
+.d-inline-table, .d-it, .display-inline-table, .inline-table {
+    display: inline-table;
+}
+
+.d-list-item, .d-li, .display-list-item, .list-item .d-list {
+    display: list-item;
+}
+
+.d-none, .d-n, .display-none, .none {
+    display: none;
+}
+
+.d-ruby, .d-r, .display-ruby, .ruby {
+    display: ruby;
+}
+
+.d-ruby-base, .d-rb, .display-ruby-base, .ruby-base {
+    display: ruby-base;
+}
+
+.d-ruby-base-container, .d-rbc, .display-ruby-base-container, .ruby-base-container {
+    display: ruby-base-container;
+}
+
+.d-ruby-text, .d-rt, .display-ruby-text, .ruby-text {
+    display: ruby-text;
+}
+
+.d-ruby-text-container, .d-rtc, .display-ruby-text-container, .ruby-text-container {
+    display: ruby-text-container;
+}
+
+.d-run-internal, .d-run-in, .display-run-in, .run-in {
+    display: run-in;
+}
+
+.d-table, .d-t, .display-table, .table {
+    display: table;
+}
+
+.d-table-caption, .d-tc, .display-table-caption, .table-caption {
+    display: table-caption;
+}
+
+.d-table-cell, .d-td, .display-table-cell, .table-cell {
+    display: table-cell;
+}
+
+.d-table-column, .d-tcol, .display-table-column, .table-column {
+    display: table-column;
+}
+
+.d-table-column-group, .d-tcolgrp, .display-table-column-group, .table-column-group {
+    display: table-column-group;
+}
+
+.d-table-footer-group, .d-tfg, .display-table-footer-group, .table-footer-group {
+    display: table-footer-group;
+}
+
+.d-table-header-group, .d-thg, .display-table-header-group, .table-header-group {
+    display: table-header-group;
+}
+
+.d-table-row, .d-tr, .display-table-row, .table-row {
+    display: table-row;
+}
+
+.d-table-row-group, .d-trg, .display-table-row-group, .table-row-group {
+    display: table-row-group;
+}
+
+.d-table-section, .d-ts, .display-table-section, .table-section {
+    display: table-section;
+}

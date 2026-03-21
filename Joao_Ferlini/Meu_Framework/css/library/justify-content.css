@@ -1,0 +1,51 @@
+.justify-content-center, .content-center {
+    justify-content: center;
+}
+
+.justify-content-end, .content-end {
+    justify-content: end;
+}
+
+.justify-content-start, .content-start {
+    justify-content: start;
+}
+
+.justify-content-between, .content-between {
+    justify-content: between;
+}
+
+.justify-content-around, .content-around {
+    justify-content: around;
+}
+
+.justify-content-evenly, .content-evenly {
+    justify-content: evenly;
+}
+
+.justify-content-stretch, .content-stretch {
+    justify-content: stretch;
+}
+
+.justify-content-baseline, .content-baseline {
+    justify-content: baseline;
+}
+
+.justify-content-left, .content-left {
+    justify-content: left;
+}
+
+.justify-content-right, .content-right {
+    justify-content: right;
+}
+
+.justify-content-space-between, .content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around, .content-space-around {
+    justify-content: space-around;
+}
+
+.justify-content-space-evenly, .content-space-evenly {
+    justify-content: space-evenly;
+}
