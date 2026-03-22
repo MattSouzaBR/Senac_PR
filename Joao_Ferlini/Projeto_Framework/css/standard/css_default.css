@@ -1,70 +1,62 @@
 :root {
 
     /* ==============================================
-       CSS DEFAULT — Baseado nas normas ABNT
-       NBR 14724:2024 (trabalhos acadêmicos)
-       NBR 6024:2012  (numeração progressiva / hierarquia de seções)
+       CSS DEFAULT
+       Duas camadas de estilo:
+         1. Web/SEO — padrão global, fora do .folha-abnt
+         2. ABNT    — dentro do .folha-abnt
+                      NBR 14724:2024 + NBR 6024:2012
        ============================================== */
 
     /* ----------------------------------------------
        CORES
     ---------------------------------------------- */
-    --default-background-color: #f5f5f5;    /* Papel branco (NBR 14724) */
-    --default-text-color: #1f1f1f;          /* Texto na cor preta (NBR 14724) */
+    --default-background-color: #f5f5f5;
+    --default-text-color:       #1f1f1f;
 
     /* ----------------------------------------------
        TIPOGRAFIA GERAL
-       Fonte recomendada: Arial ou Times New Roman
-       Tamanho padrão: 12pt = 16px
-       (NBR 14724, seção 5.1)
     ---------------------------------------------- */
     --default-font-family: Arial, sans-serif;
-    --default-font-size: 16px;              /* 12pt ≈ 16px */
-    --default-font-size-small: 13.33px;     /* 10pt ≈ 13.33px — notas de rodapé, legendas, citações longas */
+    --default-font-size:   16px;
 
     /* ----------------------------------------------
-       HEADINGS — Hierarquia tipográfica
-       h1 = Títulos sem numeração (capa, resumo, sumário, referências)
-            centralizado + MAIÚSCULAS + negrito (NBR 14724 / NBR 6024)
-       h2 = Seção primária:    MAIÚSCULAS + negrito      (NBR 6024)
-       h3 = Seção secundária:  negrito                   (NBR 6024)
-       h4 = Seção terciária:   itálico                   (NBR 6024)
-       h5 = Seção quaternária: sem destaque              (NBR 6024)
-       h6 = Seção quinária:    itálico + sublinhado      (NBR 6024)
-       Todos no tamanho 12pt conforme NBR 14724
+       HEADINGS — Camada Web/SEO
+       Escala visual com tamanhos distintos
+       Recomendado por Google, Bing, Yahoo
     ---------------------------------------------- */
 
-    /* font-size: todos 12pt = 16px */
-    --default-font-size-h1: var(--default-font-size);
-    --default-font-size-h2: var(--default-font-size);
-    --default-font-size-h3: var(--default-font-size);
-    --default-font-size-h4: var(--default-font-size);
-    --default-font-size-h5: var(--default-font-size);
-    --default-font-size-h6: var(--default-font-size);
+    /* font-size */
+    --default-font-size-h1: 2rem;       /* 32px */
+    --default-font-size-h2: 1.5rem;     /* 24px */
+    --default-font-size-h3: 1.25rem;    /* 20px */
+    --default-font-size-h4: 1.125rem;   /* 18px */
+    --default-font-size-h5: 1rem;       /* 16px */
+    --default-font-size-h6: 0.875rem;   /* 14px */
 
     /* font-weight */
-    --default-font-weight-h1: 700;          /* Negrito */
-    --default-font-weight-h2: 700;          /* Negrito */
-    --default-font-weight-h3: 700;          /* Negrito */
-    --default-font-weight-h4: 400;          /* Normal (destaque via itálico) */
-    --default-font-weight-h5: 400;          /* Normal */
-    --default-font-weight-h6: 400;          /* Normal (destaque via itálico + sublinhado) */
-
-    /* text-transform */
-    --default-text-transform-h1: uppercase; /* MAIÚSCULAS */
-    --default-text-transform-h2: uppercase; /* MAIÚSCULAS */
-    --default-text-transform-h3: none;
-    --default-text-transform-h4: none;
-    --default-text-transform-h5: none;
-    --default-text-transform-h6: none;
+    --default-font-weight-h1: 700;
+    --default-font-weight-h2: 700;
+    --default-font-weight-h3: 600;
+    --default-font-weight-h4: 600;
+    --default-font-weight-h5: 500;
+    --default-font-weight-h6: 500;
 
     /* font-style */
     --default-font-style-h1: normal;
     --default-font-style-h2: normal;
     --default-font-style-h3: normal;
-    --default-font-style-h4: italic;        /* Itálico */
+    --default-font-style-h4: normal;
     --default-font-style-h5: normal;
-    --default-font-style-h6: italic;        /* Itálico */
+    --default-font-style-h6: normal;
+
+    /* text-transform */
+    --default-text-transform-h1: none;
+    --default-text-transform-h2: none;
+    --default-text-transform-h3: none;
+    --default-text-transform-h4: none;
+    --default-text-transform-h5: none;
+    --default-text-transform-h6: none;
 
     /* text-decoration */
     --default-text-decoration-h1: none;
@@ -72,86 +64,160 @@
     --default-text-decoration-h3: none;
     --default-text-decoration-h4: none;
     --default-text-decoration-h5: none;
-    --default-text-decoration-h6: underline; /* Sublinhado */
+    --default-text-decoration-h6: none;
 
     /* text-align */
-    --default-text-align-h1: center;        /* Títulos sem numeração: centralizado */
-    --default-text-align-h2: left;          /* Seções numeradas: esquerda */
+    --default-text-align-h1: left;
+    --default-text-align-h2: left;
     --default-text-align-h3: left;
     --default-text-align-h4: left;
     --default-text-align-h5: left;
     --default-text-align-h6: left;
 
-    /* line-height: espaçamento 1,5 (NBR 14724, seção 5.2) */
-    --default-line-height-h1: 1.5;
-    --default-line-height-h2: 1.5;
-    --default-line-height-h3: 1.5;
-    --default-line-height-h4: 1.5;
-    --default-line-height-h5: 1.5;
-    --default-line-height-h6: 1.5;
+    /* line-height */
+    --default-line-height-h1: 1.2;
+    --default-line-height-h2: 1.25;
+    --default-line-height-h3: 1.3;
+    --default-line-height-h4: 1.35;
+    --default-line-height-h5: 1.4;
+    --default-line-height-h6: 1.4;
 
     /* ----------------------------------------------
-       PARÁGRAFO (NBR 14724, seção 5.2 e 5.3)
-       Espaçamento 1,5 entre linhas
-       Recuo de 1,25cm na primeira linha
-       Texto justificado
+       HEADINGS — Camada ABNT
+       Usados dentro do .folha-abnt
+       NBR 6024: todos 16px, diferenciados por estilo
     ---------------------------------------------- */
-    --default-font-size-p: var(--default-font-size);
-    --default-line-height-p: 1.5;
-    --default-display-p: block;
-    --default-text-indent-p: 1.25cm;        /* Recuo de parágrafo */
-    --default-text-align-p: justify;        /* Texto justificado */
+
+    /* font-size: todos 12pt = 16px */
+    --default-abnt-font-size-h1: 16px;
+    --default-abnt-font-size-h2: 16px;
+    --default-abnt-font-size-h3: 16px;
+    --default-abnt-font-size-h4: 16px;
+    --default-abnt-font-size-h5: 16px;
+    --default-abnt-font-size-h6: 16px;
+
+    /* font-weight */
+    --default-abnt-font-weight-h1: 700;     /* Negrito */
+    --default-abnt-font-weight-h2: 700;     /* Negrito */
+    --default-abnt-font-weight-h3: 700;     /* Negrito */
+    --default-abnt-font-weight-h4: 400;     /* Normal — destaque via itálico */
+    --default-abnt-font-weight-h5: 400;     /* Normal */
+    --default-abnt-font-weight-h6: 400;     /* Normal — destaque via itálico + sublinhado */
+
+    /* font-style */
+    --default-abnt-font-style-h1: normal;
+    --default-abnt-font-style-h2: normal;
+    --default-abnt-font-style-h3: normal;
+    --default-abnt-font-style-h4: italic;
+    --default-abnt-font-style-h5: normal;
+    --default-abnt-font-style-h6: italic;
+
+    /* text-transform */
+    --default-abnt-text-transform-h1: uppercase;    /* h1 = título sem numeração */
+    --default-abnt-text-transform-h2: uppercase;    /* h2 = seção primária */
+    --default-abnt-text-transform-h3: none;
+    --default-abnt-text-transform-h4: none;
+    --default-abnt-text-transform-h5: none;
+    --default-abnt-text-transform-h6: none;
+
+    /* text-decoration */
+    --default-abnt-text-decoration-h1: none;
+    --default-abnt-text-decoration-h2: none;
+    --default-abnt-text-decoration-h3: none;
+    --default-abnt-text-decoration-h4: none;
+    --default-abnt-text-decoration-h5: none;
+    --default-abnt-text-decoration-h6: underline;
+
+    /* text-align */
+    --default-abnt-text-align-h1: center;   /* Títulos sem numeração: centralizado */
+    --default-abnt-text-align-h2: left;
+    --default-abnt-text-align-h3: left;
+    --default-abnt-text-align-h4: left;
+    --default-abnt-text-align-h5: left;
+    --default-abnt-text-align-h6: left;
+
+    /* line-height */
+    --default-abnt-line-height-h1: 1.5;
+    --default-abnt-line-height-h2: 1.5;
+    --default-abnt-line-height-h3: 1.5;
+    --default-abnt-line-height-h4: 1.5;
+    --default-abnt-line-height-h5: 1.5;
+    --default-abnt-line-height-h6: 1.5;
 
     /* ----------------------------------------------
-       LISTAS (NBR 14724)
-       Sem marcadores visuais, só recuo
-       Aplicado apenas dentro de .conteudo-abnt
+       PARÁGRAFO — Camada Web/SEO
     ---------------------------------------------- */
-    --default-list-style: none;
-    --default-list-padding-left: 1.25cm;    /* Mesmo recuo do parágrafo */
+    --default-font-size-p:   16px;
+    --default-line-height-p: 1.6;           /* Mais confortável para leitura em tela */
+    --default-display-p:     block;
+    --default-text-indent-p: 0;             /* Sem recuo — padrão web */
+    --default-text-align-p:  left;          /* Alinhado à esquerda — padrão web */
+
+    /* ----------------------------------------------
+       PARÁGRAFO — Camada ABNT
+       Usado dentro do .folha-abnt
+    ---------------------------------------------- */
+    --default-abnt-line-height-p: 1.5;
+    --default-abnt-text-indent-p: 1.25cm;   /* Recuo de parágrafo */
+    --default-abnt-text-align-p:  justify;  /* Texto justificado */
+
+    /* ----------------------------------------------
+       LISTAS
+       Fora do .folha-abnt: marcadores normais do browser
+       Dentro do .folha-abnt: sem marcadores, só recuo (NBR 14724)
+    ---------------------------------------------- */
+    --default-list-style:        none;
+    --default-list-padding-left: 1.25cm;
 
     /* ----------------------------------------------
        BODY
     ---------------------------------------------- */
     --default-body-background-color: var(--default-background-color);
-    --default-body-color: var(--default-text-color);
-    --default-body-font-family: var(--default-font-family);
-    --default-body-font-size: var(--default-font-size);
-    --default-body-line-height: 1.5;
+    --default-body-color:            var(--default-text-color);
+    --default-body-font-family:      var(--default-font-family);
+    --default-body-font-size:        var(--default-font-size);
+    --default-body-line-height:      1.6;
 
     /* ----------------------------------------------
-       MARGENS DE PÁGINA (NBR 14724, seção 5.1)
+       MARGENS DE PÁGINA ABNT (NBR 14724, seção 5.1)
        Superior: 3cm | Esquerda: 3cm
        Inferior: 2cm | Direita:  2cm
+       Convertidas para px: 1cm ≈ 37.8px
     ---------------------------------------------- */
-    --default-margin-page-top:    113px;    /* 3cm ≈ 113px */
-    --default-margin-page-left:   113px;    /* 3cm ≈ 113px */
-    --default-margin-page-bottom: 76px;     /* 2cm ≈  76px */
-    --default-margin-page-right:  76px;     /* 2cm ≈  76px */
+    --default-margin-page-top:    113px;    /* 3cm */
+    --default-margin-page-left:   113px;    /* 3cm */
+    --default-margin-page-bottom: 76px;     /* 2cm */
+    --default-margin-page-right:  76px;     /* 2cm */
+
+    /* ----------------------------------------------
+       FIGURAS ABNT (NBR 14724)
+       10pt ≈ 13.33px para legenda e fonte
+    ---------------------------------------------- */
+    --default-abnt-font-size-small: 13.33px;
 
     /* ----------------------------------------------
        TAG: A
     ---------------------------------------------- */
-    --default-a-text-decoration: none;
+    --default-a-text-decoration:       none;
     --default-a-hover-text-decoration: underline;
-    --default-a-color: inherit;
-    --default-a-hover-color: inherit;
+    --default-a-color:                 inherit;
+    --default-a-hover-color:           inherit;
 
     /* ----------------------------------------------
        LAYOUT (utilitários internos do framework)
     ---------------------------------------------- */
     --default-justify-content: center;
-    --default-align-items: center;
+    --default-align-items:     center;
 
-    --default-gap: 10px;
+    --default-gap:         10px;
     --default-gap-minimum: 5px;
     --default-gap-maximum: 30px;
 
-    --default-margin: 10px;
+    --default-margin:         10px;
     --default-margin-minimum: 5px;
     --default-margin-maximum: 30px;
 
-    --default-padding: 10px;
+    --default-padding:         10px;
     --default-padding-minimum: 5px;
     --default-padding-maximum: 30px;
 }

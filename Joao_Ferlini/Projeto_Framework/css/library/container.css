@@ -1,0 +1,100 @@
+/* ==============================================
+   CONTAINER.CSS
+   Centraliza e limita a largura do conteúdo.
+   Sobrescreve o .container do Bootstrap quando
+   carregado depois dele no <head>.
+
+   Uso recomendado: aplicar no filho (.ncol),
+   não no pai (.nrow) — assim o pai pode ter
+   background fullwidth e o filho fica centralizado.
+
+   Exemplo:
+     <section class="nrow" style="background:#111;">
+         <div class="ncol container">conteúdo</div>
+     </section>
+
+   Aliases de breakpoint:
+     w+número:  w320, w576, w768, w992, w1200, w1400, w1600, w1920, w2560
+     notável:   n1(320) ... n9(2560)
+     semântico: mobile, tablet, desktop, ultrawide, widescreen
+   ============================================== */
+
+/* ----------------------------------------------
+   CONTAINER PADRÃO
+   Equivalente ao container-xl do Bootstrap
+   mas usando clamp para fluidez total
+---------------------------------------------- */
+.container {
+    width:     clamp(280px, 80%, 1140px) !important;
+    margin:    0 auto;
+}
+
+/* ----------------------------------------------
+   VARIAÇÕES DE TAMANHO
+---------------------------------------------- */
+.container-xs   { width: clamp(280px, 80%, 480px) !important;  margin: 0 auto; }
+.container-sm   { width: clamp(280px, 80%, 540px) !important;  margin: 0 auto; }
+.container-md   { width: clamp(280px, 80%, 720px) !important;  margin: 0 auto; }
+.container-lg   { width: clamp(280px, 80%, 960px) !important;  margin: 0 auto; }
+.container-xl   { width: clamp(280px, 80%, 1140px) !important; margin: 0 auto; }
+.container-xxl  { width: clamp(280px, 80%, 1400px) !important; margin: 0 auto; }
+.container-full { width: 100%;                       margin: 0 auto; } /* sem limite */
+
+/* ----------------------------------------------
+   ALIASES — breakpoint como largura máxima
+   w+número | n+notável | semântico
+---------------------------------------------- */
+
+/* w320 / n1 / mobile — máx 320px */
+.w320-container, .n1-container, .mobile-container {
+    width: clamp(280px, 80%, 320px) !important;
+    margin: 0 auto;
+}
+
+/* w576 / n2 — máx 576px */
+.w576-container, .n2-container {
+    width: clamp(280px, 80%, 576px) !important;
+    margin: 0 auto;
+}
+
+/* w768 / n3 / tablet — máx 768px */
+.w768-container, .n3-container, .tablet-container {
+    width: clamp(280px, 80%, 768px) !important;
+    margin: 0 auto;
+}
+
+/* w992 / n4 — máx 992px */
+.w992-container, .n4-container {
+    width: clamp(280px, 80%, 992px) !important;
+    margin: 0 auto;
+}
+
+/* w1200 / n5 / desktop — máx 1200px */
+.w1200-container, .n5-container, .desktop-container {
+    width: clamp(280px, 80%, 1200px) !important;
+    margin: 0 auto;
+}
+
+/* w1400 / n6 — máx 1400px */
+.w1400-container, .n6-container {
+    width: clamp(280px, 80%, 1400px) !important;
+    margin: 0 auto;
+}
+
+/* w1600 / n7 — máx 1600px */
+.w1600-container, .n7-container {
+    width: clamp(280px, 80%, 1600px) !important;
+    margin: 0 auto;
+}
+
+/* w1920 / n8 / ultrawide — máx 1920px */
+.w1920-container, .n8-container, .ultrawide-container {
+    width: clamp(280px, 80%, 1920px) !important;
+    margin: 0 auto;
+}
+
+/* w2560 / n9 / widescreen — máx 2560px */
+.w2560-container, .n9-container, .widescreen-container {
+    width: clamp(280px, 80%, 2560px) !important;
+    margin: 0 auto;
+}

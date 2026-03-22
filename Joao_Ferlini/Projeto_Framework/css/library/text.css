@@ -1,0 +1,147 @@
+/* ==============================================
+   TEXT.CSS
+   Utilitários de tipografia e cor de texto.
+   Breakpoints desktop first (max-width):
+     w+número | n+notável | semântico
+   ============================================== */
+
+/* ----------------------------------------------
+   TEXT-ALIGN
+---------------------------------------------- */
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+.text-start   { text-align: start; }
+.text-end     { text-align: end; }
+
+/* ----------------------------------------------
+   TEXT-TRANSFORM
+---------------------------------------------- */
+.text-uppercase  { text-transform: uppercase; }
+.text-lowercase  { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-no-transform { text-transform: none; }
+
+/* ----------------------------------------------
+   TEXT-DECORATION
+---------------------------------------------- */
+.text-underline    { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-no-underline,
+.text-none-decoration { text-decoration: none; }
+
+/* ----------------------------------------------
+   TEXT-OVERFLOW
+---------------------------------------------- */
+.text-truncate {
+    overflow:      hidden;
+    white-space:   nowrap;
+    text-overflow: ellipsis;
+}
+.text-wrap   { white-space: normal; }
+.text-nowrap { white-space: nowrap; }
+.text-break  { word-break: break-all; }
+
+/* ----------------------------------------------
+   LINE-HEIGHT
+---------------------------------------------- */
+.lh-1    { line-height: 1; }
+.lh-sm   { line-height: 1.25; }
+.lh-base { line-height: 1.5; }
+.lh-lg   { line-height: 1.75; }
+.lh-xl   { line-height: 2; }
+
+/* ----------------------------------------------
+   LETTER-SPACING
+---------------------------------------------- */
+.tracking-tight   { letter-spacing: -0.05em; }
+.tracking-normal  { letter-spacing: 0; }
+.tracking-wide    { letter-spacing: 0.05em; }
+.tracking-wider   { letter-spacing: 0.1em; }
+.tracking-widest  { letter-spacing: 0.2em; }
+
+/* ----------------------------------------------
+   COR DE TEXTO — fixas
+---------------------------------------------- */
+.text-white,
+.text-white *     { color: #ffffff !important; }
+.text-black,
+.text-black *     { color: #000000 !important; }
+.text-muted,
+.text-muted *     { color: #6c757d !important; }
+.text-light       { color: #f8f9fa !important; }
+.text-dark        { color: #212529 !important; }
+
+/* ----------------------------------------------
+   COR DE TEXTO — variáveis do projeto
+   (descomente e defina em variables.css)
+---------------------------------------------- */
+.text-primary     { color: var(--primary-color,   #0d6efd) !important; }
+.text-secondary   { color: var(--secondary-color, #6c757d) !important; }
+.text-accent      { color: var(--accent-color,    #fd7e14) !important; }
+.text-success     { color: var(--text-color-success, #198754) !important; }
+.text-warning     { color: var(--text-color-warning, #ffc107) !important; }
+.text-danger      { color: var(--text-color-error,   #dc3545) !important; }
+.text-info        { color: var(--text-color-info,    #0dcaf0) !important; }
+
+/* ----------------------------------------------
+   OPACIDADE DE TEXTO
+---------------------------------------------- */
+.text-opacity-25  { opacity: 0.25; }
+.text-opacity-50  { opacity: 0.50; }
+.text-opacity-75  { opacity: 0.75; }
+.text-opacity-100 { opacity: 1; }
+
+/* ----------------------------------------------
+   BREAKPOINTS — Desktop first
+   (text-align e text-color são os mais usados)
+---------------------------------------------- */
+
+/* w1200 / n5 / desktop */
+@media (max-width: 1200px) {
+    .w1200-text-left,    .n5-text-left,    .desktop-text-left    { text-align: left; }
+    .w1200-text-center,  .n5-text-center,  .desktop-text-center  { text-align: center; }
+    .w1200-text-right,   .n5-text-right,   .desktop-text-right   { text-align: right; }
+    .w1200-text-white,   .n5-text-white,   .desktop-text-white   { color: #ffffff !important; }
+    .w1200-text-black,   .n5-text-black,   .desktop-text-black   { color: #000000 !important; }
+    .w1200-text-muted,   .n5-text-muted,   .desktop-text-muted   { color: #6c757d !important; }
+}
+
+/* w992 / n4 */
+@media (max-width: 992px) {
+    .w992-text-left,   .n4-text-left   { text-align: left; }
+    .w992-text-center, .n4-text-center { text-align: center; }
+    .w992-text-right,  .n4-text-right  { text-align: right; }
+    .w992-text-white,  .n4-text-white  { color: #ffffff !important; }
+    .w992-text-black,  .n4-text-black  { color: #000000 !important; }
+    .w992-text-muted,  .n4-text-muted  { color: #6c757d !important; }
+}
+
+/* w768 / n3 / tablet */
+@media (max-width: 768px) {
+    .w768-text-left,    .n3-text-left,    .tablet-text-left    { text-align: left; }
+    .w768-text-center,  .n3-text-center,  .tablet-text-center  { text-align: center; }
+    .w768-text-right,   .n3-text-right,   .tablet-text-right   { text-align: right; }
+    .w768-text-white,   .n3-text-white,   .tablet-text-white   { color: #ffffff !important; }
+    .w768-text-black,   .n3-text-black,   .tablet-text-black   { color: #000000 !important; }
+    .w768-text-muted,   .n3-text-muted,   .tablet-text-muted   { color: #6c757d !important; }
+}
+
+/* w576 / n2 */
+@media (max-width: 576px) {
+    .w576-text-left,   .n2-text-left   { text-align: left; }
+    .w576-text-center, .n2-text-center { text-align: center; }
+    .w576-text-right,  .n2-text-right  { text-align: right; }
+    .w576-text-white,  .n2-text-white  { color: #ffffff !important; }
+    .w576-text-black,  .n2-text-black  { color: #000000 !important; }
+}
+
+/* w320 / n1 / mobile */
+@media (max-width: 320px) {
+    .w320-text-left,    .n1-text-left,    .mobile-text-left    { text-align: left; }
+    .w320-text-center,  .n1-text-center,  .mobile-text-center  { text-align: center; }
+    .w320-text-right,   .n1-text-right,   .mobile-text-right   { text-align: right; }
+    .w320-text-white,   .n1-text-white,   .mobile-text-white   { color: #ffffff !important; }
+    .w320-text-black,   .n1-text-black,   .mobile-text-black   { color: #000000 !important; }
+}

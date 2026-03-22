@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../css/standard/variables.css">
+    <link rel="stylesheet" href="../../../../css/standard/css_favorites.css">
+    <link rel="stylesheet" href="../../../../css/standard/reset.css">
+    <link rel="stylesheet" href="../../../../css/standard/autofit.css">
+    <link rel="stylesheet" href="../../../../css/standard/normalize.css">
+    <link rel="stylesheet" href="../../../css/index-style.css">
+<body><!-- ================================================
+     HEADER TEMPLATES
+     tests/templates/header.html
+     Conteúdo do body apenas.
+     Requer Bootstrap 5 e seu framework linkados no head.
+     Ordem do head:
+       1. bootstrap.css
+       2. variables.css
+       3. css_favorites.css
+       4. reset.css
+       5. autofit.css
+       6. display.css
+       7. container.css
+       8. normalize.css
+     ================================================ -->
+
+<style>
+    /* Estilos visuais de apoio para os templates — não são do framework */
+    .template-titulo {
+        background: #1e1e1e;
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+    .template-titulo.bootstrap { border-left: 4px solid #7952b3; }
+    .template-titulo.sistema   { border-left: 4px solid #27ae60; }
+    .separador-tema { border: none; border-top: 2px dashed #ccc; margin: 2.5rem 0 1rem; }
+    .tema-titulo { text-align:center; font-size:0.75rem; font-weight:700; color:#999; letter-spacing:0.2em; text-transform:uppercase; margin:2rem 0 1rem; }
+
+    /* Estilos visuais dos headers — cores, fontes, sombras */
+    .h-minimalista          { background:#fff; border-bottom:1px solid #e5e5e5; height:64px; }
+    .h-dark                 { background:#111; padding:1.5rem 0; }
+    .h-dark a               { text-decoration:none; }
+    .h-duplo-util           { background:#f0f0f0; font-size:0.8rem; padding:0.4rem 0; }
+    .h-duplo-util a         { color:#555; }
+    .h-duplo-nav            { background:#fff; box-shadow:0 1px 4px rgba(0,0,0,0.07); padding:1rem 0; }
+    .h-saas                 { background:#fff; border-bottom:1px solid #e2e8f0; height:56px; }
+    .h-ecom-anuncio         { background:#2ecc71; padding:0.4rem 0; }
+    .h-ecom-nav             { background:#fff; border-bottom:1px solid #eee; padding:1rem 0; }
+    .h-ecom-cats            { background:#fff; border-bottom:1px solid #eee; padding:0.5rem 0; }
+    .h-jornal               { border-bottom:3px solid #c0392b; padding:0.75rem 0; }
+    .h-landing              { background:#0a0a0a; padding:1.25rem 0; }
+    .h-moda                 { background:#fff; box-shadow:0 1px 8px rgba(0,0,0,0.07); padding:1.25rem 0; }
+    .h-saas2                { background:#6c5ce7; padding:1rem 0; }
+    .sidebar-nav            { background:#1a1a2e; padding:1rem; width:180px; min-width:180px; flex:none; }
+    .sidebar-content        { background:#f4f4f4; padding:2rem; flex:1; }
+    .breadcrumb-item        { color:#94a3b8; font-size:0.85rem; }
+    .breadcrumb-item.active { color:#1e293b; font-weight:600; }
+    .breadcrumb-sep         { color:#cbd5e1; }
+    .avatar                 { width:32px; height:32px; background:#6c5ce7; border-radius:50%; color:#fff; font-size:0.8rem; font-weight:700; }
+    .btn-novo               { background:none; border:1px solid #e2e8f0; padding:0.35rem 0.75rem; border-radius:6px; font-size:0.85rem; cursor:pointer; }
+    .tag-badge              { background:#27ae60; color:#fff; border-radius:50%; padding:1px 6px; font-size:0.75rem; }
+    .busca-ecom             { border:2px solid #27ae60; border-radius:8px; overflow:hidden; flex:1; max-width:400px; }
+    .busca-ecom input       { border:none; padding:0.5rem 1rem; outline:none; font-size:0.9rem; flex:1; }
+    .busca-ecom button      { background:#27ae60; color:#fff; border:none; padding:0.5rem 1rem; cursor:pointer; }
+    .busca-jornal           { border:1px solid #ddd; padding:0.35rem 0.75rem; border-radius:20px; font-size:0.85rem; outline:none; max-width:180px; }
+    .icone-landing          { width:28px; height:28px; background:#f59e0b; border-radius:6px; display:inline-block; }
+    .btn-cta-landing        { background:#f59e0b; color:#0a0a0a; padding:0.5rem 1.25rem; border-radius:6px; font-size:0.9rem; font-weight:700; text-decoration:none; }
+    .btn-gratis-saas        { background:#fff; color:#6c5ce7; padding:0.4rem 1rem; border-radius:6px; font-size:0.9rem; font-weight:600; text-decoration:none; }
+    .sidebar-app            { height:200px; overflow:hidden; }
+</style>
+
+<!-- ================================================
+     TEMA 1 — MINIMALISTA
+     ================================================ -->
+<p class="tema-titulo">① Minimalista — logo esquerda, nav direita</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<nav class="navbar navbar-light bg-white border-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold" href="#">MeuSite</a>
+        <div class="d-flex gap-4">
+            <a class="nav-link" href="#">Início</a>
+            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" href="#">Serviços</a>
+            <a class="nav-link" href="#">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-minimalista nrow">
+    <div class="ncol container df jc-between ai-center">
+        <a href="#" class="fw-bold fz-lg">MeuSite</a>
+        <nav class="df g-8">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 2 — DARK COM LOGO CENTRALIZADO
+     ================================================ -->
+<p class="tema-titulo">② Dark — logo centralizado, nav embaixo</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<nav class="navbar navbar-dark bg-dark py-3">
+    <div class="container d-flex flex-column align-items-center gap-3">
+        <a class="navbar-brand fw-black fs-4 mb-0" href="#" style="letter-spacing:0.2em;">MARCA</a>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-white-50 text-decoration-none small text-uppercase">Início</a>
+            <a href="#" class="text-white-50 text-decoration-none small text-uppercase">Portfólio</a>
+            <a href="#" class="text-white-50 text-decoration-none small text-uppercase">Blog</a>
+            <a href="#" class="text-white text-decoration-none small text-uppercase">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-dark nrow text-white">
+    <div class="ncol container flex-dir-column ai g-5">
+        <a href="#" class="fw-bold fz-xl">MARCA</a>
+        <nav class="df g-8">
+            <a href="#">Início</a>
+            <a href="#">Portfólio</a>
+            <a href="#">Blog</a>
+            <a href="#" class="fw-bold">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 3 — DUPLO TOPO
+     ================================================ -->
+<p class="tema-titulo">③ Duplo topo — barra de utilidades + nav principal</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<header>
+    <div class="bg-light border-bottom py-1">
+        <div class="container d-flex justify-content-between">
+            <small class="text-muted"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="42212d2c3623362d02272f32302731236c212d2f6c2030">[email&#160;protected]</a></small>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-muted small text-decoration-none">Facebook</a>
+                <a href="#" class="text-muted small text-decoration-none">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-white shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold fs-4" href="#">Empresa<span class="text-danger">.</span></a>
+            <div class="d-flex gap-3 align-items-center">
+                <a class="nav-link" href="#">Produtos</a>
+                <a class="nav-link" href="#">Sobre</a>
+                <a href="#" class="btn btn-danger btn-sm">Fale conosco</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header>
+    <div class="h-duplo-util nrow">
+        <div class="ncol container df jc-between ai-center">
+            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a2aeafb5a0b5ae81a4acb1b3a4b2a0efa2aeacefa3b3">[email&#160;protected]</a></span>
+            <nav class="df g-5">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </nav>
+        </div>
+    </div>
+    <div class="h-duplo-nav nrow">
+        <div class="ncol container df jc-between ai-center">
+            <a href="#" class="fw-bold fz-xl">Empresa.</a>
+            <nav class="df g-5 ai-center">
+                <a href="#">Produtos</a>
+                <a href="#">Sobre</a>
+                <a href="#" class="btn btn-danger btn-sm">Fale conosco</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 4 — SaaS / DASHBOARD
+     ================================================ -->
+<p class="tema-titulo">④ SaaS — breadcrumb + ações do usuário</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<header class="border-bottom bg-white">
+    <div class="container py-2 d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-2 align-items-center small">
+            <span class="text-muted">Dashboard</span>
+            <span class="text-muted">/</span>
+            <span class="text-muted">Projetos</span>
+            <span class="text-muted">/</span>
+            <span class="fw-semibold">Site Institucional</span>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+            <button class="btn btn-outline-secondary btn-sm">+ Novo</button>
+            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width:32px;height:32px;font-size:0.8rem;font-weight:700;">MA</div>
+        </div>
+    </div>
+</header>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-saas nrow">
+    <div class="ncol container df jc-between ai-center">
+        <nav class="df g-3 ai-center">
+            <span class="breadcrumb-item">Dashboard</span>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-item">Projetos</span>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-item active">Site Institucional</span>
+        </nav>
+        <div class="df g-3 ai-center">
+            <button class="btn-novo">+ Novo</button>
+            <div class="avatar df ai jc-center">MA</div>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 5 — E-COMMERCE COMPLETO
+     ================================================ -->
+<p class="tema-titulo">⑤ E-commerce — anúncio + busca + categorias</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<header>
+    <div class="bg-success text-white text-center py-2 small fw-semibold">
+        🚚 Frete grátis acima de R$199 | Use o código BEMVINDO10
+    </div>
+    <div class="container py-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <a href="#" class="text-decoration-none fw-bold fs-4 text-success">shop<span class="text-dark">verde</span></a>
+            <div class="input-group" style="max-width:400px;">
+                <input type="text" class="form-control" placeholder="O que você procura?">
+                <button class="btn btn-success">Buscar</button>
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-dark text-decoration-none small">👤 Conta</a>
+                <a href="#" class="text-dark text-decoration-none small">🛒 <span class="badge bg-success">3</span></a>
+            </div>
+        </div>
+        <div class="d-flex gap-4 border-top pt-2">
+            <a href="#" class="text-secondary small text-decoration-none">Eletrônicos</a>
+            <a href="#" class="text-secondary small text-decoration-none">Moda</a>
+            <a href="#" class="text-secondary small text-decoration-none">Casa</a>
+            <a href="#" class="text-secondary small text-decoration-none">Esportes</a>
+        </div>
+    </div>
+</header>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header>
+    <div class="h-ecom-anuncio nrow">
+        <div class="ncol df jc-center fw-bold">
+            🚚 Frete grátis acima de R$199 | Use o código BEMVINDO10
+        </div>
+    </div>
+    <div class="h-ecom-nav nrow">
+        <div class="ncol container df jc-between ai-center">
+            <a href="#" class="fw-bold fz-xl">shopverde</a>
+            <div class="busca-ecom df">
+                <input type="text" placeholder="O que você procura?">
+                <button>Buscar</button>
+            </div>
+            <nav class="df g-5 ai-center">
+                <a href="#">👤 Conta</a>
+                <a href="#">🛒 <span class="tag-badge">3</span></a>
+            </nav>
+        </div>
+    </div>
+    <div class="h-ecom-cats nrow">
+        <div class="ncol container df g-8">
+            <a href="#">Eletrônicos</a>
+            <a href="#">Moda</a>
+            <a href="#">Casa</a>
+            <a href="#">Esportes</a>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 6 — JORNAL / NOTÍCIAS
+     ================================================ -->
+<p class="tema-titulo">⑥ Jornal — logo editorial + sub-nav de editorias</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<header class="border-bottom border-danger border-3 py-2">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <small class="text-muted">Sábado, 22 de março de 2026</small>
+            <a href="#" class="text-decoration-none text-dark fw-black fs-2" style="font-family:Georgia,serif;">O DIÁRIO</a>
+            <input type="text" class="form-control form-control-sm rounded-pill" style="max-width:180px;" placeholder="Buscar...">
+        </div>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-dark small fw-bold text-decoration-none">POLÍTICA</a>
+            <a href="#" class="text-dark small fw-bold text-decoration-none">ECONOMIA</a>
+            <a href="#" class="text-dark small fw-bold text-decoration-none">TECNOLOGIA</a>
+            <a href="#" class="text-danger small fw-bold text-decoration-none">AO VIVO</a>
+        </div>
+    </div>
+</header>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-jornal">
+    <div class="nrow">
+        <div class="ncol container df jc-between ai-center">
+            <span class="fz-sm">Sábado, 22 de março de 2026</span>
+            <a href="#" class="fw-bold fz-3xl">O DIÁRIO</a>
+            <input type="text" placeholder="Buscar..." class="busca-jornal">
+        </div>
+    </div>
+    <div class="nrow">
+        <div class="ncol container df g-8">
+            <a href="#" class="fw-bold fz-sm">POLÍTICA</a>
+            <a href="#" class="fw-bold fz-sm">ECONOMIA</a>
+            <a href="#" class="fw-bold fz-sm">TECNOLOGIA</a>
+            <a href="#" class="fw-bold fz-sm text-danger">AO VIVO</a>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 7 — LANDING PAGE DARK
+     ================================================ -->
+<p class="tema-titulo">⑦ Landing page — fundo escuro com CTA destaque</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<nav class="navbar navbar-dark py-3" style="background:#0a0a0a;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+            <span class="rounded-2 bg-warning" style="width:24px;height:24px;display:inline-block;"></span>
+            Lançar
+        </a>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-secondary text-decoration-none small">Produto</a>
+            <a href="#" class="text-secondary text-decoration-none small">Preços</a>
+            <a href="#" class="text-secondary text-decoration-none small">Docs</a>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+            <a href="#" class="text-light text-decoration-none small me-2">Entrar</a>
+            <a href="#" class="btn btn-warning btn-sm fw-bold text-dark">Começar grátis →</a>
+        </div>
+    </div>
+</nav>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-landing nrow text-white">
+    <div class="ncol container df jc-between ai-center">
+        <a href="#" class="df ai-center g-3 fw-bold">
+            <span class="icone-landing"></span>
+            Lançar
+        </a>
+        <nav class="df g-8">
+            <a href="#">Produto</a>
+            <a href="#">Preços</a>
+            <a href="#">Docs</a>
+        </nav>
+        <div class="df g-5 ai-center">
+            <a href="#">Entrar</a>
+            <a href="#" class="btn-cta-landing">Começar grátis →</a>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 8 — MODA / LIFESTYLE
+     ================================================ -->
+<p class="tema-titulo">⑧ Moda — logo centralizado, nav inferior</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container d-flex flex-column align-items-center py-2 gap-3">
+        <a class="navbar-brand fw-black fs-3 mb-0" href="#">VISTA</a>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-muted text-decoration-none small text-uppercase fw-semibold">Home</a>
+            <a href="#" class="text-muted text-decoration-none small text-uppercase fw-semibold">Coleção</a>
+            <a href="#" class="text-muted text-decoration-none small text-uppercase fw-semibold">Lookbook</a>
+            <a href="#" class="text-muted text-decoration-none small text-uppercase fw-semibold">Sobre</a>
+        </div>
+    </div>
+</nav>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-moda nrow">
+    <div class="ncol container flex-dir-column ai g-5">
+        <a href="#" class="fw-bold fz-3xl">VISTA</a>
+        <nav class="df g-8">
+            <a href="#" class="fz-sm fw-bold text-uppercase">Home</a>
+            <a href="#" class="fz-sm fw-bold text-uppercase">Coleção</a>
+            <a href="#" class="fz-sm fw-bold text-uppercase">Lookbook</a>
+            <a href="#" class="fz-sm fw-bold text-uppercase">Sobre</a>
+        </nav>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 9 — SIDEBAR APP
+     ================================================ -->
+<p class="tema-titulo">⑨ App — sidebar vertical com nav lateral</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<div class="d-flex sidebar-app">
+    <div class="d-flex flex-column p-3 gap-3" style="background:#1a1a2e; width:180px; min-width:180px;">
+        <span style="color:#e94560; font-weight:900;">APP</span>
+        <a href="#" class="text-white text-decoration-none small">Dashboard</a>
+        <a href="#" class="text-white-50 text-decoration-none small">Relatórios</a>
+        <a href="#" class="text-white-50 text-decoration-none small">Usuários</a>
+        <a href="#" class="text-white-50 text-decoration-none small">Config</a>
+    </div>
+    <div class="flex-grow-1 p-4" style="background:#f4f4f4;">
+        <p class="text-muted small">Área de conteúdo principal</p>
+    </div>
+</div>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<div class="nrow sidebar-app">
+    <div class="ncol sidebar-nav flex-dir-column g-5 text-white">
+        <span class="fw-bold">APP</span>
+        <a href="#" class="fw-bold">Dashboard</a>
+        <a href="#">Relatórios</a>
+        <a href="#">Usuários</a>
+        <a href="#">Config</a>
+    </div>
+    <div class="sidebar-content">
+        <p>Área de conteúdo principal</p>
+    </div>
+</div>
+
+<hr class="separador-tema">
+
+<!-- ================================================
+     TEMA 10 — SaaS COM CTA
+     ================================================ -->
+<p class="tema-titulo">⑩ SaaS — logo + nav central + login e CTA</p>
+
+<p class="template-titulo bootstrap">Bootstrap</p>
+<nav class="navbar navbar-expand-lg" style="background:#6c5ce7;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-white fw-bold" href="#">TechCorp</a>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-white-50 text-decoration-none small">Produto</a>
+            <a href="#" class="text-white-50 text-decoration-none small">Soluções</a>
+            <a href="#" class="text-white-50 text-decoration-none small">Recursos</a>
+            <a href="#" class="text-white-50 text-decoration-none small">Preços</a>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+            <a href="#" class="text-white-50 text-decoration-none small">Login</a>
+            <a href="#" class="btn btn-light btn-sm fw-semibold ms-2">Grátis</a>
+        </div>
+    </div>
+</nav>
+
+<p class="template-titulo sistema">Meu Sistema</p>
+<header class="h-saas2 nrow">
+    <div class="ncol container df jc-between ai-center">
+        <a href="#" class="fw-bold fz-lg">TechCorp</a>
+        <nav class="df g-8">
+            <a href="#">Produto</a>
+            <a href="#">Soluções</a>
+            <a href="#">Recursos</a>
+            <a href="#">Preços</a>
+        </nav>
+        <div class="df g-5 ai-center">
+            <a href="#">Login</a>
+            <a href="#" class="btn-gratis-saas">Grátis</a>
+        </div>
+    </div>
+</header>
+
+<hr class="separador-tema">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

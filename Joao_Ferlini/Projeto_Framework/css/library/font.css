@@ -1,0 +1,105 @@
+/* ==============================================
+   FONT.CSS
+   Utilitários de fonte.
+   Breakpoints desktop first (max-width):
+     w+número | n+notável | semântico
+   ============================================== */
+
+/* ----------------------------------------------
+   FONT-WEIGHT
+---------------------------------------------- */
+.fw-100, .fw-thin        { font-weight: 100; }
+.fw-200, .fw-extralight  { font-weight: 200; }
+.fw-300, .fw-light       { font-weight: 300; }
+.fw-400, .fw-normal      { font-weight: 400; }
+.fw-500, .fw-medium      { font-weight: 500; }
+.fw-600, .fw-semibold    { font-weight: 600; }
+.fw-700, .fw-bold        { font-weight: 700; }
+.fw-800, .fw-extrabold   { font-weight: 800; }
+.fw-900, .fw-black       { font-weight: 900; }
+
+/* ----------------------------------------------
+   FONT-STYLE
+---------------------------------------------- */
+.fs-italic  { font-style: italic; }
+.fs-normal  { font-style: normal; }
+.fs-oblique { font-style: oblique; }
+
+/* ----------------------------------------------
+   FONT-SIZE — escala rem
+---------------------------------------------- */
+.fz-xs   { font-size: 0.75rem;  }   /* 12px */
+.fz-sm   { font-size: 0.875rem; }   /* 14px */
+.fz-base { font-size: 1rem;     }   /* 16px */
+.fz-md   { font-size: 1.125rem; }   /* 18px */
+.fz-lg   { font-size: 1.25rem;  }   /* 20px */
+.fz-xl   { font-size: 1.5rem;   }   /* 24px */
+.fz-2xl  { font-size: 1.875rem; }   /* 30px */
+.fz-3xl  { font-size: 2rem;     }   /* 32px */
+.fz-4xl  { font-size: 2.25rem;  }   /* 36px */
+.fz-5xl  { font-size: 3rem;     }   /* 48px */
+.fz-6xl  { font-size: 3.75rem;  }   /* 60px */
+
+/* Alias numérico — compatível com Bootstrap fs-1..6 */
+.fz-1 { font-size: 2.5rem;  }   /* 40px */
+.fz-2 { font-size: 2rem;    }   /* 32px */
+.fz-3 { font-size: 1.75rem; }   /* 28px */
+.fz-4 { font-size: 1.5rem;  }   /* 24px */
+.fz-5 { font-size: 1.25rem; }   /* 20px */
+.fz-6 { font-size: 1rem;    }   /* 16px */
+
+/* ----------------------------------------------
+   BREAKPOINTS — Desktop first
+---------------------------------------------- */
+
+/* w1200 / n5 / desktop */
+@media (max-width: 1200px) {
+    .w1200-fw-normal, .n5-fw-normal, .desktop-fw-normal { font-weight: 400; }
+    .w1200-fw-bold,   .n5-fw-bold,   .desktop-fw-bold   { font-weight: 700; }
+    .w1200-fz-sm,     .n5-fz-sm,     .desktop-fz-sm     { font-size: 0.875rem; }
+    .w1200-fz-base,   .n5-fz-base,   .desktop-fz-base   { font-size: 1rem; }
+    .w1200-fz-lg,     .n5-fz-lg,     .desktop-fz-lg     { font-size: 1.25rem; }
+    .w1200-fz-xl,     .n5-fz-xl,     .desktop-fz-xl     { font-size: 1.5rem; }
+    .w1200-fs-italic, .n5-fs-italic, .desktop-fs-italic { font-style: italic; }
+    .w1200-fs-normal, .n5-fs-normal, .desktop-fs-normal { font-style: normal; }
+}
+
+/* w992 / n4 */
+@media (max-width: 992px) {
+    .w992-fw-normal, .n4-fw-normal { font-weight: 400; }
+    .w992-fw-bold,   .n4-fw-bold   { font-weight: 700; }
+    .w992-fz-sm,     .n4-fz-sm     { font-size: 0.875rem; }
+    .w992-fz-base,   .n4-fz-base   { font-size: 1rem; }
+    .w992-fz-lg,     .n4-fz-lg     { font-size: 1.25rem; }
+    .w992-fz-xl,     .n4-fz-xl     { font-size: 1.5rem; }
+}
+
+/* w768 / n3 / tablet */
+@media (max-width: 768px) {
+    .w768-fw-normal, .n3-fw-normal, .tablet-fw-normal { font-weight: 400; }
+    .w768-fw-bold,   .n3-fw-bold,   .tablet-fw-bold   { font-weight: 700; }
+    .w768-fz-sm,     .n3-fz-sm,     .tablet-fz-sm     { font-size: 0.875rem; }
+    .w768-fz-base,   .n3-fz-base,   .tablet-fz-base   { font-size: 1rem; }
+    .w768-fz-lg,     .n3-fz-lg,     .tablet-fz-lg     { font-size: 1.25rem; }
+    .w768-fz-xl,     .n3-fz-xl,     .tablet-fz-xl     { font-size: 1.5rem; }
+}
+
+/* w576 / n2 */
+@media (max-width: 576px) {
+    .w576-fw-normal, .n2-fw-normal { font-weight: 400; }
+    .w576-fw-bold,   .n2-fw-bold   { font-weight: 700; }
+    .w576-fz-sm,     .n2-fz-sm     { font-size: 0.875rem; }
+    .w576-fz-base,   .n2-fz-base   { font-size: 1rem; }
+    .w576-fz-lg,     .n2-fz-lg     { font-size: 1.25rem; }
+    .w576-fz-xl,     .n2-fz-xl     { font-size: 1.5rem; }
+}
+
+/* w320 / n1 / mobile */
+@media (max-width: 320px) {
+    .w320-fw-normal, .n1-fw-normal, .mobile-fw-normal { font-weight: 400; }
+    .w320-fw-bold,   .n1-fw-bold,   .mobile-fw-bold   { font-weight: 700; }
+    .w320-fz-sm,     .n1-fz-sm,     .mobile-fz-sm     { font-size: 0.875rem; }
+    .w320-fz-base,   .n1-fz-base,   .mobile-fz-base   { font-size: 1rem; }
+    .w320-fz-lg,     .n1-fz-lg,     .mobile-fz-lg     { font-size: 1.25rem; }
+    .w320-fz-xl,     .n1-fz-xl,     .mobile-fz-xl     { font-size: 1.5rem; }
+}
