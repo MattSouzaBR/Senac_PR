@@ -1,0 +1,10 @@
+.align-items,
+.ai, .a-i {
+    align-items: var(--default-align-items);  /* center por default */
+}
+
+.ai-start,    .align-items-start    { align-items: flex-start; }
+.ai-end,      .align-items-end      { align-items: flex-end; }
+.ai-center,   .align-items-center   { align-items: center; }
+.ai-baseline, .align-items-baseline { align-items: baseline; }
+.ai-stretch,  .align-items-stretch  { align-items: stretch; }

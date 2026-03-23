@@ -1,0 +1,105 @@
+/* ==============================================
+   COLORS.CSS
+   Utilitários de background-color e border-color.
+   Cores de TEXTO ficam em text.css.
+   Breakpoints desktop first (max-width):
+     w+número | n+notável | semântico
+   ============================================== */
+
+/* ----------------------------------------------
+   BACKGROUND — cores fixas
+---------------------------------------------- */
+.bg-white        { background-color: #ffffff !important; }
+.bg-black        { background-color: #000000 !important; }
+.bg-transparent  { background-color: transparent !important; }
+
+/* Escala de cinza */
+.bg-gray-100     { background-color: #f8f9fa !important; }
+.bg-gray-200     { background-color: #e9ecef !important; }
+.bg-gray-300     { background-color: #dee2e6 !important; }
+.bg-gray-400     { background-color: #ced4da !important; }
+.bg-gray-500     { background-color: #adb5bd !important; }
+.bg-gray-600     { background-color: #6c757d !important; }
+.bg-gray-700     { background-color: #495057 !important; }
+.bg-gray-800     { background-color: #343a40 !important; }
+.bg-gray-900     { background-color: #212529 !important; }
+
+/* Aliases semânticos fixos */
+.bg-light        { background-color: #f8f9fa !important; }
+.bg-dark         { background-color: #212529 !important; }
+
+/* ----------------------------------------------
+   BACKGROUND — variáveis do projeto
+   (defina em variables.css)
+---------------------------------------------- */
+.bg-primary      { background-color: var(--primary-color,            #0d6efd) !important; }
+.bg-secondary    { background-color: var(--secondary-color,          #6c757d) !important; }
+.bg-accent       { background-color: var(--accent-color,             #fd7e14) !important; }
+.bg-success      { background-color: var(--background-color-success, #198754) !important; }
+.bg-warning      { background-color: var(--background-color-warning, #ffc107) !important; }
+.bg-danger       { background-color: var(--background-color-error,   #dc3545) !important; }
+.bg-info         { background-color: var(--background-color-info,    #0dcaf0) !important; }
+
+/* ----------------------------------------------
+   BORDER-COLOR
+---------------------------------------------- */
+.border-white    { border-color: #ffffff !important; }
+.border-black    { border-color: #000000 !important; }
+.border-light    { border-color: #f8f9fa !important; }
+.border-dark     { border-color: #212529 !important; }
+.border-muted    { border-color: #6c757d !important; }
+.border-primary  { border-color: var(--primary-color,   #0d6efd) !important; }
+.border-success  { border-color: var(--border-color-success, #198754) !important; }
+.border-warning  { border-color: var(--border-color-warning, #ffc107) !important; }
+.border-danger   { border-color: var(--border-color-error,   #dc3545) !important; }
+
+/* ----------------------------------------------
+   OPACITY DE FUNDO
+---------------------------------------------- */
+.bg-opacity-10   { opacity: 0.1; }
+.bg-opacity-25   { opacity: 0.25; }
+.bg-opacity-50   { opacity: 0.5; }
+.bg-opacity-75   { opacity: 0.75; }
+.bg-opacity-100  { opacity: 1; }
+
+/* ----------------------------------------------
+   BREAKPOINTS — Desktop first
+---------------------------------------------- */
+
+/* w1200 / n5 / desktop */
+@media (max-width: 1200px) {
+    .w1200-bg-white, .n5-bg-white, .desktop-bg-white { background-color: #ffffff !important; }
+    .w1200-bg-dark,  .n5-bg-dark,  .desktop-bg-dark  { background-color: #212529 !important; }
+    .w1200-bg-light, .n5-bg-light, .desktop-bg-light  { background-color: #f8f9fa !important; }
+    .w1200-bg-transparent, .n5-bg-transparent, .desktop-bg-transparent { background-color: transparent !important; }
+}
+
+/* w992 / n4 */
+@media (max-width: 992px) {
+    .w992-bg-white, .n4-bg-white { background-color: #ffffff !important; }
+    .w992-bg-dark,  .n4-bg-dark  { background-color: #212529 !important; }
+    .w992-bg-light, .n4-bg-light { background-color: #f8f9fa !important; }
+    .w992-bg-transparent, .n4-bg-transparent { background-color: transparent !important; }
+}
+
+/* w768 / n3 / tablet */
+@media (max-width: 768px) {
+    .w768-bg-white, .n3-bg-white, .tablet-bg-white { background-color: #ffffff !important; }
+    .w768-bg-dark,  .n3-bg-dark,  .tablet-bg-dark  { background-color: #212529 !important; }
+    .w768-bg-light, .n3-bg-light, .tablet-bg-light  { background-color: #f8f9fa !important; }
+    .w768-bg-transparent, .n3-bg-transparent, .tablet-bg-transparent { background-color: transparent !important; }
+}
+
+/* w576 / n2 */
+@media (max-width: 576px) {
+    .w576-bg-white, .n2-bg-white { background-color: #ffffff !important; }
+    .w576-bg-dark,  .n2-bg-dark  { background-color: #212529 !important; }
+    .w576-bg-light, .n2-bg-light { background-color: #f8f9fa !important; }
+}
+
+/* w320 / n1 / mobile */
+@media (max-width: 320px) {
+    .w320-bg-white, .n1-bg-white, .mobile-bg-white { background-color: #ffffff !important; }
+    .w320-bg-dark,  .n1-bg-dark,  .mobile-bg-dark  { background-color: #212529 !important; }
+    .w320-bg-light, .n1-bg-light, .mobile-bg-light  { background-color: #f8f9fa !important; }
+}

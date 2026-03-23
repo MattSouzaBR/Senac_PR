@@ -1,0 +1,181 @@
+/* ==============================================
+   DISPLAY.CSS
+   Utilitários de display e flex-direction.
+   Unifica o display-flex.css ao padrão do framework.
+   Breakpoints desktop first (max-width):
+     w+número | n+notável | semântico
+   ============================================== */
+
+/* ----------------------------------------------
+   DISPLAY
+---------------------------------------------- */
+.d-none         { display: none; }
+.d-block        { display: block; }
+.d-inline       { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex         { display: flex; }
+.d-inline-flex  { display: inline-flex; }
+.d-grid         { display: grid; }
+.d-inline-grid  { display: inline-grid; }
+.d-contents     { display: contents; }
+
+/* ----------------------------------------------
+   DISPLAY FLEX — aliases longos e curtos
+   Mantém compatibilidade com display-flex.css
+---------------------------------------------- */
+
+/* Flex base */
+.display-flex, .flex, .df, .d-f { display: flex; }
+
+/* Flex column */
+.display-flex-column, .flex-column,
+.dfc, .df-c, .df-column { display: flex; flex-direction: column !important; }
+
+/* Flex column reverse */
+.display-flex-column-reverse, .flex-column-reverse,
+.dfcr, .df-cr, .df-column-reverse { display: flex; flex-direction: column-reverse !important; }
+
+/* Flex row */
+.display-flex-row, .flex-row,
+.dfr, .df-r, .df-row { display: flex; flex-direction: row !important; }
+
+/* Flex row reverse */
+.display-flex-row-reverse, .flex-row-reverse,
+.dfrr, .df-rr, .df-row-reverse { display: flex; flex-direction: row-reverse !important; }
+
+/* ----------------------------------------------
+   FLEX-DIRECTION — garante display:flex e sobrescreve
+   qualquer flex-direction herdada (ex: de .ncol)
+---------------------------------------------- */
+.flex-dir-row            { display: flex; flex-direction: row !important; }
+.flex-dir-row-reverse    { display: flex; flex-direction: row-reverse !important; }
+.flex-dir-column         { display: flex; flex-direction: column !important; }
+.flex-dir-column-reverse { display: flex; flex-direction: column-reverse !important; }
+
+/* ----------------------------------------------
+   FLEX WRAP
+---------------------------------------------- */
+.flex-wrap   { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+/* ----------------------------------------------
+   BREAKPOINTS — Desktop first (max-width)
+   w+número | n+notável | semântico
+---------------------------------------------- */
+
+/* w2560 / n9 / widescreen */
+@media (max-width: 2560px) {
+    .w2560-d-none,  .n9-d-none,  .widescreen-d-none  { display: none; }
+    .w2560-d-block, .n9-d-block, .widescreen-d-block  { display: block; }
+    .w2560-d-flex,  .n9-d-flex,  .widescreen-d-flex   { display: flex; }
+    .w2560-d-grid,  .n9-d-grid,  .widescreen-d-grid   { display: grid; }
+    .w2560-d-inline,.n9-d-inline,.widescreen-d-inline  { display: inline; }
+    .w2560-df-row,  .n9-df-row,  .widescreen-df-row   { display: flex; flex-direction: row; }
+    .w2560-df-col,  .n9-df-col,  .widescreen-df-col   { display: flex; flex-direction: column; }
+    .w2560-df-row-reverse, .n9-df-row-reverse, .widescreen-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w2560-df-col-reverse, .n9-df-col-reverse, .widescreen-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w1920 / n8 / ultrawide */
+@media (max-width: 1920px) {
+    .w1920-d-none,  .n8-d-none,  .ultrawide-d-none  { display: none; }
+    .w1920-d-block, .n8-d-block, .ultrawide-d-block  { display: block; }
+    .w1920-d-flex,  .n8-d-flex,  .ultrawide-d-flex   { display: flex; }
+    .w1920-d-grid,  .n8-d-grid,  .ultrawide-d-grid   { display: grid; }
+    .w1920-d-inline,.n8-d-inline,.ultrawide-d-inline  { display: inline; }
+    .w1920-df-row,  .n8-df-row,  .ultrawide-df-row   { display: flex; flex-direction: row; }
+    .w1920-df-col,  .n8-df-col,  .ultrawide-df-col   { display: flex; flex-direction: column; }
+    .w1920-df-row-reverse, .n8-df-row-reverse, .ultrawide-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w1920-df-col-reverse, .n8-df-col-reverse, .ultrawide-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w1600 / n7 */
+@media (max-width: 1600px) {
+    .w1600-d-none,  .n7-d-none  { display: none; }
+    .w1600-d-block, .n7-d-block { display: block; }
+    .w1600-d-flex,  .n7-d-flex  { display: flex; }
+    .w1600-d-grid,  .n7-d-grid  { display: grid; }
+    .w1600-d-inline,.n7-d-inline{ display: inline; }
+    .w1600-df-row,  .n7-df-row  { display: flex; flex-direction: row; }
+    .w1600-df-col,  .n7-df-col  { display: flex; flex-direction: column; }
+    .w1600-df-row-reverse, .n7-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w1600-df-col-reverse, .n7-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w1400 / n6 */
+@media (max-width: 1400px) {
+    .w1400-d-none,  .n6-d-none  { display: none; }
+    .w1400-d-block, .n6-d-block { display: block; }
+    .w1400-d-flex,  .n6-d-flex  { display: flex; }
+    .w1400-d-grid,  .n6-d-grid  { display: grid; }
+    .w1400-d-inline,.n6-d-inline{ display: inline; }
+    .w1400-df-row,  .n6-df-row  { display: flex; flex-direction: row; }
+    .w1400-df-col,  .n6-df-col  { display: flex; flex-direction: column; }
+    .w1400-df-row-reverse, .n6-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w1400-df-col-reverse, .n6-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w1200 / n5 / desktop */
+@media (max-width: 1200px) {
+    .w1200-d-none,  .n5-d-none,  .desktop-d-none  { display: none; }
+    .w1200-d-block, .n5-d-block, .desktop-d-block  { display: block; }
+    .w1200-d-flex,  .n5-d-flex,  .desktop-d-flex   { display: flex; }
+    .w1200-d-grid,  .n5-d-grid,  .desktop-d-grid   { display: grid; }
+    .w1200-d-inline,.n5-d-inline,.desktop-d-inline  { display: inline; }
+    .w1200-df-row,  .n5-df-row,  .desktop-df-row   { display: flex; flex-direction: row; }
+    .w1200-df-col,  .n5-df-col,  .desktop-df-col   { display: flex; flex-direction: column; }
+    .w1200-df-row-reverse, .n5-df-row-reverse, .desktop-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w1200-df-col-reverse, .n5-df-col-reverse, .desktop-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w992 / n4 */
+@media (max-width: 992px) {
+    .w992-d-none,  .n4-d-none  { display: none; }
+    .w992-d-block, .n4-d-block { display: block; }
+    .w992-d-flex,  .n4-d-flex  { display: flex; }
+    .w992-d-grid,  .n4-d-grid  { display: grid; }
+    .w992-d-inline,.n4-d-inline{ display: inline; }
+    .w992-df-row,  .n4-df-row  { display: flex; flex-direction: row; }
+    .w992-df-col,  .n4-df-col  { display: flex; flex-direction: column; }
+    .w992-df-row-reverse, .n4-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w992-df-col-reverse, .n4-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w768 / n3 / tablet */
+@media (max-width: 768px) {
+    .w768-d-none,  .n3-d-none,  .tablet-d-none  { display: none; }
+    .w768-d-block, .n3-d-block, .tablet-d-block  { display: block; }
+    .w768-d-flex,  .n3-d-flex,  .tablet-d-flex   { display: flex; }
+    .w768-d-grid,  .n3-d-grid,  .tablet-d-grid   { display: grid; }
+    .w768-d-inline,.n3-d-inline,.tablet-d-inline  { display: inline; }
+    .w768-df-row,  .n3-df-row,  .tablet-df-row   { display: flex; flex-direction: row; }
+    .w768-df-col,  .n3-df-col,  .tablet-df-col   { display: flex; flex-direction: column; }
+    .w768-df-row-reverse, .n3-df-row-reverse, .tablet-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w768-df-col-reverse, .n3-df-col-reverse, .tablet-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w576 / n2 */
+@media (max-width: 576px) {
+    .w576-d-none,  .n2-d-none  { display: none; }
+    .w576-d-block, .n2-d-block { display: block; }
+    .w576-d-flex,  .n2-d-flex  { display: flex; }
+    .w576-d-grid,  .n2-d-grid  { display: grid; }
+    .w576-d-inline,.n2-d-inline{ display: inline; }
+    .w576-df-row,  .n2-df-row  { display: flex; flex-direction: row; }
+    .w576-df-col,  .n2-df-col  { display: flex; flex-direction: column; }
+    .w576-df-row-reverse, .n2-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w576-df-col-reverse, .n2-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}
+
+/* w320 / n1 / mobile */
+@media (max-width: 320px) {
+    .w320-d-none,  .n1-d-none,  .mobile-d-none  { display: none; }
+    .w320-d-block, .n1-d-block, .mobile-d-block  { display: block; }
+    .w320-d-flex,  .n1-d-flex,  .mobile-d-flex   { display: flex; }
+    .w320-d-grid,  .n1-d-grid,  .mobile-d-grid   { display: grid; }
+    .w320-d-inline,.n1-d-inline,.mobile-d-inline  { display: inline; }
+    .w320-df-row,  .n1-df-row,  .mobile-df-row   { display: flex; flex-direction: row; }
+    .w320-df-col,  .n1-df-col,  .mobile-df-col   { display: flex; flex-direction: column; }
+    .w320-df-row-reverse, .n1-df-row-reverse, .mobile-df-row-reverse { display: flex; flex-direction: row-reverse; }
+    .w320-df-col-reverse, .n1-df-col-reverse, .mobile-df-col-reverse { display: flex; flex-direction: column-reverse; }
+}

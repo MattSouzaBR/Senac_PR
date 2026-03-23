@@ -1,0 +1,70 @@
+/* 
+Usado com display:grid; grid-template-columns: repeat(x, x);
+*/
+
+.column-gap {
+    column-gap: var(--default-gap);
+}
+
+.column-gap-min, .column-gap-minimum, .column-gap.minimum {
+    column-gap: var(--default-gap-minimum)
+}
+
+.column-gap-max, .column-gap-maximum, .column-gap.maximum {
+    column-gap: var(--default-gap-maximum)
+}
+
+.column-gap-0, .gap-x-0, .col-gap-0, .gap-column-0,
+.gx-0, .gx0, .g-x-0 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.0), var(--default-gap-maximum));
+}
+
+.column-gap-1, .gap-x-1, .col-gap-1, .gap-column-1,
+.gx-1, .gx1, .g-x-1 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.0), var(--default-gap-maximum));
+}
+
+.column-gap-2, .gap-x-2, .col-gap-2, .gap-column-2,
+.gx-2, .gx2, .g-x-2 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.2), var(--default-gap-maximum));
+}
+
+.column-gap-3, .gap-x-3, .col-gap-3, .gap-column-3,
+.gx-3, .gx3, .g-x-3 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.3), var(--default-gap-maximum));
+}
+
+.column-gap-4, .gap-x-4, .col-gap-4, .gap-column-4,
+.gx-4, .gx4, .g-x-4 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.4), var(--default-gap-maximum));
+}
+
+.column-gap-5, .gap-x-5, .col-gap-5, .gap-column-5,
+.gx-5, .gx5, .g-x-5 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.5), var(--default-gap-maximum));
+}
+
+.column-gap-6, .gap-x-6, .col-gap-6, .gap-column-6,
+.gx-6, .gx6, .g-x-6 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.6), var(--default-gap-maximum));
+}
+
+.column-gap-7, .gap-x-7, .col-gap-7, .gap-column-7,
+.gx-7, .gx7, .g-x-7 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.7), var(--default-gap-maximum));
+}
+
+.column-gap-8, .gap-x-8, .col-gap-8, .gap-column-8,
+.gx-8, .gx8, .g-x-8 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.8), var(--default-gap-maximum));
+}
+
+.column-gap-9, .gap-x-9, .col-gap-9, .gap-column-9,
+.gx-9, .gx9, .g-x-9 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.9), var(--default-gap-maximum));
+}
+
+.column-gap-10, .gap-x-10, .col-gap-10, .gap-column-10,
+.gx-10, .gx10, .g-x-10 {
+    column-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum)), var(--default-gap-maximum));
+}

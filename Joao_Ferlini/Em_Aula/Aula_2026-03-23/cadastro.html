@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="layout">
+        <menu>
+            <h2>Menu Sistema</h2>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html" class="ativo">Cadastro</a>
+            <a href="relatorio.html">Relatório</a>
+        </menu>
+
+        <main>
+            <div class="topo">
+                <h1><span class="texto-destaque">Cadastro</span> de Cliente</h1>
+                <p>Exemplo de formulário para cadastro de cliente</p>
+            </div>
+
+            <section>
+                <form action="">
+                    <label for="">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+
+                    <label for="">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Informe o e-mail">
+
+                    <label for="">Telefone</label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Digite um telefone">
+                    
+                    <label for="">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Informe a cidade">
+
+                    <label for="">Tipo</label>
+                    <select name="tipo" id="tipo">
+                        <option value="">Selecione!</option>
+                        <option value="">Comum</option>
+                        <option value="">Premium</option>
+                    </select>
+
+                    <label for="">Observações</label>
+                    <textarea name="obs" id="obs" placeholder="Digite uma observação"></textarea>
+
+                    <button type="submit">
+                        Salvar
+                    </button>
+
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

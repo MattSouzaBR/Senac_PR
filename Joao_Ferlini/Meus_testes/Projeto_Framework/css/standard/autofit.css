@@ -1,0 +1,466 @@
+/* ==============================================
+   AUTOFIT.CSS
+   Sistema de grid próprio.
+
+     .nrow  — container pai  (nova linha)
+     .ncol  — container filho/pai (nova coluna)
+
+     Regras:
+       - .nrow organiza filhos em flex
+       - .ncol sem fração: ocupa espaço restante (flex: 1)
+       - .ncol com fração: largura fixa (flex: none + width)
+       - .ncol pode ser pai de outro .nrow ou .ncol
+       - Frações só têm efeito como filhos diretos de .nrow ou .ncol
+       - Sempre use .ncol junto com a fração: class="ncol ncol-1-4"
+
+     Frações:  .ncol-1-2, .ncol-1-3, .ncol-2-3...
+               .ncol-1-10, .ncol-3-10, .ncol-7-10...
+     Offset:   .offset-1-4, .offset-1-3...
+     Order:    .order-1, .w768-order-2, .tablet-order-1...
+
+     BREAKPOINTS — Desktop first (max-width):
+       w+número:  w320, w576, w768, w992, w1200, w1400, w1600, w1920, w2560
+       notável:   n1(320), n2(576), n3(768), n4(992), n5(1200), n6(1400), n7(1600), n8(1920), n9(2560)
+       semântico: mobile(320), tablet(768), desktop(1200), ultrawide(1920), widescreen(2560)
+   ============================================== */
+
+/* ----------------------------------------------
+   .nrow — container pai
+---------------------------------------------- */
+.nrow {
+    display:   flex;
+    flex-wrap: wrap;
+    width:     100%;
+}
+
+/* ----------------------------------------------
+   .ncol — container filho/pai
+---------------------------------------------- */
+.ncol {
+    display:   flex;
+    flex-wrap: wrap;
+}
+
+/* Como filho direto — ocupa espaço restante */
+.nrow > .ncol,
+.ncol > .ncol {
+    flex:  1;
+    width: auto;
+    /* flex-direction não é definida aqui — deixa display.css controlar */
+}
+
+/* flex-dir-column dentro de nrow/ncol — sobrescreve com !important já no display.css */
+.nrow > .flex-dir-column,
+.ncol > .flex-dir-column {
+    flex-direction: column !important;
+}
+
+/* Com fração — garante flex: none */
+.nrow > [class*="ncol-"],
+.ncol > [class*="ncol-"] {
+    flex: none !important;
+}
+
+/* ----------------------------------------------
+   FRAÇÕES — filhos diretos de .nrow ou .ncol
+---------------------------------------------- */
+
+/* 1/1 — aliases: 2-2, 3-3, 4-4, 5-5, 10-10 */
+.nrow > .ncol-1-1,  .ncol > .ncol-1-1,
+.nrow > .ncol-2-2,  .ncol > .ncol-2-2,
+.nrow > .ncol-3-3,  .ncol > .ncol-3-3,
+.nrow > .ncol-4-4,  .ncol > .ncol-4-4,
+.nrow > .ncol-5-5,  .ncol > .ncol-5-5,
+.nrow > .ncol-10-10,.ncol > .ncol-10-10 { width: 100% !important; }
+
+/* 1/2 — aliases: 2-4, 5-10 */
+.nrow > .ncol-1-2,  .ncol > .ncol-1-2,
+.nrow > .ncol-2-4,  .ncol > .ncol-2-4,
+.nrow > .ncol-5-10, .ncol > .ncol-5-10  { width: 50% !important; }
+
+/* 1/3 */
+.nrow > .ncol-1-3,  .ncol > .ncol-1-3  { width: 33.333% !important; }
+
+/* 2/3 */
+.nrow > .ncol-2-3,  .ncol > .ncol-2-3  { width: 66.666% !important; }
+
+/* 1/4 */
+.nrow > .ncol-1-4,  .ncol > .ncol-1-4  { width: 25% !important; }
+
+/* 3/4 */
+.nrow > .ncol-3-4,  .ncol > .ncol-3-4  { width: 75% !important; }
+
+/* 1/5 — alias: 2-10 */
+.nrow > .ncol-1-5,  .ncol > .ncol-1-5,
+.nrow > .ncol-2-10, .ncol > .ncol-2-10  { width: 20% !important; }
+
+/* 2/5 — alias: 4-10 */
+.nrow > .ncol-2-5,  .ncol > .ncol-2-5,
+.nrow > .ncol-4-10, .ncol > .ncol-4-10  { width: 40% !important; }
+
+/* 3/5 — alias: 6-10 */
+.nrow > .ncol-3-5,  .ncol > .ncol-3-5,
+.nrow > .ncol-6-10, .ncol > .ncol-6-10  { width: 60% !important; }
+
+/* 4/5 — alias: 8-10 */
+.nrow > .ncol-4-5,  .ncol > .ncol-4-5,
+.nrow > .ncol-8-10, .ncol > .ncol-8-10  { width: 80% !important; }
+
+/* Escala de 10 — frações novas */
+.nrow > .ncol-1-10, .ncol > .ncol-1-10  { width: 10% !important; }
+.nrow > .ncol-3-10, .ncol > .ncol-3-10  { width: 30% !important; }
+.nrow > .ncol-7-10, .ncol > .ncol-7-10  { width: 70% !important; }
+.nrow > .ncol-9-10, .ncol > .ncol-9-10  { width: 90% !important; }
+
+/* ----------------------------------------------
+   OFFSET
+---------------------------------------------- */
+.nrow > .offset-1-2,  .ncol > .offset-1-2  { margin-left: 50%; }
+.nrow > .offset-1-3,  .ncol > .offset-1-3  { margin-left: 33.333%; }
+.nrow > .offset-2-3,  .ncol > .offset-2-3  { margin-left: 66.666%; }
+.nrow > .offset-1-4,  .ncol > .offset-1-4  { margin-left: 25%; }
+.nrow > .offset-3-4,  .ncol > .offset-3-4  { margin-left: 75%; }
+.nrow > .offset-1-5,  .ncol > .offset-1-5  { margin-left: 20%; }
+.nrow > .offset-2-5,  .ncol > .offset-2-5  { margin-left: 40%; }
+.nrow > .offset-3-5,  .ncol > .offset-3-5  { margin-left: 60%; }
+.nrow > .offset-4-5,  .ncol > .offset-4-5  { margin-left: 80%; }
+.nrow > .offset-1-10, .ncol > .offset-1-10 { margin-left: 10%; }
+.nrow > .offset-2-10, .ncol > .offset-2-10 { margin-left: 20%; }
+.nrow > .offset-3-10, .ncol > .offset-3-10 { margin-left: 30%; }
+.nrow > .offset-4-10, .ncol > .offset-4-10 { margin-left: 40%; }
+.nrow > .offset-5-10, .ncol > .offset-5-10 { margin-left: 50%; }
+.nrow > .offset-6-10, .ncol > .offset-6-10 { margin-left: 60%; }
+.nrow > .offset-7-10, .ncol > .offset-7-10 { margin-left: 70%; }
+.nrow > .offset-8-10, .ncol > .offset-8-10 { margin-left: 80%; }
+.nrow > .offset-9-10, .ncol > .offset-9-10 { margin-left: 90%; }
+
+/* ----------------------------------------------
+   ORDER — global
+---------------------------------------------- */
+.order-1     { order: 1; }
+.order-2     { order: 2; }
+.order-3     { order: 3; }
+.order-4     { order: 4; }
+.order-5     { order: 5; }
+.order-6     { order: 6; }
+.order-first { order: -1; }
+.order-last  { order: 999; }
+
+/* ==============================================
+   BREAKPOINTS — Desktop first (max-width)
+   w+número | n+notável | semântico
+   ============================================== */
+
+/* w2560 / n9 / widescreen — 2560px */
+@media (max-width: 2560px) {
+    .nrow > .w2560-ncol-1-1, .ncol > .w2560-ncol-1-1,
+    .nrow > .n9-ncol-1-1,    .ncol > .n9-ncol-1-1,
+    .nrow > .widescreen-ncol-1-1, .ncol > .widescreen-ncol-1-1 { width: 100% !important; }
+
+    .nrow > .w2560-ncol-1-2, .ncol > .w2560-ncol-1-2,
+    .nrow > .n9-ncol-1-2,    .ncol > .n9-ncol-1-2,
+    .nrow > .widescreen-ncol-1-2, .ncol > .widescreen-ncol-1-2 { width: 50% !important; }
+
+    .nrow > .w2560-ncol-1-3, .ncol > .w2560-ncol-1-3,
+    .nrow > .n9-ncol-1-3,    .ncol > .n9-ncol-1-3,
+    .nrow > .widescreen-ncol-1-3, .ncol > .widescreen-ncol-1-3 { width: 33.333% !important; }
+
+    .nrow > .w2560-ncol-2-3, .ncol > .w2560-ncol-2-3,
+    .nrow > .n9-ncol-2-3,    .ncol > .n9-ncol-2-3,
+    .nrow > .widescreen-ncol-2-3, .ncol > .widescreen-ncol-2-3 { width: 66.666% !important; }
+
+    .nrow > .w2560-ncol-1-4, .ncol > .w2560-ncol-1-4,
+    .nrow > .n9-ncol-1-4,    .ncol > .n9-ncol-1-4,
+    .nrow > .widescreen-ncol-1-4, .ncol > .widescreen-ncol-1-4 { width: 25% !important; }
+
+    .nrow > .w2560-ncol-3-4, .ncol > .w2560-ncol-3-4,
+    .nrow > .n9-ncol-3-4,    .ncol > .n9-ncol-3-4,
+    .nrow > .widescreen-ncol-3-4, .ncol > .widescreen-ncol-3-4 { width: 75% !important; }
+
+    .nrow > .w2560-ncol-1-5, .ncol > .w2560-ncol-1-5,
+    .nrow > .n9-ncol-1-5,    .ncol > .n9-ncol-1-5,
+    .nrow > .widescreen-ncol-1-5, .ncol > .widescreen-ncol-1-5 { width: 20% !important; }
+
+    .nrow > .w2560-ncol-2-5, .ncol > .w2560-ncol-2-5,
+    .nrow > .n9-ncol-2-5,    .ncol > .n9-ncol-2-5,
+    .nrow > .widescreen-ncol-2-5, .ncol > .widescreen-ncol-2-5 { width: 40% !important; }
+
+    .nrow > .w2560-ncol-3-5, .ncol > .w2560-ncol-3-5,
+    .nrow > .n9-ncol-3-5,    .ncol > .n9-ncol-3-5,
+    .nrow > .widescreen-ncol-3-5, .ncol > .widescreen-ncol-3-5 { width: 60% !important; }
+
+    .nrow > .w2560-ncol-4-5, .ncol > .w2560-ncol-4-5,
+    .nrow > .n9-ncol-4-5,    .ncol > .n9-ncol-4-5,
+    .nrow > .widescreen-ncol-4-5, .ncol > .widescreen-ncol-4-5 { width: 80% !important; }
+
+    .w2560-order-1, .n9-order-1, .widescreen-order-1 { order: 1; }
+    .w2560-order-2, .n9-order-2, .widescreen-order-2 { order: 2; }
+    .w2560-order-first, .n9-order-first, .widescreen-order-first { order: -1; }
+    .w2560-order-last,  .n9-order-last,  .widescreen-order-last  { order: 999; }
+}
+
+/* w1920 / n8 / ultrawide — 1920px */
+@media (max-width: 1920px) {
+    .nrow > .w1920-ncol-1-1, .ncol > .w1920-ncol-1-1,
+    .nrow > .n8-ncol-1-1,    .ncol > .n8-ncol-1-1,
+    .nrow > .ultrawide-ncol-1-1, .ncol > .ultrawide-ncol-1-1 { width: 100% !important; }
+
+    .nrow > .w1920-ncol-1-2, .ncol > .w1920-ncol-1-2,
+    .nrow > .n8-ncol-1-2,    .ncol > .n8-ncol-1-2,
+    .nrow > .ultrawide-ncol-1-2, .ncol > .ultrawide-ncol-1-2 { width: 50% !important; }
+
+    .nrow > .w1920-ncol-1-3, .ncol > .w1920-ncol-1-3,
+    .nrow > .n8-ncol-1-3,    .ncol > .n8-ncol-1-3,
+    .nrow > .ultrawide-ncol-1-3, .ncol > .ultrawide-ncol-1-3 { width: 33.333% !important; }
+
+    .nrow > .w1920-ncol-2-3, .ncol > .w1920-ncol-2-3,
+    .nrow > .n8-ncol-2-3,    .ncol > .n8-ncol-2-3,
+    .nrow > .ultrawide-ncol-2-3, .ncol > .ultrawide-ncol-2-3 { width: 66.666% !important; }
+
+    .nrow > .w1920-ncol-1-4, .ncol > .w1920-ncol-1-4,
+    .nrow > .n8-ncol-1-4,    .ncol > .n8-ncol-1-4,
+    .nrow > .ultrawide-ncol-1-4, .ncol > .ultrawide-ncol-1-4 { width: 25% !important; }
+
+    .nrow > .w1920-ncol-3-4, .ncol > .w1920-ncol-3-4,
+    .nrow > .n8-ncol-3-4,    .ncol > .n8-ncol-3-4,
+    .nrow > .ultrawide-ncol-3-4, .ncol > .ultrawide-ncol-3-4 { width: 75% !important; }
+
+    .nrow > .w1920-ncol-1-5, .ncol > .w1920-ncol-1-5,
+    .nrow > .n8-ncol-1-5,    .ncol > .n8-ncol-1-5,
+    .nrow > .ultrawide-ncol-1-5, .ncol > .ultrawide-ncol-1-5 { width: 20% !important; }
+
+    .nrow > .w1920-ncol-2-5, .ncol > .w1920-ncol-2-5,
+    .nrow > .n8-ncol-2-5,    .ncol > .n8-ncol-2-5,
+    .nrow > .ultrawide-ncol-2-5, .ncol > .ultrawide-ncol-2-5 { width: 40% !important; }
+
+    .nrow > .w1920-ncol-3-5, .ncol > .w1920-ncol-3-5,
+    .nrow > .n8-ncol-3-5,    .ncol > .n8-ncol-3-5,
+    .nrow > .ultrawide-ncol-3-5, .ncol > .ultrawide-ncol-3-5 { width: 60% !important; }
+
+    .nrow > .w1920-ncol-4-5, .ncol > .w1920-ncol-4-5,
+    .nrow > .n8-ncol-4-5,    .ncol > .n8-ncol-4-5,
+    .nrow > .ultrawide-ncol-4-5, .ncol > .ultrawide-ncol-4-5 { width: 80% !important; }
+
+    .w1920-order-1, .n8-order-1, .ultrawide-order-1 { order: 1; }
+    .w1920-order-2, .n8-order-2, .ultrawide-order-2 { order: 2; }
+    .w1920-order-first, .n8-order-first, .ultrawide-order-first { order: -1; }
+    .w1920-order-last,  .n8-order-last,  .ultrawide-order-last  { order: 999; }
+}
+
+/* w1600 / n7 — 1600px */
+@media (max-width: 1600px) {
+    .nrow > .w1600-ncol-1-1, .ncol > .w1600-ncol-1-1,
+    .nrow > .n7-ncol-1-1,    .ncol > .n7-ncol-1-1    { width: 100% !important; }
+    .nrow > .w1600-ncol-1-2, .ncol > .w1600-ncol-1-2,
+    .nrow > .n7-ncol-1-2,    .ncol > .n7-ncol-1-2    { width: 50% !important; }
+    .nrow > .w1600-ncol-1-3, .ncol > .w1600-ncol-1-3,
+    .nrow > .n7-ncol-1-3,    .ncol > .n7-ncol-1-3    { width: 33.333% !important; }
+    .nrow > .w1600-ncol-2-3, .ncol > .w1600-ncol-2-3,
+    .nrow > .n7-ncol-2-3,    .ncol > .n7-ncol-2-3    { width: 66.666% !important; }
+    .nrow > .w1600-ncol-1-4, .ncol > .w1600-ncol-1-4,
+    .nrow > .n7-ncol-1-4,    .ncol > .n7-ncol-1-4    { width: 25% !important; }
+    .nrow > .w1600-ncol-3-4, .ncol > .w1600-ncol-3-4,
+    .nrow > .n7-ncol-3-4,    .ncol > .n7-ncol-3-4    { width: 75% !important; }
+    .nrow > .w1600-ncol-1-5, .ncol > .w1600-ncol-1-5,
+    .nrow > .n7-ncol-1-5,    .ncol > .n7-ncol-1-5    { width: 20% !important; }
+    .nrow > .w1600-ncol-2-5, .ncol > .w1600-ncol-2-5,
+    .nrow > .n7-ncol-2-5,    .ncol > .n7-ncol-2-5    { width: 40% !important; }
+    .nrow > .w1600-ncol-3-5, .ncol > .w1600-ncol-3-5,
+    .nrow > .n7-ncol-3-5,    .ncol > .n7-ncol-3-5    { width: 60% !important; }
+    .nrow > .w1600-ncol-4-5, .ncol > .w1600-ncol-4-5,
+    .nrow > .n7-ncol-4-5,    .ncol > .n7-ncol-4-5    { width: 80% !important; }
+    .w1600-order-1, .n7-order-1 { order: 1; } .w1600-order-2, .n7-order-2 { order: 2; }
+    .w1600-order-first, .n7-order-first { order: -1; } .w1600-order-last, .n7-order-last { order: 999; }
+}
+
+/* w1400 / n6 — 1400px */
+@media (max-width: 1400px) {
+    .nrow > .w1400-ncol-1-1, .ncol > .w1400-ncol-1-1,
+    .nrow > .n6-ncol-1-1,    .ncol > .n6-ncol-1-1    { width: 100% !important; }
+    .nrow > .w1400-ncol-1-2, .ncol > .w1400-ncol-1-2,
+    .nrow > .n6-ncol-1-2,    .ncol > .n6-ncol-1-2    { width: 50% !important; }
+    .nrow > .w1400-ncol-1-3, .ncol > .w1400-ncol-1-3,
+    .nrow > .n6-ncol-1-3,    .ncol > .n6-ncol-1-3    { width: 33.333% !important; }
+    .nrow > .w1400-ncol-2-3, .ncol > .w1400-ncol-2-3,
+    .nrow > .n6-ncol-2-3,    .ncol > .n6-ncol-2-3    { width: 66.666% !important; }
+    .nrow > .w1400-ncol-1-4, .ncol > .w1400-ncol-1-4,
+    .nrow > .n6-ncol-1-4,    .ncol > .n6-ncol-1-4    { width: 25% !important; }
+    .nrow > .w1400-ncol-3-4, .ncol > .w1400-ncol-3-4,
+    .nrow > .n6-ncol-3-4,    .ncol > .n6-ncol-3-4    { width: 75% !important; }
+    .nrow > .w1400-ncol-1-5, .ncol > .w1400-ncol-1-5,
+    .nrow > .n6-ncol-1-5,    .ncol > .n6-ncol-1-5    { width: 20% !important; }
+    .nrow > .w1400-ncol-2-5, .ncol > .w1400-ncol-2-5,
+    .nrow > .n6-ncol-2-5,    .ncol > .n6-ncol-2-5    { width: 40% !important; }
+    .nrow > .w1400-ncol-3-5, .ncol > .w1400-ncol-3-5,
+    .nrow > .n6-ncol-3-5,    .ncol > .n6-ncol-3-5    { width: 60% !important; }
+    .nrow > .w1400-ncol-4-5, .ncol > .w1400-ncol-4-5,
+    .nrow > .n6-ncol-4-5,    .ncol > .n6-ncol-4-5    { width: 80% !important; }
+    .w1400-order-1, .n6-order-1 { order: 1; } .w1400-order-2, .n6-order-2 { order: 2; }
+    .w1400-order-first, .n6-order-first { order: -1; } .w1400-order-last, .n6-order-last { order: 999; }
+}
+
+/* w1200 / n5 / desktop — 1200px */
+@media (max-width: 1200px) {
+    .nrow > .w1200-ncol-1-1, .ncol > .w1200-ncol-1-1,
+    .nrow > .n5-ncol-1-1,    .ncol > .n5-ncol-1-1,
+    .nrow > .desktop-ncol-1-1, .ncol > .desktop-ncol-1-1 { width: 100% !important; }
+    .nrow > .w1200-ncol-1-2, .ncol > .w1200-ncol-1-2,
+    .nrow > .n5-ncol-1-2,    .ncol > .n5-ncol-1-2,
+    .nrow > .desktop-ncol-1-2, .ncol > .desktop-ncol-1-2 { width: 50% !important; }
+    .nrow > .w1200-ncol-1-3, .ncol > .w1200-ncol-1-3,
+    .nrow > .n5-ncol-1-3,    .ncol > .n5-ncol-1-3,
+    .nrow > .desktop-ncol-1-3, .ncol > .desktop-ncol-1-3 { width: 33.333% !important; }
+    .nrow > .w1200-ncol-2-3, .ncol > .w1200-ncol-2-3,
+    .nrow > .n5-ncol-2-3,    .ncol > .n5-ncol-2-3,
+    .nrow > .desktop-ncol-2-3, .ncol > .desktop-ncol-2-3 { width: 66.666% !important; }
+    .nrow > .w1200-ncol-1-4, .ncol > .w1200-ncol-1-4,
+    .nrow > .n5-ncol-1-4,    .ncol > .n5-ncol-1-4,
+    .nrow > .desktop-ncol-1-4, .ncol > .desktop-ncol-1-4 { width: 25% !important; }
+    .nrow > .w1200-ncol-3-4, .ncol > .w1200-ncol-3-4,
+    .nrow > .n5-ncol-3-4,    .ncol > .n5-ncol-3-4,
+    .nrow > .desktop-ncol-3-4, .ncol > .desktop-ncol-3-4 { width: 75% !important; }
+    .nrow > .w1200-ncol-1-5, .ncol > .w1200-ncol-1-5,
+    .nrow > .n5-ncol-1-5,    .ncol > .n5-ncol-1-5,
+    .nrow > .desktop-ncol-1-5, .ncol > .desktop-ncol-1-5 { width: 20% !important; }
+    .nrow > .w1200-ncol-2-5, .ncol > .w1200-ncol-2-5,
+    .nrow > .n5-ncol-2-5,    .ncol > .n5-ncol-2-5,
+    .nrow > .desktop-ncol-2-5, .ncol > .desktop-ncol-2-5 { width: 40% !important; }
+    .nrow > .w1200-ncol-3-5, .ncol > .w1200-ncol-3-5,
+    .nrow > .n5-ncol-3-5,    .ncol > .n5-ncol-3-5,
+    .nrow > .desktop-ncol-3-5, .ncol > .desktop-ncol-3-5 { width: 60% !important; }
+    .nrow > .w1200-ncol-4-5, .ncol > .w1200-ncol-4-5,
+    .nrow > .n5-ncol-4-5,    .ncol > .n5-ncol-4-5,
+    .nrow > .desktop-ncol-4-5, .ncol > .desktop-ncol-4-5 { width: 80% !important; }
+    .w1200-order-1, .n5-order-1, .desktop-order-1 { order: 1; }
+    .w1200-order-2, .n5-order-2, .desktop-order-2 { order: 2; }
+    .w1200-order-first, .n5-order-first, .desktop-order-first { order: -1; }
+    .w1200-order-last,  .n5-order-last,  .desktop-order-last  { order: 999; }
+}
+
+/* w992 / n4 — 992px */
+@media (max-width: 992px) {
+    .nrow > .w992-ncol-1-1, .ncol > .w992-ncol-1-1,
+    .nrow > .n4-ncol-1-1,   .ncol > .n4-ncol-1-1   { width: 100% !important; }
+    .nrow > .w992-ncol-1-2, .ncol > .w992-ncol-1-2,
+    .nrow > .n4-ncol-1-2,   .ncol > .n4-ncol-1-2   { width: 50% !important; }
+    .nrow > .w992-ncol-1-3, .ncol > .w992-ncol-1-3,
+    .nrow > .n4-ncol-1-3,   .ncol > .n4-ncol-1-3   { width: 33.333% !important; }
+    .nrow > .w992-ncol-2-3, .ncol > .w992-ncol-2-3,
+    .nrow > .n4-ncol-2-3,   .ncol > .n4-ncol-2-3   { width: 66.666% !important; }
+    .nrow > .w992-ncol-1-4, .ncol > .w992-ncol-1-4,
+    .nrow > .n4-ncol-1-4,   .ncol > .n4-ncol-1-4   { width: 25% !important; }
+    .nrow > .w992-ncol-3-4, .ncol > .w992-ncol-3-4,
+    .nrow > .n4-ncol-3-4,   .ncol > .n4-ncol-3-4   { width: 75% !important; }
+    .nrow > .w992-ncol-1-5, .ncol > .w992-ncol-1-5,
+    .nrow > .n4-ncol-1-5,   .ncol > .n4-ncol-1-5   { width: 20% !important; }
+    .nrow > .w992-ncol-2-5, .ncol > .w992-ncol-2-5,
+    .nrow > .n4-ncol-2-5,   .ncol > .n4-ncol-2-5   { width: 40% !important; }
+    .nrow > .w992-ncol-3-5, .ncol > .w992-ncol-3-5,
+    .nrow > .n4-ncol-3-5,   .ncol > .n4-ncol-3-5   { width: 60% !important; }
+    .nrow > .w992-ncol-4-5, .ncol > .w992-ncol-4-5,
+    .nrow > .n4-ncol-4-5,   .ncol > .n4-ncol-4-5   { width: 80% !important; }
+    .w992-order-1, .n4-order-1 { order: 1; } .w992-order-2, .n4-order-2 { order: 2; }
+    .w992-order-first, .n4-order-first { order: -1; } .w992-order-last, .n4-order-last { order: 999; }
+}
+
+/* w768 / n3 / tablet — 768px */
+@media (max-width: 768px) {
+    .nrow > .w768-ncol-1-1, .ncol > .w768-ncol-1-1,
+    .nrow > .n3-ncol-1-1,   .ncol > .n3-ncol-1-1,
+    .nrow > .tablet-ncol-1-1, .ncol > .tablet-ncol-1-1 { width: 100% !important; }
+    .nrow > .w768-ncol-1-2, .ncol > .w768-ncol-1-2,
+    .nrow > .n3-ncol-1-2,   .ncol > .n3-ncol-1-2,
+    .nrow > .tablet-ncol-1-2, .ncol > .tablet-ncol-1-2 { width: 50% !important; }
+    .nrow > .w768-ncol-1-3, .ncol > .w768-ncol-1-3,
+    .nrow > .n3-ncol-1-3,   .ncol > .n3-ncol-1-3,
+    .nrow > .tablet-ncol-1-3, .ncol > .tablet-ncol-1-3 { width: 33.333% !important; }
+    .nrow > .w768-ncol-2-3, .ncol > .w768-ncol-2-3,
+    .nrow > .n3-ncol-2-3,   .ncol > .n3-ncol-2-3,
+    .nrow > .tablet-ncol-2-3, .ncol > .tablet-ncol-2-3 { width: 66.666% !important; }
+    .nrow > .w768-ncol-1-4, .ncol > .w768-ncol-1-4,
+    .nrow > .n3-ncol-1-4,   .ncol > .n3-ncol-1-4,
+    .nrow > .tablet-ncol-1-4, .ncol > .tablet-ncol-1-4 { width: 25% !important; }
+    .nrow > .w768-ncol-3-4, .ncol > .w768-ncol-3-4,
+    .nrow > .n3-ncol-3-4,   .ncol > .n3-ncol-3-4,
+    .nrow > .tablet-ncol-3-4, .ncol > .tablet-ncol-3-4 { width: 75% !important; }
+    .nrow > .w768-ncol-1-5, .ncol > .w768-ncol-1-5,
+    .nrow > .n3-ncol-1-5,   .ncol > .n3-ncol-1-5,
+    .nrow > .tablet-ncol-1-5, .ncol > .tablet-ncol-1-5 { width: 20% !important; }
+    .nrow > .w768-ncol-2-5, .ncol > .w768-ncol-2-5,
+    .nrow > .n3-ncol-2-5,   .ncol > .n3-ncol-2-5,
+    .nrow > .tablet-ncol-2-5, .ncol > .tablet-ncol-2-5 { width: 40% !important; }
+    .nrow > .w768-ncol-3-5, .ncol > .w768-ncol-3-5,
+    .nrow > .n3-ncol-3-5,   .ncol > .n3-ncol-3-5,
+    .nrow > .tablet-ncol-3-5, .ncol > .tablet-ncol-3-5 { width: 60% !important; }
+    .nrow > .w768-ncol-4-5, .ncol > .w768-ncol-4-5,
+    .nrow > .n3-ncol-4-5,   .ncol > .n3-ncol-4-5,
+    .nrow > .tablet-ncol-4-5, .ncol > .tablet-ncol-4-5 { width: 80% !important; }
+    .w768-order-1, .n3-order-1, .tablet-order-1 { order: 1; }
+    .w768-order-2, .n3-order-2, .tablet-order-2 { order: 2; }
+    .w768-order-first, .n3-order-first, .tablet-order-first { order: -1; }
+    .w768-order-last,  .n3-order-last,  .tablet-order-last  { order: 999; }
+}
+
+/* w576 / n2 — 576px */
+@media (max-width: 576px) {
+    .nrow > .w576-ncol-1-1, .ncol > .w576-ncol-1-1,
+    .nrow > .n2-ncol-1-1,   .ncol > .n2-ncol-1-1   { width: 100% !important; }
+    .nrow > .w576-ncol-1-2, .ncol > .w576-ncol-1-2,
+    .nrow > .n2-ncol-1-2,   .ncol > .n2-ncol-1-2   { width: 50% !important; }
+    .nrow > .w576-ncol-1-3, .ncol > .w576-ncol-1-3,
+    .nrow > .n2-ncol-1-3,   .ncol > .n2-ncol-1-3   { width: 33.333% !important; }
+    .nrow > .w576-ncol-2-3, .ncol > .w576-ncol-2-3,
+    .nrow > .n2-ncol-2-3,   .ncol > .n2-ncol-2-3   { width: 66.666% !important; }
+    .nrow > .w576-ncol-1-4, .ncol > .w576-ncol-1-4,
+    .nrow > .n2-ncol-1-4,   .ncol > .n2-ncol-1-4   { width: 25% !important; }
+    .nrow > .w576-ncol-3-4, .ncol > .w576-ncol-3-4,
+    .nrow > .n2-ncol-3-4,   .ncol > .n2-ncol-3-4   { width: 75% !important; }
+    .nrow > .w576-ncol-1-5, .ncol > .w576-ncol-1-5,
+    .nrow > .n2-ncol-1-5,   .ncol > .n2-ncol-1-5   { width: 20% !important; }
+    .nrow > .w576-ncol-2-5, .ncol > .w576-ncol-2-5,
+    .nrow > .n2-ncol-2-5,   .ncol > .n2-ncol-2-5   { width: 40% !important; }
+    .nrow > .w576-ncol-3-5, .ncol > .w576-ncol-3-5,
+    .nrow > .n2-ncol-3-5,   .ncol > .n2-ncol-3-5   { width: 60% !important; }
+    .nrow > .w576-ncol-4-5, .ncol > .w576-ncol-4-5,
+    .nrow > .n2-ncol-4-5,   .ncol > .n2-ncol-4-5   { width: 80% !important; }
+    .w576-order-1, .n2-order-1 { order: 1; } .w576-order-2, .n2-order-2 { order: 2; }
+    .w576-order-first, .n2-order-first { order: -1; } .w576-order-last, .n2-order-last { order: 999; }
+}
+
+/* w320 / n1 / mobile — 320px */
+@media (max-width: 320px) {
+    .nrow > .w320-ncol-1-1, .ncol > .w320-ncol-1-1,
+    .nrow > .n1-ncol-1-1,   .ncol > .n1-ncol-1-1,
+    .nrow > .mobile-ncol-1-1, .ncol > .mobile-ncol-1-1 { width: 100% !important; }
+    .nrow > .w320-ncol-1-2, .ncol > .w320-ncol-1-2,
+    .nrow > .n1-ncol-1-2,   .ncol > .n1-ncol-1-2,
+    .nrow > .mobile-ncol-1-2, .ncol > .mobile-ncol-1-2 { width: 50% !important; }
+    .nrow > .w320-ncol-1-3, .ncol > .w320-ncol-1-3,
+    .nrow > .n1-ncol-1-3,   .ncol > .n1-ncol-1-3,
+    .nrow > .mobile-ncol-1-3, .ncol > .mobile-ncol-1-3 { width: 33.333% !important; }
+    .nrow > .w320-ncol-2-3, .ncol > .w320-ncol-2-3,
+    .nrow > .n1-ncol-2-3,   .ncol > .n1-ncol-2-3,
+    .nrow > .mobile-ncol-2-3, .ncol > .mobile-ncol-2-3 { width: 66.666% !important; }
+    .nrow > .w320-ncol-1-4, .ncol > .w320-ncol-1-4,
+    .nrow > .n1-ncol-1-4,   .ncol > .n1-ncol-1-4,
+    .nrow > .mobile-ncol-1-4, .ncol > .mobile-ncol-1-4 { width: 25% !important; }
+    .nrow > .w320-ncol-3-4, .ncol > .w320-ncol-3-4,
+    .nrow > .n1-ncol-3-4,   .ncol > .n1-ncol-3-4,
+    .nrow > .mobile-ncol-3-4, .ncol > .mobile-ncol-3-4 { width: 75% !important; }
+    .nrow > .w320-ncol-1-5, .ncol > .w320-ncol-1-5,
+    .nrow > .n1-ncol-1-5,   .ncol > .n1-ncol-1-5,
+    .nrow > .mobile-ncol-1-5, .ncol > .mobile-ncol-1-5 { width: 20% !important; }
+    .nrow > .w320-ncol-2-5, .ncol > .w320-ncol-2-5,
+    .nrow > .n1-ncol-2-5,   .ncol > .n1-ncol-2-5,
+    .nrow > .mobile-ncol-2-5, .ncol > .mobile-ncol-2-5 { width: 40% !important; }
+    .nrow > .w320-ncol-3-5, .ncol > .w320-ncol-3-5,
+    .nrow > .n1-ncol-3-5,   .ncol > .n1-ncol-3-5,
+    .nrow > .mobile-ncol-3-5, .ncol > .mobile-ncol-3-5 { width: 60% !important; }
+    .nrow > .w320-ncol-4-5, .ncol > .w320-ncol-4-5,
+    .nrow > .n1-ncol-4-5,   .ncol > .n1-ncol-4-5,
+    .nrow > .mobile-ncol-4-5, .ncol > .mobile-ncol-4-5 { width: 80% !important; }
+    .w320-order-1, .n1-order-1, .mobile-order-1 { order: 1; }
+    .w320-order-2, .n1-order-2, .mobile-order-2 { order: 2; }
+    .w320-order-first, .n1-order-first, .mobile-order-first { order: -1; }
+    .w320-order-last,  .n1-order-last,  .mobile-order-last  { order: 999; }
+}
