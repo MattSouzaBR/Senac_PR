@@ -57,3 +57,7 @@ button:hover {
     /* background-color: #1d4ed8; */
     filter: brightness(120%); /*Sugestão do Gemini*/
 }
+
+.erro {
+    border: 2px solid red;
+}
