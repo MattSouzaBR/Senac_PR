@@ -4,7 +4,7 @@ namespace MeuPrograma {
     public class Program {
         public static void Main(string[] args) {
         // Declarar as variáveis
-            double total, preco, totalComissaoVendedor, comissao, diferenca, percentualComissao = 0.2;
+            double total, preco, totalComissaoVendedor, diferenca, percentualComissao = 0.2;
             int qtdVendida;
         
         // Entrada
@@ -18,12 +18,12 @@ namespace MeuPrograma {
 
         // Processamento
             total = qtdVendida * preco;
-            comissao = total * percentualComissao;
-            diferenca = total - comissao;
+            totalComissaoVendedor = total * percentualComissao;
+            diferenca = total - totalComissaoVendedor;
 
         // Saída
             Console.WriteLine ("Ao vender ", qtdVendida, " itens por R$ ", preco, " o total será: R$ ", total);
-            Console.WriteLine ("A comissão do vendedor será R$ ", comissao, ". Sobrará para a loja: R$ ", diferenca);
+            Console.WriteLine ("A comissão do vendedor será R$ ", totalComissaoVendedor, ". Sobrará para a loja: R$ ", diferenca);
         }
     }
 }

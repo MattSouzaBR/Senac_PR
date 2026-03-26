@@ -6,7 +6,7 @@ public class MeuPrograma {
         Scanner ler = new Scanner(System.in); // <<<< Declarar o nome que referencia o programa
 
         // Declarar as variáveis
-            double total, preco, totalComissaoVendedor, comissao, diferenca, percentualComissao = 0.02;
+            double total, preco, totalComissaoVendedor, diferenca, percentualComissao = 0.02;
             int qtdVendida;
         
         // Entrada
@@ -18,11 +18,13 @@ public class MeuPrograma {
             
         // Processamento
             total = qtdVendida * preco;
-            comissao = total * percentualComissao;
-            diferenca = total - comissao;
+            totalComissaoVendedor = total * percentualComissao;
+            diferenca = total - totalComissaoVendedor;
         
         // Saída
             System.out.println ("Ao vender " + qtdVendida + " itens por " + preco + " o total será: R$ " + total);
-            System.out.println ("A comissão do vendedor será R$ " + comissao + ". Sobrará para a loja: R$ " + diferenca);
+            System.out.println ("A comissão do vendedor será R$ " + totalComissaoVendedor + ". Sobrará para a loja: R$ " + diferenca);
+
+        ler.close();
     }
 }
