@@ -4,6 +4,22 @@
         --espacamento: 20px;
 }
 
+img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+#main-depoimentos * img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+pre {
+    text-wrap: unset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 * {     /* Reset */
         margin: 0;
         padding: 0;
@@ -121,12 +137,6 @@ input, select, textarea {
 textarea {
     resize: vertical;
     min-height: 100px;
-}
-
-.d-flex {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap: 20px;
 }
 
 button {

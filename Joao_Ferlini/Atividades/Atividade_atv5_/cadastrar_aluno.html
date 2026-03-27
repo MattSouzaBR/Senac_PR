@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Ficha de Cadastro do Aluno | Escola Azul Brasil</title>
 </head>
@@ -18,7 +19,7 @@
                 <label for="aluno_nome_aluno">Nome do Aluno <span style="color: red;">*</span></label>
                 <input type="text" name="aluno_nome_aluno" id="aluno_nome_aluno" placeholder="José Exemplo Souza" required>
 
-                <div class="d-flex">
+                <div class="row-1-1-2">
                     <div>
                         <label for="aluno_cpf_aluno">CPF <span style="color: red;">*</span></label>
                         <input type="text" name="aluno_cpf_aluno" id="aluno_cpf_aluno" placeholder="xxx.xxx.xxx-xx" required>
@@ -41,7 +42,7 @@
                 <h2>Identificação do(s) Responsável(is)</h2>
                 <label for="aluno_nome_mae">Nome do Primeiro Responsável <span style="color: red;">*</span></label>
                 <input type="text" name="aluno_nome_mae" id="aluno_nome_mae" placeholder="Maria Exemplo Souza" required>
-                <div class="d-flex">
+                <div class="row-1-1-2">
                     <div>
                         <label for="aluno_cpf_mae">CPF <span style="color: red;">*</span></label>
                         <input type="text" name="aluno_cpf_mae" id="aluno_cpf_mae" placeholder="xxx.xxx.xxx-xx" required>
@@ -60,7 +61,7 @@
                 <br>
                 <label for="aluno_nome_pai">Nome do Segundo Responsável</label>
                 <input type="text" name="aluno_nome_pai" id="aluno_nome_pai" placeholder="Pedro Exemplo Souza">
-                <div class="d-flex">
+                <div class="row-1-1-2">
                     <div>
                         <label for="aluno_cpf_pai">CPF</label>
                         <input type="text" name="aluno_cpf_pai" id="aluno_cpf_pai" placeholder="xxx.xxx.xxx-xx">
@@ -82,7 +83,12 @@
                 <h2>Informações de Contato</h2>
                 <label for="aluno_endereco">Endereço <span style="color: red;">*</span></label>
                 <input type="text" name="aluno_endereco" id="aluno_endereco" placeholder="Rua com Casas, SN" required>
-                <div class="d-flex">
+                <div class="row-2-1-1">
+                    <div>
+                        <label for="aluno_complemento">Complemento</label>
+                        <input type="text" name="aluno_complemento" id="aluno_complemento" placeholder="casa da frente">
+                    </div>
+
                     <div>
                         <label for="aluno_telefone">Telefone <span style="color: red;">*</span></label>
                         <input type="text" name="aluno_telefone" id="aluno_telefone" placeholder="(xx) xxx xxx xxx" required>
@@ -93,10 +99,6 @@
                         <input type="text" name="aluno_celular" id="aluno_celular" placeholder="(xx) xxx xxx xxx" required>
                     </div>
 
-                    <div>
-                        <label for="aluno_complemento">Complemento</label>
-                        <input type="text" name="aluno_complemento" id="aluno_complemento" placeholder="casa da frente">
-                    </div>
                 </div>
                 <label for="aluno_anotacoes">Anotações / Detalhes Adicionais <span style="color: red;">*</span></label>
                 <textarea name="aluno_anotacoes" id="aluno_anotacoes" placeholder="Este telefone é do pai do Aluno..." required></textarea>
