@@ -32,6 +32,6 @@ body {
     }
 
     #nav-menu-navegacao a:hover, #nav-menu-gerenciamento a:hover {
-    filter: brightness(120%); /*Sugestão do Gemini*/
-    transform: scale(105%);
+        filter: brightness(120%); /*Sugestão do Gemini*/
+        transform: scale(105%);
     }
