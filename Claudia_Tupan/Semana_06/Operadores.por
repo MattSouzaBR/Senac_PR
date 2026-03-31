@@ -18,7 +18,7 @@ programa
 	funcao inicio()
 	{
 		// Declaração
-		inteiro intNumeroUm, intNumeroDois, somaTotal, subtracaoTotal, multiplicacaoTotal, restoTotal
+		inteiro somaTotal, subtracaoTotal, multiplicacaoTotal, restoTotal
 		real numeroUm, numeroDois, divisaoTotal
 
 		// Entrada
@@ -34,8 +34,8 @@ programa
 		multiplicacaoTotal = numeroUm * numeroDois
 		divisaoTotal = numeroUm / numeroDois
 
-		intNumeroUm = numeroUm
-		intNumeroDois = numeroDois
+		inteiro intNumeroUm = numeroUm
+		inteiro intNumeroDois = numeroDois
 		restoTotal = intNumeroUm % intNumeroDois
 
 		// Saída
@@ -51,7 +51,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1457; 
+ * @POSICAO-CURSOR = 1112; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
