@@ -1,0 +1,40 @@
+.layout             {display: grid;}
+
+.row-1fr            {grid-template-columns: repeat(1, 1fr);}
+.row-2fr            {grid-template-columns: repeat(2, 1fr);}
+.row-3fr            {grid-template-columns: repeat(3, 1fr);}
+.row-4fr            {grid-template-columns: repeat(4, 1fr);}
+.row-5fr            {grid-template-columns: repeat(5, 1fr);}
+.row-6fr            {grid-template-columns: repeat(6, 1fr);}
+.row-7fr            {grid-template-columns: repeat(7, 1fr);}
+.row-8fr            {grid-template-columns: repeat(8, 1fr);}
+.row-9fr            {grid-template-columns: repeat(9, 1fr);}
+.row-10fr           {grid-template-columns: repeat(10, 1fr);}
+.row-11fr           {grid-template-columns: repeat(11, 1fr);}
+.row-12fr           {grid-template-columns: repeat(12, 1fr);}
+
+.span-1             {column-span: span 1;}
+.span-2             {column-span: span 2;}
+.span-3             {column-span: span 3;}
+.span-4             {column-span: span 4;}
+.span-5             {column-span: span 5;}
+.span-6             {column-span: span 6;}
+.span-7             {column-span: span 7;}
+.span-8             {column-span: span 8;}
+.span-9             {column-span: span 9;}
+.span-10            {column-span: span 10;}
+.span-11            {column-span: span 11;}
+.span-12            {column-span: span 12;}
+
+.row-1fr-1fr        {grid-template-columns: 1fr 1fr;}
+.row-1fr-2fr        {grid-template-columns: 1fr 2fr;}
+.row-2fr-1fr        {grid-template-columns: 2fr 1fr;}
+
+.row-1fr-1fr-1fr    {grid-template-columns: 1fr 1fr 1fr;}
+.row-1fr-1fr-2fr    {grid-template-columns: 1fr 1fr 2fr;}
+.row-1fr-2fr-1fr    {grid-template-columns: 1fr 2fr 1fr;}
+.row-1fr-2fr-2fr    {grid-template-columns: 1fr 2fr 2fr;}
+.row-2fr-1fr-1fr    {grid-template-columns: 2fr 1fr 1fr;}
+
+.row-auto-1fr       {grid-template-columns: auto 1fr;}
+.row-1fr-auto       {grid-template-columns: 1fr auto;}
