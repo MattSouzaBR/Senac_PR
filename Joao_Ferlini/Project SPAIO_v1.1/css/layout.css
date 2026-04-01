@@ -12,11 +12,11 @@ header > menu   {grid-area: menu-header;}
 
 body {
     display: grid;
-    grid-template-areas: 
-        "header header"
-        "main aside"
-        "footer footer"
-    ;
+        grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer"
+        ;
 }
 
 /*
