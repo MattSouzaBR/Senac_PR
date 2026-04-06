@@ -1,0 +1,25 @@
+body > header   {grid-area: header;}
+body > main     {grid-area: main;}
+body > aside    {grid-area: aside;}
+body > footer   {grid-area: footer;}
+body > menu     {grid-area: menu;}
+body > nav      {grid-area: nav;}
+body > section  {grid-area: section;}
+body > article  {grid-area: article;}
+
+header > nav    {grid-area: nav-header;}
+header > menu   {grid-area: menu-header;}
+
+body {
+    display: grid;
+        grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer"
+        ;
+}
+
+/*
+    https://cssgridgenerator.io/
+    https://cssgrid-generator.netlify.app/
+*/

@@ -1,7 +1,3 @@
-Exemplo de Sombras:
- - https://getbootstrap.com/docs/4.1/utilities/shadows/
-
-
 Ver: https://www.gov.br/ds/components/button?tab=visao-geral
 
 https://getbootstrap.com/docs/5.3/examples/

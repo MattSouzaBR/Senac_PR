@@ -1,0 +1,36 @@
+
+/* Links */
+a {
+    transition: filter 0.3s ease
+}
+
+a:hover {
+    filter: brightness(120%);
+}
+
+/* Botões */
+a.btn, button {
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+a.btn:hover, button:hover {
+    filter: brightness(120%);
+    transform: scale(105%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*
+    // Sombras
+    https://getcssscan.com/css-box-shadow-examples
+    https://html-css-js.com/css/generator/box-shadow/
+
+    // Botões
+    https://uiverse.io/buttons
+    https://getcssscan.com/css-buttons-examples
+    https://cssbuttons.io/
+    https://www.bestcssbuttongenerator.com/
+
+    Necessita remover o Bootstrap e colocar Tailwind CSS >> https://flowbite.com/docs/components/buttons/
+    Necessita remover o Bootstrap e colocar Bulma CSS >> https://bulma.io/documentation/elements/button/
+*/
