@@ -1,10 +1,13 @@
-programa {
-	funcao mensagem (cadeia texto) {
+programa
+ {
+	
+funcao mensagem (cadeia texto) {
 		escreva (texto, "\n")	
 	}
 	
-	funcao inicio() {
-		enum5 ()
+	funcao inicio()
+ {
+		enum1 ()
 	}
 	/* Leia cada enunciado e identifique
 	 *  1 - Quantas variáveis devem ser declaradas
@@ -23,22 +26,42 @@ programa {
 		* Crie um algoritmo que leia a largura e a altura da sala
 		* Calcule e mostre a área e o perímetro do retângulo
 		*/
+
+		/*
+		Quadrado
+			Perímetro: P = 4xL(lado + lado + lado + lado)
+			Área: A = l²(lado x lado)
+		
+		Retângulo
+			Perímetro: P = 2x(base+altura)
+			Área: A = base x altura
+		
+		Triângulo
+			Perímetro: P = a + b + c
+			Área: A = (base x altura)/2
+
+		Círculo
+			Perímetro (Circunferência): C = 2 x π x r (r é o raio, π ~ 3,14)
+			Área: A = π x r²
+		*/
 		
 		// Declaração das variáveis
-		real largura, altura, hipotenusa
+		real base, altura, perimetro, area
 
 		// Entrada
-		escreva ("Informe a largura: ")
-		leia (largura)
+		escreva ("Informe a base: ")
+		leia (base)
 
 		escreva ("Informe a altura: ")
 		leia (altura)
 		
 		// Processamento
-		hipotenusa = altura * altura + largura * largura
+		perimetro = 2 * (base + altura)
+		area = base * altura
 		
 		// Saída
-		escreva ("")
+		mensagem ("O perímetro é: " + perimetro)
+		mensagem ("A área é: " + area)
 	}
 
 	funcao enum2 () {
@@ -56,7 +79,10 @@ programa {
 		 */
 		 
 		// Declaração de variáveis
+		real KmDistancia, litroCombustivel
+
 		// Entrada do Usuário
+		
 		// Processamento interno
 		// Saída para Usuário
 	}
