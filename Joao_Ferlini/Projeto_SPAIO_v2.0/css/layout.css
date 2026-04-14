@@ -3,36 +3,62 @@ aside {grid-area: aside;}
 main {grid-area: main;}
 footer{grid-area: footer;}
 
-/* First Mobile Styles */
 body {
     background-color: var(--background-color);
+    min-height: 100vh;
+    gap: 10px;
     display: grid;
+}
+
+/* Mobile sem aside */
+body:not(:has(> aside)) {
     grid-template-areas:
-    "header"
-    "aside"
-    "main"
-    "footer";
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Mobile com aside */
+body:has(> aside) {
+    grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
 }
 
-/* Then Desktop Styles */
+/* Desktop sem aside */
 @media (min-width: 768px) {
-    body {
+    body:not(:has(> aside)) {
         grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
-        grid-template-columns: auto 1fr;
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    /* Desktop com aside */
+    body:has(> aside) {
+        grid-template-areas:
+            "header header"
+            "aside  main"
+            "footer footer";
+        grid-template-columns: clamp(200px, 20%, 300px) 1fr;
         grid-template-rows: auto 1fr auto;
     }
 }
 
-/* Ultrawide Styles */
-@media (min-width: 1400px) {
+/* Ultrawide */
+@media (min-width: 2560px) {
     body {
         grid-template-areas:
-        "header main aside footer";
-        grid-template-columns: 1fr;
+            "header aside main footer";
+        grid-template-columns: auto auto 1fr auto;
+        grid-template-rows: 1fr;
     }
 }

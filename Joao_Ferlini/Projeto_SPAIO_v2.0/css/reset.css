@@ -21,8 +21,8 @@
         border: 0;
         font: inherit;
         font-size: 100%; /* Invertido com a linha acima. Por esse ser específico e o 'font' genérico, ele acabava sendo sobrescrito */
-        font-family: var(--fonte-padrao); /* Acrescentado ! */
-        color: var(--cor-escura); /* Acrescentado ! */
+        font-family: var(--font-family); /* Acrescentado ! */
+        color: var(--paragraph-color); /* Acrescentado ! */
         vertical-align: baseline;
         text-decoration: none;
     }
@@ -33,7 +33,7 @@
     }
     body {
         line-height: 1;
-        background-color: var(--cor-clara); /* Acrescentado ! */;
+        background-color: var(--background-color); /* Acrescentado ! */;
     }
     ol, ul {
         list-style: none;
