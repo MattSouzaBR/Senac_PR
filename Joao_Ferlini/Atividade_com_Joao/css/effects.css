@@ -5,3 +5,11 @@ a img {
 a img:hover {
     transform: scale(1.1);
 }
+
+header a:hover {
+        background-color: rgb(0, 0, 0) !important;
+        transition: .5s;
+        li, i{
+            color: white;
+        }
+    }
