@@ -37,7 +37,7 @@ body:has(> aside) {
             "header main"
             "header main"
             "footer main";
-        grid-template-columns: auto 1fr;
+        grid-template-columns: minmax(200px, 15%) 1fr;
         grid-template-rows: auto 1fr auto;
     }
 
