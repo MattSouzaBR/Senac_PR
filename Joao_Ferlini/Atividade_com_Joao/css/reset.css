@@ -77,4 +77,17 @@
 
     html {
         scroll-behavior: smooth;
+        /* scroll-padding-top: 50px; */
+    }
+
+    input[type="checkbox"] {
+        accent-color: #ff69b4;
+    }
+
+    :root {
+        color-scheme: light dark;
+    }
+
+    img {
+        image-rendering: pixelated;
     }

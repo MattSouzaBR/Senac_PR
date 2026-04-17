@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 :root {
     /* 
         https://corhexa.com/f4f2ef
@@ -21,7 +22,7 @@
     --paragraph-color: var(--dark-color);
     --heading-color: var(--dark-color); /* corrigido: era referência circular */
 
-    --font-family: Arial, sans-serif;
+    --font-family: 'DM Sans', sans-serif;
     --font-size: 14px;
     --letter-spacing: 0px;
     --line-height: 1.5;
@@ -29,8 +30,8 @@
     --heading-margin: 1rem 0 0.5rem;
 
     /* Sobrescreve tokens do Bootstrap */
-    --bs-font-sans-serif: Arial, sans-serif;
-    --bs-body-font-family: Arial, sans-serif;
+    --bs-font-sans-serif: 'DM Sans', sans-serif;
+    --bs-body-font-family: 'DM Sans', sans-serif;
     --bs-body-font-size: 14px;
     --bs-body-line-height: 1.5;
     --bs-body-color: #212529;

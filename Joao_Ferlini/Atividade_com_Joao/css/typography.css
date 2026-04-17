@@ -1,3 +1,5 @@
+
+
 h1, h2, h3, h4, h5, h6, p {
     font-family: var(--font-family);
     color: var(--color);
@@ -5,6 +7,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1, h2, h3, h4, h5, h6 {
     margin: var(--heading-margin);
+}
+
+strong {
+    font-weight: 700;
 }
 
 p {
