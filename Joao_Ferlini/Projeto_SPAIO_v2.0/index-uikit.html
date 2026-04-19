@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAIO UI Kit — Biblioteca de Componentes</title>
+    
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Seu Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/effects.css">
+
+    <style>
+        :root {
+            --ui-bg: #f8fafc;
+            --ui-sidebar: #ffffff;
+            --ui-accent: var(--primary-color, #0d6efd);
+            --ui-text: #1e293b;
+            --ui-border: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--ui-bg);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--ui-text);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-areas: "sidebar content";
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .ui-sidebar {
+            grid-area: sidebar;
+            background: var(--ui-sidebar);
+            border-right: 1px solid var(--ui-border);
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .ui-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--ui-accent);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ui-nav-group {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ui-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.75rem 1rem;
+            color: #64748b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .ui-nav-link:hover, .ui-nav-link.active {
+            background-color: #f1f5f9;
+            color: var(--ui-accent);
+        }
+
+        /* Content */
+        .ui-content {
+            grid-area: content;
+            padding: 3rem 4rem;
+            max-width: 1200px;
+        }
+
+        .ui-section {
+            margin-bottom: 5rem;
+        }
+
+        .ui-header {
+            margin-bottom: 2rem;
+        }
+
+        .ui-header h2 {
+            font-weight: 700;
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ui-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        /* Component Card */
+        .component-card {
+            background: white;
+            border: 1px solid var(--ui-border);
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .component-preview {
+            padding: 3rem;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: #fcfcfc;
+            border-bottom: 1px solid var(--ui-border);
+        }
+
+        .component-meta {
+            padding: 1rem 1.5rem;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .component-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .btn-copy {
+            background: #f1f5f9;
+            border: none;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-copy:hover {
+            background: var(--ui-accent);
+            color: white;
+        }
+
+        .btn-copy.success {
+            background: #22c55e;
+            color: white;
+        }
+
+        /* Code display (hidden) */
+        .code-snippet {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-areas: "content";
+            }
+            .ui-sidebar {
+                display: none;
+            }
+            .ui-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="ui-sidebar">
+        <div class="ui-brand">
+            <i class="bi bi-layers-fill"></i> SPAIO UI Kit
+        </div>
+        
+        <nav>
+            <div class="ui-nav-group">Início</div>
+            <a href="#intro" class="ui-nav-link active"><i class="bi bi-house-door"></i> Introdução</a>
+            
+            <div class="ui-nav-group">Navegação</div>
+            <a href="#navbars" class="ui-nav-link"><i class="bi bi-window-stack"></i> Navbars</a>
+            <a href="#footers" class="ui-nav-link"><i class="bi bi-layout-sidebar-inset"></i> Footers</a>
+            
+            <div class="ui-nav-group">Seções principais</div>
+            <a href="#heros" class="ui-nav-link"><i class="bi bi-megaphone"></i> Heros</a>
+            <a href="#services" class="ui-nav-link"><i class="bi bi-grid-3x3-gap"></i> Serviços</a>
+            
+            <div class="ui-nav-group">SaaS / Dashboard</div>
+            <a href="#stats" class="ui-nav-link"><i class="bi bi-graph-up"></i> Stats Cards</a>
+            <a href="#auth" class="ui-nav-link"><i class="bi bi-shield-lock"></i> Telas de Login</a>
+            
+            <div class="ui-nav-group">Utilitários</div>
+            <a href="#typography" class="ui-nav-link"><i class="bi bi-type"></i> Tipografia</a>
+        </nav>
+    </aside>
+
+    <main class="ui-content">
+        
+        <section id="intro" class="ui-section">
+            <div class="ui-header">
+                <h2>Biblioteca de Componentes</h2>
+                <p>Coleção de elementos prontos para o seu SAAS. Copie o HTML e cole no seu projeto.</p>
+            </div>
+            <div class="alert alert-info border-0 shadow-sm">
+                <i class="bi bi-info-circle-fill me-2"></i> Todos os componentes usam as variáveis definidas em <code>css/variables.css</code>.
+            </div>
+        </section>
+
+        <!-- NAVBARS -->
+        <section id="navbars" class="ui-section">
+            <div class="ui-header">
+                <h3>Navbars</h3>
+                <p>Estruturas de navegação para diferentes contextos.</p>
+            </div>
+
+            <!-- Navbar Minimalista -->
+            <div class="component-card">
+                <div class="component-preview">
+                    <!-- Preview -->
+                    <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded-3 py-3">
+                        <div class="container-fluid px-4">
+                            <a class="navbar-brand fw-bold text-primary" href="#">SPAIO</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="nav1">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="text-muted small">v2.0</span>
+                                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width:38px;height:38px;font-weight:600">JS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Dashboard Navbar (Light)</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold text-primary" href="#">SPAIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-muted small">v2.0</span>
+                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width:38px;height:38px;font-weight:600">JS</div>
+            </div>
+        </div>
+    </div>
+</nav></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- HEROS -->
+        <section id="heros" class="ui-section">
+            <div class="ui-header">
+                <h3>Hero Sections</h3>
+                <p>Introduções impactantes para o seu produto.</p>
+            </div>
+
+            <!-- Hero SaaS -->
+            <div class="component-card">
+                <div class="component-preview">
+                    <div class="text-center py-5">
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-4">Novo: Agora com IA integrada</span>
+                        <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -0.02em;">Gerencie seu SAAS com <br><span class="text-primary text-gradient">inteligência e fluidez.</span></h1>
+                        <p class="lead text-muted mx-auto mb-5" style="max-width: 600px;">A plataforma definitiva para organizar suas metas, otimizar sua equipe e escalar seu negócio com dados em tempo real.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-primary btn-lg px-4 py-3 shadow-sm rounded-3">Começar agora free</button>
+                            <button class="btn btn-outline-secondary btn-lg px-4 py-3 rounded-3">Ver demonstração</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Hero SaaS Centralizado</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<div class="text-center py-5">
+    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-4">Novo: Agora com IA integrada</span>
+    <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -0.02em;">Gerencie seu SAAS com <br><span class="text-primary">inteligência e fluidez.</span></h1>
+    <p class="lead text-muted mx-auto mb-5" style="max-width: 600px;">A plataforma definitiva para organizar suas metas, otimizar sua equipe e escalar seu negócio com dados em tempo real.</p>
+    <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-primary btn-lg px-4 py-3 shadow-sm">Começar agora free</button>
+        <button class="btn btn-outline-secondary btn-lg px-4 py-3">Ver demonstração</button>
+    </div>
+</div></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS CARDS -->
+        <section id="stats" class="ui-section">
+            <div class="ui-header">
+                <h3>Stats Cards</h3>
+                <p>Cards de métricas rápidas para dashboards.</p>
+            </div>
+
+            <div class="component-card">
+                <div class="component-preview">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-3 rounded-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="bg-primary-subtle text-primary p-2 rounded-3">
+                                        <i class="bi bi-people-fill fs-4"></i>
+                                    </div>
+                                    <span class="text-success small fw-bold"><i class="bi bi-arrow-up"></i> 12%</span>
+                                </div>
+                                <h6 class="text-muted mb-1">Total de Clientes</h6>
+                                <h3 class="fw-bold mb-0">1,280</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-3 rounded-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="bg-success-subtle text-success p-2 rounded-3">
+                                        <i class="bi bi-currency-dollar fs-4"></i>
+                                    </div>
+                                    <span class="text-success small fw-bold"><i class="bi bi-arrow-up"></i> 8%</span>
+                                </div>
+                                <h6 class="text-muted mb-1">Receita Mensal</h6>
+                                <h3 class="fw-bold mb-0">R$ 45.200</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-3 rounded-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="bg-warning-subtle text-warning p-2 rounded-3">
+                                        <i class="bi bi-clock-history fs-4"></i>
+                                    </div>
+                                    <span class="text-danger small fw-bold"><i class="bi bi-arrow-down"></i> 3%</span>
+                                </div>
+                                <h6 class="text-muted mb-1">Tempo de Resposta</h6>
+                                <h3 class="fw-bold mb-0">2.4m</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Stats Grid (3 Colunas)</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3 rounded-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="bg-primary-subtle text-primary p-2 rounded-3">
+                    <i class="bi bi-people-fill fs-4"></i>
+                </div>
+                <span class="text-success small fw-bold"><i class="bi bi-arrow-up"></i> 12%</span>
+            </div>
+            <h6 class="text-muted mb-1">Total de Clientes</h6>
+            <h3 class="fw-bold mb-0">1,280</h3>
+        </div>
+    </div>
+    <!-- Repetir col-md-4 para outros cards -->
+</div></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section id="footers" class="ui-section">
+            <div class="ui-header">
+                <h3>Footers</h3>
+                <p>Rodapés organizados e modernos.</p>
+            </div>
+
+            <div class="component-card">
+                <div class="component-preview">
+                    <footer class="bg-white px-4 py-4 rounded-4 shadow-sm border">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-6 text-center text-md-start">
+                                <span class="fw-bold text-primary fs-5">SPAIO</span>
+                                <p class="text-muted small mb-0 mt-1">© 2026 Senac PR. Desenvolvido por João & Matheus.</p>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                                    <a href="#" class="text-muted text-decoration-none small">Privacidade</a>
+                                    <a href="#" class="text-muted text-decoration-none small">Termos</a>
+                                    <a href="#" class="text-muted text-decoration-none small">Suporte</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Mini Dashboard Footer</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<footer class="bg-white px-4 py-4 rounded-4 shadow-sm border mt-4">
+    <div class="row g-4 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+            <span class="fw-bold text-primary fs-5">SPAIO</span>
+            <p class="text-muted small mb-0 mt-1">© 2026 Senac PR. Desenvolvido por João & Matheus.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+            <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                <a href="#" class="text-muted text-decoration-none small">Privacidade</a>
+                <a href="#" class="text-muted text-decoration-none small">Termos</a>
+                <a href="#" class="text-muted text-decoration-none small">Suporte</a>
+            </div>
+        </div>
+    </div>
+</footer></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="ui-section">
+            <div class="ui-header">
+                <h3>Serviços / Funcionalidades</h3>
+                <p>Grades para exibir o que o seu SAAS oferece.</p>
+            </div>
+
+            <div class="component-card">
+                <div class="component-preview">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="text-center p-4">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width:64px;height:64px">
+                                    <i class="bi bi-cloud-check fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold">Nuvem Segura</h5>
+                                <p class="text-muted small">Seus dados protegidos com criptografia de ponta a ponta e backup automático.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width:64px;height:64px">
+                                    <i class="bi bi-lightning-charge fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold">Alta Performance</h5>
+                                <p class="text-muted small">Infraestrutura otimizada para garantir que sua equipe nunca perca tempo esperando.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width:64px;height:64px">
+                                    <i class="bi bi-phone fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold">Mobile First</h5>
+                                <p class="text-muted small">Acesse de qualquer lugar, com uma interface pensada para todos os dispositivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Seção de Features (Ícone Circular)</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="text-center p-4">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width:64px;height:64px">
+                <i class="bi bi-cloud-check fs-3"></i>
+            </div>
+            <h5 class="fw-bold">Nuvem Segura</h5>
+            <p class="text-muted small">Seus dados protegidos com criptografia de ponta a ponta.</p>
+        </div>
+    </div>
+    <!-- Repetir para outros -->
+</div></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUTH -->
+        <section id="auth" class="ui-section">
+            <div class="ui-header">
+                <h3>Autenticação</h3>
+                <p>Telas de login e registro para o seu SAAS.</p>
+            </div>
+
+            <div class="component-card">
+                <div class="component-preview">
+                    <div class="mx-auto shadow-lg rounded-4 overflow-hidden bg-white" style="max-width: 400px; border: 1px solid #eee">
+                        <div class="p-5">
+                            <div class="text-center mb-4">
+                                <h4 class="fw-bold">Bem-vindo de volta</h4>
+                                <p class="text-muted small">Acesse sua conta para continuar</p>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">E-mail</label>
+                                    <input type="email" class="form-control py-2" placeholder="exemplo@email.com">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label small fw-semibold">Senha</label>
+                                        <a href="#" class="small text-decoration-none">Esqueceu?</a>
+                                    </div>
+                                    <input type="password" class="form-control py-2" placeholder="••••••••">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold mt-2">Entrar no Sistema</button>
+                            </form>
+                            <div class="text-center mt-4">
+                                <p class="small text-muted mb-0">Não tem conta? <a href="#" class="text-decoration-none fw-bold">Criar agora</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Card de Login Centralizado</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<div class="card shadow rounded-4 border-0 mx-auto" style="max-width: 400px;">
+    <div class="card-body p-5">
+        <h4 class="fw-bold text-center mb-4">Entrar</h4>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" placeholder="email@exemplo.com">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Senha</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+            </div>
+            <button class="btn btn-primary w-100 py-2">Entrar</button>
+        </form>
+    </div>
+</div></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section id="typography" class="ui-section">
+            <div class="ui-header">
+                <h3>Tipografia & Identidade</h3>
+                <p>Estilos de texto e hierarquia visual do sistema.</p>
+            </div>
+
+            <div class="component-card">
+                <div class="component-preview">
+                    <h1 class="display-1 fw-bold">Display 1</h1>
+                    <h1 class="fw-bold">Título H1</h1>
+                    <h2 class="fw-bold">Título H2</h2>
+                    <h3 class="fw-bold">Título H3</h3>
+                    <p class="lead">Este é um parágrafo 'lead' para textos de destaque.</p>
+                    <p>Este é o corpo de texto padrão. Ele usa o espaçamento e a cor definida nas suas variáveis de design.</p>
+                    <p class="text-muted small">Texto pequeno e silenciado para legendas e notas de rodapé.</p>
+                </div>
+                <div class="component-meta">
+                    <span class="component-title">Hierarquia de Texto</span>
+                    <button class="btn-copy" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i> <span>Copiar HTML</span>
+                    </button>
+                    <textarea class="code-snippet">
+<h1 class="fw-bold">Título</h1>
+<p class="lead">Resumo...</p>
+<p>Conteúdo...</p></textarea>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copyCode(button) {
+            const textarea = button.parentElement.querySelector('.code-snippet');
+            textarea.select();
+            document.execCommand('copy');
+
+            const btnText = button.querySelector('span');
+            const btnIcon = button.querySelector('i');
+            
+            const originalText = btnText.innerText;
+            const originalIcon = btnIcon.className;
+
+            button.classList.add('success');
+            btnText.innerText = 'Copiado!';
+            btnIcon.className = 'bi bi-check2';
+
+            setTimeout(() => {
+                button.classList.remove('success');
+                btnText.innerText = originalText;
+                btnIcon.className = originalIcon;
+            }, 2000);
+        }
+
+        // Active link handling on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.ui-section');
+            const navLinks = document.querySelectorAll('.ui-nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
