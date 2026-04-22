@@ -1,3 +1,35 @@
+<dialog>
+    <p>Isso é um modal </p>
+</dialog>
+
+<details>
+    <summary>Clique para ver mais</summary>
+    <p>Conteúdo escondido</p>
+</details>
+
+<form oninput="result.value = a.valueAsNumber + b.valueAsNumber">
+    <input type="number" id="a"> +
+    <input type="number" id="b"> =
+    <output name="result"></output>
+</form>
+
+<meter value="0.7">70%</meter>
+
+Pressione <kbd>Ctrl</dbd> + <kbd>C</dbd> para copiar
+
+<abbr title="HyperText Markup Language">HTML</abbr>
+
+<input list="linguagens">
+<datalist id="linguagens">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="JS">
+</datalist>
+
+<p contenteditable="true">Edite este texto</p>
+
+
+
 Exemplo de Sombras:
  - https://getbootstrap.com/docs/4.1/utilities/shadows/
 
