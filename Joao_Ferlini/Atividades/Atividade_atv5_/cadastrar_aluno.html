@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ficha de Cadastro do Aluno | Escola Azul Brasil</title>
+</head>
+<body class="layout">
+    <main>
+        <h1>Cadastrar Aluno</h1>
+        <p>Preencha as informações do aluno para cadastrar na plataforma.</p>
+
+        <form action="">
+<!-- Identificação do Aluno -->
+            <section>
+                <h2>Identificação do Aluno</h2>
+                <label for="aluno_nome_aluno">Nome do Aluno <span style="color: red;">*</span></label>
+                <input type="text" name="aluno_nome_aluno" id="aluno_nome_aluno" placeholder="José Exemplo Souza" required>
+
+                <div class="row-1-1-2">
+                    <div>
+                        <label for="aluno_cpf_aluno">CPF <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_cpf_aluno" id="aluno_cpf_aluno" placeholder="xxx.xxx.xxx-xx" required>
+                    </div>
+    
+                    <div>
+                        <label for="aluno_rg_aluno">RG</label>
+                        <input type="text" name="aluno_rg_aluno" id="aluno_rg_aluno" placeholder="xxxxxxx">
+                    </div>
+
+                    <div>
+                        <label for="aluno_email_aluno">E-mail <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_email_aluno" id="aluno_email_aluno" placeholder="jose_souza@exemplo.com" required>
+                    </div>
+                </div>
+            </section>
+
+<!-- Identificação do Responsável -->
+            <section>
+                <h2>Identificação do(s) Responsável(is)</h2>
+                <label for="aluno_nome_mae">Nome do Primeiro Responsável <span style="color: red;">*</span></label>
+                <input type="text" name="aluno_nome_mae" id="aluno_nome_mae" placeholder="Maria Exemplo Souza" required>
+                <div class="row-1-1-2">
+                    <div>
+                        <label for="aluno_cpf_mae">CPF <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_cpf_mae" id="aluno_cpf_mae" placeholder="xxx.xxx.xxx-xx" required>
+                    </div>
+    
+                    <div>
+                        <label for="aluno_rg_mae">RG</label>
+                        <input type="text" name="aluno_rg_mae" id="aluno_rg_mae" placeholder="xxxxxxx">
+                    </div>
+
+                    <div>
+                        <label for="aluno_email_mae">E-mail <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_email_mae" id="aluno_email_mae" placeholder="maria_souza@exemplo.com" required>
+                    </div>
+                </div>
+                <br>
+                <label for="aluno_nome_pai">Nome do Segundo Responsável</label>
+                <input type="text" name="aluno_nome_pai" id="aluno_nome_pai" placeholder="Pedro Exemplo Souza">
+                <div class="row-1-1-2">
+                    <div>
+                        <label for="aluno_cpf_pai">CPF</label>
+                        <input type="text" name="aluno_cpf_pai" id="aluno_cpf_pai" placeholder="xxx.xxx.xxx-xx">
+                    </div>
+    
+                    <div>
+                        <label for="aluno_rg_pai">RG</label>
+                        <input type="text" name="aluno_rg_pai" id="aluno_rg_pai" placeholder="xxxxxxx">
+                    </div>
+
+                    <div>
+                        <label for="aluno_email_pai">E-mail</label>
+                        <input type="text" name="aluno_email_pai" id="aluno_email_pai" placeholder="pedro_souza@exemplo.com">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Informações de Contato</h2>
+                <label for="aluno_endereco">Endereço <span style="color: red;">*</span></label>
+                <input type="text" name="aluno_endereco" id="aluno_endereco" placeholder="Rua com Casas, SN" required>
+                <div class="row-2-1-1">
+                    <div>
+                        <label for="aluno_complemento">Complemento</label>
+                        <input type="text" name="aluno_complemento" id="aluno_complemento" placeholder="casa da frente">
+                    </div>
+
+                    <div>
+                        <label for="aluno_telefone">Telefone <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_telefone" id="aluno_telefone" placeholder="(xx) xxx xxx xxx" required>
+                    </div>
+    
+                    <div>
+                        <label for="aluno_celular">Celular <span style="color: red;">*</span></label>
+                        <input type="text" name="aluno_celular" id="aluno_celular" placeholder="(xx) xxx xxx xxx" required>
+                    </div>
+
+                </div>
+                <label for="aluno_anotacoes">Anotações / Detalhes Adicionais <span style="color: red;">*</span></label>
+                <textarea name="aluno_anotacoes" id="aluno_anotacoes" placeholder="Este telefone é do pai do Aluno..." required></textarea>
+            </section>
+            <button type="submit">Processar e Enviar</button>
+        </form>
+    </main>
+
+    <menu>
+        <a href="index.html"><img src="image/techone-branca.png" alt=""></a>
+        <nav>
+            <ul>
+                <h2>Navegação</h2>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Servicos</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <ul>
+                <h2>Cadastrar</h2>
+                <li><a href="cadastrar_aluno.html">Cadastrar Aluno</a></li>
+                <li><a href="cadastrar_professor.html">Cadastrar Professor</a></li>
+                <h2>Consultar</h2>
+                <li><a href="consultar_aluno.html">Consultar Alunos</a></li>
+                <li><a href="consultar_professor.html">Consultar Professores</a></li>
+            </ul>
+            <ul class="acessar-plataforma">
+                <li><a id="cadastrar" href="cadastrar.html">Cadastrar</a></li>
+                <li><a id="entrar" href="entrar.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </menu>
+</body>
+</html>

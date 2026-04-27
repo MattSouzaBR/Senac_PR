@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Projeto 1</title>
+</head>
+<body>
+    <!-- Títulos
+        Recomenda-se utilizar apenas 1 h1 na página, os demais títulos podem utilizar mais de um. 
+    -->
+    <h1>Título 1</h1>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
+
+    <!-- Parágrafos -->
+    <p>Parágrafo</p>
+        <b>Texto Estilizado sem Semântica em Negrito</b>
+        <i>Texto Estilizado sem Semântica em itálico</i>
+        <strong>Ênfase Importante Destacado em Negrito</strong>
+        <em>Ênfase Importante Destacado em Itálico</em>
+    
+    <!-- Listas Não Ordenadas
+        Comumente utilizado em áreas de navegação
+    -->
+    <ul>
+        <li>Linha 1</li>
+        <li>Linha 2</li>
+        <li>Linha 3</li>
+    </ul>
+
+    <!-- Lista Ordenada
+        Comumente utilizado em Termos e Políticas 
+    -->
+     <ol>
+        <li>Linah 1</li>
+        <li>Linha 2</li>
+        <li>Linha 3</li>
+     </ol>
+
+     <!-- Links (Acessar sites/conteúdos externos) -->
+        <a href="https://google.com">Acesse o Google</a> <!--Abre na mesma página -->
+        <a href="https://google.com" target="_self">Acesse o Google</a> <!--Abre na mesma página (padrão) -->
+        <a href="https://google.com" target="_blank">Acesse o Google</a> <!--Abre numa nova aba -->
+        <a href="https://google.com" target="_parent">Acesse o Google</a> <!-- Abre o link no frame pai. Se a página não estiver dentro de um iframe, ele se comporta exatamente como o _self-->
+        <a href="https://google.com" target="_top">Acesse o Google</a> <!--Abre o link ocupando o corpo inteiro da janela, removendo todos os frames que possam existir. É útil para "escapar" de iframes aninhados -->
+    
+    <!-- Imagens
+        Recomenda-se que a imagem tenha um alt descritivo para melhorar o SEO. Não utilize expressões 'Este é, Isto é, Isto faz, Isto leva, É uma, Imagem..., Texto.' 
+    -->
+        <img src="img/img_png.png" alt="Texto alternativo caso a página não carregue">
+        <img src="img/reuel.jpg" srcset="reuel-pequeno.jpg 500w, reuel-grande.jpg 1000w" alt="Descrição da imagem do Reuel"> <!-- O src serve apenas como um "plano B" (fallback) para navegadores muito antigos que não entendem imagens responsivas.-->
+        <img src="https://i.ytimg.com/vi/jWNoxq4lDBQ/mqdefault.jpg" alt="Quando imagem não tem um alt, ela é tratada pelo google como enfeite e ignora.">
+        <img src="https://i.ytimg.com/" alt="">
+    
+</body>
+</html>

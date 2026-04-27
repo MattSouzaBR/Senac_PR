@@ -1,0 +1,450 @@
+.margin,
+.m {
+    margin: var(--default-margin);
+}
+
+.margin-top,
+.mt {
+    margin-top: var(--default-margin);
+}
+
+.margin-bottom,
+.mb {
+    margin-bottom: var(--default-margin);
+}
+
+.margin-left,
+.ml, .me {
+    margin-left: var(--default-margin);
+}
+
+.margin-right,
+.mr, .ms {
+    margin-right: var(--default-margin);
+}
+
+.margin-y,
+.my {
+    margin-top: var(--default-margin);
+    margin-bottom: var(--default-margin);
+}
+
+.margin-x,
+.mx {
+    margin-left: var(--default-margin);
+    margin-right: var(--default-margin);
+}
+
+/* margin */
+.margin-0,
+.m-0, .m0 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-1,
+.m-1, .m1 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-2,
+.m-2, .m2 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-3,
+.m-3, .m3 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-4,
+.m-4, .m4 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-5,
+.m-5, .m5 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-6,
+.m-6, .m6 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-7,
+.m-7, .m7 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-8,
+.m-8, .m8 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-9,
+.m-9, .m9 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-10,
+.m-10, .m10 {
+    margin: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin TOP */
+.margin-top-0,
+.mt-0, .mt0 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-top-1,
+.mt-1, .mt1 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-top-2,
+.mt-2, .mt2 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-top-3,
+.mt-3, .mt3 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-top-4,
+.mt-4, .mt4 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-top-5,
+.mt-5, .mt5 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-top-6,
+.mt-6, .mt6 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-top-7,
+.mt-7, .mt7 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-top-8,
+.mt-8, .mt8 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-top-9,
+.mt-9, .mt9 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-top-10,
+.mt-10, .mt10 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin BOTTOM */
+.margin-bottom-0,
+.mb-0, .mb0 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-bottom-1,
+.mb-1, .mb1 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-bottom-2,
+.mb-2, .mb2 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-bottom-3,
+.mb-3, .mb3 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-bottom-4,
+.mb-4, .mb4 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-bottom-5,
+.mb-5, .mb5 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-bottom-6,
+.mb-6, .mb6 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-bottom-7,
+.mb-7, .mb7 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-bottom-8,
+.mb-8, .mb8 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-bottom-9,
+.mb-9, .mb9 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-bottom-10,
+.mb-10, .mb10 {
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin LEFT */
+.margin-left-0,
+.ml-0, .ml0 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-left-1,
+.ml-1, .ml1 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-left-2,
+.ml-2, .ml2 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-left-3,
+.ml-3, .ml3 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-left-4,
+.ml-4, .ml4 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-left-5,
+.ml-5, .ml5 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-left-6,
+.ml-6, .ml6 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-left-7,
+.ml-7, .ml7 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-left-8,
+.ml-8, .ml8 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-left-9,
+.ml-9, .ml9 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-left-10,
+.ml-10, .ml10 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin RIGHT */
+.margin-right-0,
+.mr-0, .mr0 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-right-1,
+.mr-1, .mr1 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-right-2,
+.mr-2, .mr2 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-right-3,
+.mr-3, .mr3 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-right-4,
+.mr-4, .mr4 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-right-5,
+.mr-5, .mr5 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-right-6,
+.mr-6, .mr6 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-right-7,
+.mr-7, .mr7 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-right-8,
+.mr-8, .mr8 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-right-9,
+.mr-9, .mr9 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-right-10,
+.mr-10, .mr10 {
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin X */
+.margin-x-0,
+.mx-0, .mx0 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-x-1,
+.mx-1, .mx1 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-x-2,
+.mx-2, .mx2 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-x-3,
+.mx-3, .mx3 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-x-4,
+.mx-4, .mx4 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-x-5,
+.mx-5, .mx5 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-x-6,
+.mx-6, .mx6 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-x-7,
+.mx-7, .mx7 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-x-8,
+.mx-8, .mx8 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-x-9,
+.mx-9, .mx9 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-x-10,
+.mx-10, .mx10 {
+    margin-left: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+    margin-right: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}
+
+/* margin Y */
+.margin-y-0,
+.my-0, .my0 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.0), var(--default-margin-maximum));
+}
+
+.margin-y-1,
+.my-1, .my1 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.1), var(--default-margin-maximum));
+}
+
+.margin-y-2,
+.my-2, .my2 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.2), var(--default-margin-maximum));
+}
+
+.margin-y-3,
+.my-3, .my3 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.3), var(--default-margin-maximum));
+}
+
+.margin-y-4,
+.my-4, .my4 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.4), var(--default-margin-maximum));
+}
+
+.margin-y-5,
+.my-5, .my5 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.5), var(--default-margin-maximum));
+}
+
+.margin-y-6,
+.my-6, .my6 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.6), var(--default-margin-maximum));
+}
+
+.margin-y-7,
+.my-7, .my7 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.7), var(--default-margin-maximum));
+}
+
+.margin-y-8,
+.my-8, .my8 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.8), var(--default-margin-maximum));
+}
+
+.margin-y-9,
+.my-9, .my9 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum) * 0.9), var(--default-margin-maximum));
+}
+
+.margin-y-10,
+.my-10, .my10 {
+    margin-top: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+    margin-bottom: clamp(var(--default-margin-minimum), calc(var(--default-margin-maximum)), var(--default-margin-maximum));
+}

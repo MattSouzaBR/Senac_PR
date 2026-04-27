@@ -1,0 +1,83 @@
+.layout {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+menu {
+    width: 230px;
+    background-color: #1f2937;
+    color: #fff;
+    padding: 20px;
+}
+
+menu h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 10px;
+    margin-bottom: 8px;
+    background-color: #374151;
+    border-radius: 6px;
+    transition: background-color.2s;
+}
+
+menu a:hover {
+    background-color: #4b5563;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h1, p, form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}

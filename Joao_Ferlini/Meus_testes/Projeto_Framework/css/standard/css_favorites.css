@@ -1,0 +1,15 @@
+@import url(css_default.css);
+
+/* Favorites */
+@import url(../library/margin.css);
+@import url(../library/padding.css);
+@import url(../library/display.css);
+@import url(../library/justify-content.css);
+@import url(../library/align-items.css);
+@import url(../library/gap.css);
+@import url(../library/row-gap.css);
+@import url(../library/column-gap.css);
+@import url(../library/container.css);
+@import url(../library/font.css);
+@import url(../library/colors.css);
+@import url(../library/text.css);

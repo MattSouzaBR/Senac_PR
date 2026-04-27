@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de layout — copiar e colar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="doc-shell.css">
+</head>
+<body class="doc-page">
+
+<div class="doc-topbar">
+    <a href="tipografia.html" class="brand text-decoration-none"><i class="bi bi-arrow-left-short"></i> Tipografia</a>
+    <span class="pill">SPAIO · fragmentos</span>
+    <span class="sep"></span>
+    <span class="hint">Clique em <strong>Copiar HTML</strong> — o trecho da caixa branca vai para a área de transferência</span>
+</div>
+
+<aside class="doc-sidebar">
+    <div class="nav-group">Nesta página</div>
+    <a href="#navbars"><i class="bi bi-list"></i> Navbars</a>
+    <a href="#headers"><i class="bi bi-window"></i> Headers</a>
+    <a href="#heros"><i class="bi bi-image"></i> Heros</a>
+    <a href="#mains"><i class="bi bi-square-half"></i> Mains</a>
+    <a href="#sections"><i class="bi bi-columns-gap"></i> Sections</a>
+    <a href="#services"><i class="bi bi-grid-3x3-gap"></i> Services</a>
+    <a href="#forms"><i class="bi bi-ui-checks"></i> Forms</a>
+    <a href="#footers"><i class="bi bi-layout-text-window-reverse"></i> Footers</a>
+</aside>
+
+<main class="doc-content">
+
+    <div class="doc-hero">
+        <h1>Modelos para copiar</h1>
+        <p>Navbar, header, hero, main, seções, serviços, formulários e rodapés em Bootstrap 5 — mesma pilha de CSS do <code>index.html</code>.</p>
+        <div class="hero-pills">
+            <span class="hero-pill"><i class="bi bi-clipboard-check"></i> Um clique copia o HTML do preview</span>
+            <span class="hero-pill"><i class="bi bi-pencil"></i> Ajuste textos e classes depois de colar</span>
+        </div>
+    </div>
+
+    <!-- Navbars -->
+    <section class="doc-section" id="navbars">
+        <div class="section-tag">Navegação</div>
+        <h2 class="section-title">Navbars</h2>
+        <p class="section-desc">Barras responsivas com <code>navbar-expand-*</code> e toggler.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Navbar clara · logo + links + botão</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+                        <div class="container-fluid">
+                            <a class="navbar-brand fw-semibold" href="#">SPAIO</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nb1" aria-controls="nb1" aria-expanded="false" aria-label="Alternar navegação">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="nb1">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Mensagens</a></li>
+                                </ul>
+                                <div class="d-flex gap-2">
+                                    <a class="btn btn-outline-secondary btn-sm" href="#">Entrar</a>
+                                    <a class="btn btn-primary btn-sm" href="#">Matricular</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Navbar escura · com dropdown</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container">
+                            <a class="navbar-brand" href="#"><i class="bi bi-mortarboard me-1"></i>Área do aluno</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nb2" aria-controls="nb2" aria-expanded="false" aria-label="Alternar navegação">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="nb2">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                                    <li class="nav-item"><a class="nav-link" href="#">Painel</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                            <li><a class="dropdown-item" href="#">Preferências</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Navbar com busca</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+                        <div class="container py-1">
+                            <a class="navbar-brand" href="#">Busca</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nb3" aria-controls="nb3" aria-expanded="false" aria-label="Alternar navegação">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse mt-2 mt-md-0" id="nb3">
+                                <form class="d-flex ms-md-auto" role="search">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                                        <input class="form-control border-start-0" type="search" placeholder="Materiais, aulas…" aria-label="Buscar">
+                                        <button class="btn btn-light" type="submit">Buscar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Headers -->
+    <section class="doc-section" id="headers">
+        <div class="section-tag">Topo da página</div>
+        <h2 class="section-title">Headers</h2>
+        <p class="section-desc">Faixas acima da navbar ou cabeçalhos simples sem componente <code>navbar</code>.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Barra utilitária + marca</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <header>
+                        <div class="bg-dark text-white-50 small py-1">
+                            <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                <span><i class="bi bi-envelope me-1"></i>contato@escola.edu.br</span>
+                                <span><i class="bi bi-telephone me-1"></i>(41) 3000-0000</span>
+                            </div>
+                        </div>
+                        <div class="border-bottom bg-body">
+                            <div class="container py-3 d-flex align-items-center justify-content-between gap-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width:44px;height:44px;font-weight:700">S</div>
+                                    <div>
+                                        <div class="fw-bold text-body">Senac PR</div>
+                                        <div class="small text-secondary">Portal do aluno</div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-sm btn-outline-primary" href="#">Acessar</a>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Header compacto com nav em linha</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <header class="border-bottom bg-body-tertiary">
+                        <div class="container py-3 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                            <a href="#" class="text-decoration-none text-body fw-bold fs-5">Meu curso</a>
+                            <nav>
+                                <ul class="nav flex-column flex-md-row gap-md-3 small">
+                                    <li class="nav-item"><a class="nav-link px-0" href="#">Cronograma</a></li>
+                                    <li class="nav-item"><a class="nav-link px-0" href="#">Notas</a></li>
+                                    <li class="nav-item"><a class="nav-link px-0" href="#">Suporte</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heros -->
+    <section class="doc-section" id="heros">
+        <div class="section-tag">Destaque</div>
+        <h2 class="section-title">Heros</h2>
+        <p class="section-desc">Blocos de abertura com CTA.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Hero central · fundo primary</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <section class="py-5 text-center text-white bg-primary">
+                        <div class="container py-lg-4">
+                            <p class="text-white-50 text-uppercase small mb-2">Boas-vindas</p>
+                            <h1 class="display-6 fw-bold">Sua jornada começa aqui</h1>
+                            <p class="lead col-lg-8 mx-auto opacity-75">Acompanhe entregas, notas e mensagens em um só lugar.</p>
+                            <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
+                                <a href="#" class="btn btn-light btn-lg">Ver painel</a>
+                                <a href="#" class="btn btn-outline-light btn-lg">Material de apoio</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Hero em duas colunas</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden bg-light">
+                    <section class="py-5">
+                        <div class="container">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6">
+                                    <span class="badge text-bg-primary mb-2">Novo</span>
+                                    <h2 class="fw-bold">Organize suas entregas</h2>
+                                    <p class="text-secondary mb-4">Lista com prazos, status e links para envio. Troque o texto e as imagens conforme seu projeto.</p>
+                                    <a class="btn btn-primary" href="#">Começar</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow-sm bg-white">
+                                        <div class="d-flex align-items-center justify-content-center text-secondary small">Imagem ou ilustração</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mains -->
+    <section class="doc-section" id="mains">
+        <div class="section-tag">Conteúdo principal</div>
+        <h2 class="section-title">Main</h2>
+        <p class="section-desc">Estrutura típica do bloco principal acessível.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Main · grade de cards (dashboard)</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden bg-body-secondary">
+                    <main id="conteudo-principal" class="py-4">
+                        <div class="container">
+                            <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+                                <div>
+                                    <h1 class="h3 mb-0">Painel</h1>
+                                    <p class="text-secondary small mb-0">Resumo do seu desempenho</p>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-plus-lg"></i> Nova tarefa</button>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-body">
+                                            <h2 class="h6 card-title">Próximas entregas</h2>
+                                            <p class="card-text small text-secondary mb-0">3 itens nesta semana.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-body">
+                                            <h2 class="h6 card-title">Notas recentes</h2>
+                                            <p class="card-text small text-secondary mb-0">Média parcial disponível.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-body">
+                                            <h2 class="h6 card-title">Mensagens</h2>
+                                            <p class="card-text small text-secondary mb-0">1 não lida.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Main com aside (2 colunas)</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <main class="py-4">
+                        <div class="container">
+                            <div class="row g-4">
+                                <aside class="col-lg-3">
+                                    <div class="list-group small sticky-lg-top" style="top:1rem">
+                                        <a class="list-group-item list-group-item-action active" href="#">Visão geral</a>
+                                        <a class="list-group-item list-group-item-action" href="#">Disciplinas</a>
+                                        <a class="list-group-item list-group-item-action" href="#">Calendário</a>
+                                    </div>
+                                </aside>
+                                <div class="col-lg-9">
+                                    <article class="card shadow-sm">
+                                        <div class="card-body">
+                                            <h2 class="h4">Conteúdo principal</h2>
+                                            <p class="text-secondary mb-0">Substitua este bloco pelo fluxo da sua página.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="doc-section" id="sections">
+        <div class="section-tag">Blocos</div>
+        <h2 class="section-title">Sections</h2>
+        <p class="section-desc">Seções com título e grid de conteúdo.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Section · título + 3 cards</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <section class="py-5">
+                        <div class="container">
+                            <div class="text-center mb-4">
+                                <h2 class="h3 fw-bold">Trilhas de estudo</h2>
+                                <p class="text-secondary col-lg-8 mx-auto mb-0">Use esta seção para agrupar conteúdos relacionados.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="p-4 border rounded-3 h-100">
+                                        <h3 class="h5">Módulo 1</h3>
+                                        <p class="small text-secondary mb-0">Fundamentos e conceitos.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border rounded-3 h-100">
+                                        <h3 class="h5">Módulo 2</h3>
+                                        <p class="small text-secondary mb-0">Prática guiada.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border rounded-3 h-100">
+                                        <h3 class="h5">Módulo 3</h3>
+                                        <p class="small text-secondary mb-0">Projeto integrador.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Section alternada · fundo claro</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <section class="py-5 bg-body-tertiary">
+                        <div class="container">
+                            <div class="row align-items-center g-4">
+                                <div class="col-md-6">
+                                    <h2 class="h3 fw-bold">Destaque lateral</h2>
+                                    <p class="text-secondary">Ideal para explicar um benefício ou chamada secundária.</p>
+                                    <ul class="small text-secondary">
+                                        <li class="mb-1">Item um</li>
+                                        <li class="mb-1">Item dois</li>
+                                        <li>Item três</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bg-white border rounded-3 p-4 shadow-sm">
+                                        <p class="mb-0 small text-secondary">Card ou formulário curto dentro da seção.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="doc-section" id="services">
+        <div class="section-tag">Ícones + texto</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-desc">Três (ou mais) colunas com ícone, título e descrição.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Grade de serviços / features</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <section class="py-5 bg-body">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <h2 class="h3 fw-bold">Como podemos ajudar</h2>
+                                <p class="text-secondary mb-0">Atalhos típicos de portal acadêmico.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-4 text-center">
+                                    <div class="rounded-circle bg-primary-subtle text-primary d-inline-flex align-items-center justify-content-center mb-3" style="width:56px;height:56px">
+                                        <i class="bi bi-journal-check fs-4"></i>
+                                    </div>
+                                    <h3 class="h5">Atividades</h3>
+                                    <p class="small text-secondary mb-0">Envie trabalhos e acompanhe feedback.</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="rounded-circle bg-success-subtle text-success d-inline-flex align-items-center justify-content-center mb-3" style="width:56px;height:56px">
+                                        <i class="bi bi-graph-up-arrow fs-4"></i>
+                                    </div>
+                                    <h3 class="h5">Desempenho</h3>
+                                    <p class="small text-secondary mb-0">Notas e frequência em tempo real.</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="rounded-circle bg-info-subtle text-info d-inline-flex align-items-center justify-content-center mb-3" style="width:56px;height:56px">
+                                        <i class="bi bi-chat-dots fs-4"></i>
+                                    </div>
+                                    <h3 class="h5">Canal com a escola</h3>
+                                    <p class="small text-secondary mb-0">Mensagens e avisos oficiais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="doc-section" id="forms">
+        <div class="section-tag">Entrada de dados</div>
+        <h2 class="section-title">Forms</h2>
+        <p class="section-desc">Formulários em card e layout responsivo.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Login · card central</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden bg-body-secondary py-4">
+                    <section class="container" style="max-width:420px">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <h2 class="h4 mb-3 text-center">Entrar</h2>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="loginEmail" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="loginEmail" placeholder="voce@exemplo.com" autocomplete="username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginSenha" class="form-label">Senha</label>
+                                        <input type="password" class="form-control" id="loginSenha" autocomplete="current-password">
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3 small">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="lembrar">
+                                            <label class="form-check-label" for="lembrar">Lembrar</label>
+                                        </div>
+                                        <a href="#">Esqueci a senha</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Acessar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Contato · duas colunas</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <section class="py-4">
+                        <div class="container">
+                            <h2 class="h4 mb-3">Fale conosco</h2>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="assunto">Assunto</label>
+                                    <select class="form-select" id="assunto">
+                                        <option selected>Selecione…</option>
+                                        <option>Matrícula</option>
+                                        <option>Financeiro</option>
+                                        <option>Suporte técnico</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="msg">Mensagem</label>
+                                    <textarea class="form-control" id="msg" rows="4" placeholder="Descreva sua dúvida"></textarea>
+                                </div>
+                                <div class="col-12 d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footers -->
+    <section class="doc-section" id="footers">
+        <div class="section-tag">Rodapé</div>
+        <h2 class="section-title">Footers</h2>
+        <p class="section-desc">Rodapés simples e completos.</p>
+        <hr class="sdiv">
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Footer mínimo</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <footer class="py-3 border-top bg-body-tertiary">
+                        <div class="container text-center small text-secondary">
+                            <p class="mb-0">&copy; 2026 Nome do projeto. Todos os direitos reservados.</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Footer com colunas e redes</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <footer class="bg-dark text-white-50 pt-5 pb-3">
+                        <div class="container">
+                            <div class="row g-4 pb-4 border-bottom border-secondary">
+                                <div class="col-md-4">
+                                    <div class="text-white fw-bold mb-2">Instituição</div>
+                                    <p class="small mb-0">Texto curto sobre a escola ou produto.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-white fw-bold mb-2">Links</div>
+                                    <ul class="list-unstyled small mb-0">
+                                        <li><a class="link-light link-underline-opacity-0" href="#">Política de privacidade</a></li>
+                                        <li><a class="link-light link-underline-opacity-0" href="#">Termos de uso</a></li>
+                                        <li><a class="link-light link-underline-opacity-0" href="#">Suporte</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-white fw-bold mb-2">Redes</div>
+                                    <div class="d-flex gap-2">
+                                        <a class="btn btn-sm btn-outline-light" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                        <a class="btn btn-sm btn-outline-light" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                                        <a class="btn btn-sm btn-outline-light" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="small text-center mb-0 pt-3">&copy; 2026 Nome do projeto</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card doc-model-card">
+            <div class="demo-card-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="lbl">Footer claro · 4 colunas</span></div>
+            <div class="demo-card-body">
+                <div class="doc-copy-toolbar">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-copy-html><i class="bi bi-clipboard"></i> <span class="js-copy-label">Copiar HTML</span></button>
+                </div>
+                <div class="doc-copy-source border rounded overflow-hidden">
+                    <footer class="border-top py-4 bg-body">
+                        <div class="container">
+                            <div class="row row-cols-2 row-cols-lg-4 g-4 small">
+                                <div class="col">
+                                    <div class="fw-semibold text-body mb-2">Aluno</div>
+                                    <a class="d-block text-decoration-none text-secondary mb-1" href="#">Área logada</a>
+                                    <a class="d-block text-decoration-none text-secondary" href="#">Certificados</a>
+                                </div>
+                                <div class="col">
+                                    <div class="fw-semibold text-body mb-2">Cursos</div>
+                                    <a class="d-block text-decoration-none text-secondary mb-1" href="#">Catálogo</a>
+                                    <a class="d-block text-decoration-none text-secondary" href="#">Calendário</a>
+                                </div>
+                                <div class="col">
+                                    <div class="fw-semibold text-body mb-2">Institucional</div>
+                                    <a class="d-block text-decoration-none text-secondary mb-1" href="#">Quem somos</a>
+                                    <a class="d-block text-decoration-none text-secondary" href="#">Trabalhe conosco</a>
+                                </div>
+                                <div class="col">
+                                    <div class="fw-semibold text-body mb-2">Contato</div>
+                                    <p class="text-secondary mb-0">contato@escola.edu.br<br>(41) 3000-0000</p>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <p class="small text-secondary text-center mb-0">&copy; 2026 Nome do projeto</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script>
+(function () {
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-copy-html]');
+        if (!btn) return;
+        e.preventDefault();
+        var card = btn.closest('.doc-model-card');
+        if (!card) return;
+        var src = card.querySelector('.doc-copy-source');
+        if (!src) return;
+        var html = src.innerHTML.trim();
+
+        function feedback(ok) {
+            var label = btn.querySelector('.js-copy-label');
+            var node = label || btn;
+            var prev = node.textContent;
+            node.textContent = ok ? 'Copiado!' : 'Erro';
+            setTimeout(function () { node.textContent = prev; }, 1600);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(html).then(function () { feedback(true); }).catch(function () {
+                window.prompt('Copie manualmente (Ctrl+C):', html);
+                feedback(false);
+            });
+        } else {
+            window.prompt('Copie manualmente (Ctrl+C):', html);
+        }
+    });
+
+    function buildScrollSpy() {
+        var sections = document.querySelectorAll('section[id]');
+        var links = document.querySelectorAll('.doc-sidebar a[href^="#"]');
+        window.addEventListener('scroll', function () {
+            var current = '';
+            sections.forEach(function (s) {
+                if (window.scrollY >= s.offsetTop - 80) current = s.id;
+            });
+            links.forEach(function (l) {
+                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+            });
+        }, { passive: true });
+    }
+
+    document.addEventListener('DOMContentLoaded', buildScrollSpy);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

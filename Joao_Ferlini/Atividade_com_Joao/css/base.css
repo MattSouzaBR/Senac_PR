@@ -1,0 +1,63 @@
+/* First Mobile Styles */
+body > main > section > div > div > div > div > div > div > i {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+body > main > section > div > div > div > div > div > div > strong,
+body > main > section > div > div > div > div > div > div > strong,
+body > main > section > div > div.col-12.col-md.ps-0.pe-3 > div > div > div > strong {
+    font-size: 14px;
+}
+
+body > main > section.px-4.pb-3.border-2.border-bottom.border-black > div > div:nth-child(1) > span,
+body > header > div > span {
+    font-size: 12px;
+    color: rgb(159, 157, 157) !important;
+}
+
+body > main > section > div > div > div > div > div > div > div > div > div.col-1 > strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+body > main > section > div > div > div > div > div > div > div > div > div.col > span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body > main > section > div > div > div > div > div > div > div > div > div.col > span.d-block.text-muted.small {
+    padding-top: 4px;
+    font-weight: 400;
+    color: rgb(159, 157, 157) !important;
+}
+
+body > main > section > div > div.col-12.col-md.ps-0.pe-3 > div > div > div.col-12.p-0.border-1.px-3.border.border-black.rounded-1.pt-3 > div > div > div > div > div > div.col {
+    font-size: 14px;
+    padding-bottom: 7px;
+}
+
+body > main > section:nth-child(3) > div > div.col-12.col-md.ps-0.pe-3 > div > div > div.col-12.p-0.border-1.px-3.border.border-black.rounded-1.pt-3 > div > div > div > div:nth-child(2) > div {
+    height: 10px;
+}
+
+body > main > section:nth-child(3) > div > div.col-12.col-md.ps-0.pe-3 > div > div > div.col-12.p-0.border-1.px-3.border.border-black.rounded-1.pt-3 > div > div > div > div:nth-child(2) > div > div {
+    background-color: black;
+    border-radius: 7px;
+    height: 10px;
+}
+
+body > main > section:nth-child(3) > div > div.col-12.col-md.ps-0.pe-3 > div > div > div:nth-child(2) > div > div {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Then Desktop Styles */
+@media (min-width: 768px) {
+    
+}
+
+/* Ultrawide Styles */
+@media (min-width: 2560px) {
+    
+}

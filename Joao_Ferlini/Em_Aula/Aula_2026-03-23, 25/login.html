@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Login</h1>
+        <p>Acesse o sistema</p>
+
+        <form onsubmit="return validarFormulario()">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        function validarFormulario() {
+                // Meu erro foi colocar 'Elements' no plural na hora de copiar do professor. Ele precisou ver pessoalmente. 
+            let email = document.getElementById('email');
+            let senha = document.getElementById('senha');
+            let valido = true;
+
+            email.classList.remove("erro");
+            senha.classList.remove("erro");
+
+            if (email.value.trim() === "") {
+                valido = false;
+                // alert("Email faltando!");
+                email.classList.add("erro");
+            }
+
+            if (senha.value.trim() === "") {
+                valido = false;
+                // alert("Senha faltando!");
+                senha.classList.add("erro");
+            }
+
+            return valido;
+        }
+    </script>
+</body>
+</html>

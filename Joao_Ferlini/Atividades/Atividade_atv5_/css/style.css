@@ -1,0 +1,158 @@
+:root { /* Variáveis */
+        --cor-preta: #1f2937;
+        --cor-branca: #f4f4f4;
+        --espacamento: 20px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+#main-depoimentos * img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+pre {
+    text-wrap: unset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {     /* Reset */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+}
+
+body {  /* Config */
+        background-color: var(--cor-branca);
+        display: flex;
+        flex-direction: row-reverse;
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+}
+
+main {
+        flex: 1;
+        padding: var(--espacamento);
+        margin-left: 230px;
+}
+
+menu {
+        width: 230px;
+        height: 100%;
+        background-color: var(--cor-preta);
+        color: var(--cor-branca);
+        padding: var(--espacamento);
+        position: fixed;
+        left: 0%;
+}
+
+menu img {
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px 5px;
+    transition: transform .2s;
+}
+
+menu img:hover {
+    transform: scale(110%);
+}
+
+menu * h2 {
+    padding-top: var(--espacamento);
+    margin-bottom: 8px;
+}
+
+menu * li {
+    display: block;
+    margin-bottom: 8px;
+    background-color: rgb(191, 194, 255);
+    border-radius: 6px;
+    transition: filter .2s, transform .2s, font-weight .1s;
+}
+
+menu * a {
+    display: block;
+    height: 100%;
+    padding: 12px 10px;
+    color: var(--cor-preta);
+}
+
+menu * li:hover {
+    filter: brightness(120%); /*Sugestão do Gemini*/
+    transform: scale(105%);
+    font-weight: bold;
+}
+
+.acessar-plataforma {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#cadastrar {
+    text-align: center;
+    background-color: rgb(54, 40, 244);
+    border: 2px solid rgb(0, 29, 251);
+    color: white;
+    border-radius: 8px;
+}
+
+#entrar {
+    text-align: center;
+    background-color: rgb(8, 43, 169);
+    border: 2px solid rgb(7, 22, 157);
+    color: white;
+    border-radius: 8px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 200;
+    transition: transform .2s, font-weight .08s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: scale(105%);
+    font-weight: 300;
+}

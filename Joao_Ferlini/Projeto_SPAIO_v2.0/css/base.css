@@ -1,0 +1,15 @@
+/* First Mobile Styles */
+    body {
+        background-color: var(--background-color);
+        color: var(--paragraph-color);
+    }
+
+/* Then Desktop Styles */
+@media (min-width: 768px) {
+    
+}
+
+/* Ultrawide Styles */
+@media (min-width: 2560px) {
+    
+}

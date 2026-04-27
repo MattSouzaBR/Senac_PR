@@ -1,0 +1,31 @@
+.align-content-center, .content-align-center {
+    align-content: center;
+}
+
+.align-content-end, .content-align-end {
+    align-content: end;
+}
+
+.align-content-start, .content-align-start {
+    align-content: start;
+}
+
+.align-content-between, .content-align-between {
+    align-content: between;
+}
+
+.align-content-around, .content-align-around {
+    align-content: around;
+}
+
+.align-content-evenly, .content-align-evenly {
+    align-content: evenly;
+}
+
+.align-content-stretch, .content-align-stretch {
+    align-content: stretch;
+}
+
+.align-content-baseline, .content-align-baseline {
+    align-content: baseline;
+}

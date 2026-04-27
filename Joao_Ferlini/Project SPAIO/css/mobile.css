@@ -1,0 +1,37 @@
+body {
+    padding: 0 20px;
+}
+
+#logo-menu img {
+        max-height: 50px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+
+    #nav-menu-navegacao h2, #nav-menu-gerenciamento h2 {
+        padding-top: 15px;
+    }
+
+    #nav-menu-navegacao li, #nav-menu-gerenciamento li {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    #nav-menu-navegacao a, #nav-menu-gerenciamento a {
+        display: block;
+        padding: 10px 0;
+        padding-left: 10px;
+        border-radius: 5px;
+        background-color: var(--cor-secundaria);
+        color: var(--cor-escura);
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    #nav-menu-navegacao a:hover, #nav-menu-gerenciamento a:hover {
+        filter: brightness(120%); /*Sugestão do Gemini*/
+        transform: scale(105%);
+    }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .linha {
+            display: flex;
+        }
+
+        .coluna30 {
+            width: 33%; /* O do professor está 30% */
+            margin-right: 20px;
+        }
+
+        .coluna50 {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .coluna70 {
+            width: 70%;
+            margin-right: 20px;
+        }
+
+        .coluna100 {
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        .coluna30 input,
+        .coluna50 input,
+        .coluna70 input,
+        .coluna100 input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+
+            /* Alteração Pessoal */
+            transition: 1s;
+        }
+
+        /* Alteração Pessoal */
+        .coluna30 input:hover, /* Quando o mouse está sobre o input (mouse em cima) */
+        .coluna30 input:focus, /* Campo selecionado para digitação */
+        .coluna30 input:focus-visible, /* Foco via teclado (TAB) */
+        .coluna30 input:active /* Quando o botão do mouse está pressionado (enquanto o clique está pressionado) */
+        {
+            border: 1px solid black;
+        }
+
+        .botoes {
+            margin-top: 10px;
+        }
+
+        .botao-salvar {
+            background-color: blue;
+            color: #fff;
+            border: 1px solid blue;
+            border-radius: 5px;  /*  Professor recomenda de 5~7px */
+            padding: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <!--
+        ---- O método padrão do formulário é GET.
+
+        GET envia os dados na URL:
+        exemplo.com/pagina?nome=Teu
+
+        POST envia os dados no corpo da requisição.
+
+        Ao atualizar a página (F5):
+        - GET apenas recarrega a URL com os parâmetros.
+        - POST pode mostrar um aviso para confirmar o reenvio do formulário.
+
+        Melhores Práticas segundo a convenção (regra simples)
+        Use:
+            CASO	        MÉTODO
+            Busca de dados	GET
+            Login	        POST
+            Cadastro	    POST
+            Upload	        POST
+        
+        Resumo executivo:
+            GET = leitura
+            POST = alteração de estado
+
+        Métodos de evitar abusos
+            CSRF Token
+            Rate Limit
+            PRG Pattern
+            Idempotency Key
+            CAPTCHA
+            Token de formulário único
+            Validação de Origem
+        -->
+            <div class="linha">
+                <div class="coluna70">
+                    <label for="nome_pessoa">Nome:</label>
+                    <input type="text" name="nome_pessoa" id="nome_pessoa" placeholder="Nome da Pessoa" required>
+                    <!-- 
+                    ---- O 'for' do Label faz referência para o 'id' do input
+                    ---- Recomenda-se usar o name igual o id, para facilitar a manutenção
+                    ---- id => Identificador único no DOM (CSS, JS, label for, âncoras)
+                    ---- name => Chave enviada no formulário (POST / GET)
+                    ---- required => Força o usuário a preencher aquele campo, antes de enviar. 'Pode ser editado via Console, logo não deve ser a única opção de restrição.'
+                     -->
+                </div>
+
+                <div class="coluna30">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="custom@domain.tld" required>
+                </div>    
+            </div>
+
+            <div class="linha">
+                <div class="coluna30">
+                    <label for="password">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="coluna30">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="••••••••••••••" required>
+                </div>
+                <div class="coluna30">
+                    <label for="password">Confirme sua Senha:</label>
+                    <input type="password" name="senha_confirmar" id="senha_confirmar" placeholder="••••••••••••••" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="botoes">
+                    <button class="botao-salvar">Salvar</button>
+                </div>
+                <!-- 
+                <button type="submit"></button>
+                <button type="reset"></button>
+                <button type="button"></button>
+                <button name="acao" value="salvar">Salvar</button>
+
+                <input type="button" value="Botão comum">
+                <input type="submit" value="Enviar formulário">
+
+                ---- A tag 'button' pode ter o atributo type e conteúdo interno (texto, ícone, HTML).
+
+                <button type="submit">
+                    <span>💾</span> Salvar
+                </button>
+
+                Se um <button> estiver dentro de um <form> e não tiver type definido,
+                o navegador assume automaticamente type="submit".
+
+                ---- A tag <input> é auto-fechada e não aceita conteúdo interno.
+
+                <input type="button" value="Salvar">
+
+                REGRA PRÁTICA:
+                99% dos projetos modernos → usar <button>
+                <input type="button"> é legado ou casos simples.
+                -->
+            </div>
+
+            <!-- Atividade Formulário 2 -->
+            <h2>Atividade Formulário 2</h2>
+            <div class="linha">
+                <div class="coluna70">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Rua...">
+                </div>
+                <div class="coluna30">
+                    <label for="endereco_numero">N° da Casa</label>
+                    <input type="number" name="endereco_numero" id="endereco_numero" placeholder="123">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna30">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+                </div>
+                <div class="coluna30">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="Estado">
+                </div>
+                <div class="coluna30">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="00000-000">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna30">
+                    <label for="data_nascimento">Data de Nascimento</label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" value="Data de Nascimento">
+                </div>
+                <div class="coluna70">
+                    <label for="observacoes">Observações</label>
+                    <input type="text" name="observacoes" id="observacoes" placeholder="Observações....">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna70">
+                    <label for="nome_pai">Nome do Pai</label>
+                    <input type="text" name="nome_pai" id="nome_pai" placeholder="Nome....">
+                </div>
+                <div class="coluna30">
+                    <label for="telefone_pai">Telefone do Pai</label>
+                    <input type="text" name="telefone_pai" id="telefone_pai" placeholder="00 00000-0000">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna70">
+                    <label for="nome_mae">Nome da Mãe</label>
+                    <input type="text" name="nome_mae" id="nome_mae" placeholder="Nome....">
+                </div>
+                <div class="coluna30">
+                    <label for="telefone_mae">Telefone do Mãe</label>
+                    <input type="text" name="telefone_mae" id="telefone_mae" placeholder="00 00000-0000">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna100">
+                    <label for="escolaridade">Escolaridade</label>
+                    <input type="text" name="escolaridade" id="escolaridade" placeholder="Escolaridade">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna30">
+                    <label for="curso_1">Curso A</label>
+                    <input type="text" name="curso_1" id="curso_1" placeholder="Curso....">
+                </div>
+                <div class="coluna30">
+                    <label for="curso_2">Curso B</label>
+                    <input type="text" name="curso_2" id="curso_2" placeholder="Curso....">
+                </div>
+                <div class="coluna30">
+                    <label for="curso_3">Curso C</label>
+                    <input type="text" name="curso_3" id="curso_3" placeholder="Curso....">
+                </div>
+            </div>
+            
+            <div class="linha">
+                <div class="botoes">
+                    <button class="botao-salvar">Salvar</button>
+                </div>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>

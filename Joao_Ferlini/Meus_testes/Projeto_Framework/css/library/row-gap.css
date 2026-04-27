@@ -1,0 +1,70 @@
+/* 
+Usado com display:grid; grid-template-columns: repeat(x, x);
+*/
+
+.row-gap {
+    row-gap: var(--default-gap);
+}
+
+.row-gap-min, .row-gap-minimum, .row-gap.minimum {
+    row-gap: var(--default-gap-minimum)
+}
+
+.row-gap-max, .row-gap-maximum, .row-gap.maximum {
+    row-gap: var(--default-gap-maximum)
+}
+
+.row-gap-0, .gap-y-0, .row-gap-0, .gap-row-0,
+.gy-0, .gy0, .g-y-0 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.0), var(--default-gap-maximum));
+}
+
+.row-gap-1, .gap-y-1, .row-gap-1, .gap-row-1,
+.gy-1, .gy1, .g-y-1 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.0), var(--default-gap-maximum));
+}
+
+.row-gap-2, .gap-y-2, .row-gap-2, .gap-row-2,
+.gy-2, .gy2, .g-y-2 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.2), var(--default-gap-maximum));
+}
+
+.row-gap-3, .gap-y-3, .row-gap-3, .gap-row-3,
+.gy-3, .gy3, .g-y-3 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.3), var(--default-gap-maximum));
+}
+
+.row-gap-4, .gap-y-4, .row-gap-4, .gap-row-4,
+.gy-4, .gy4, .g-y-4 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.4), var(--default-gap-maximum));
+}
+
+.row-gap-5, .gap-y-5, .row-gap-5, .gap-row-5,
+.gy-5, .gy5, .g-y-5 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.5), var(--default-gap-maximum));
+}
+
+.row-gap-6, .gap-y-6, .row-gap-6, .gap-row-6,
+.gy-6, .gy6, .g-y-6 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.6), var(--default-gap-maximum));
+}
+
+.row-gap-7, .gap-y-7, .row-gap-7, .gap-row-7,
+.gy-7, .gy7, .g-y-7 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.7), var(--default-gap-maximum));
+}
+
+.row-gap-8, .gap-y-8, .row-gap-8, .gap-row-8,
+.gy-8, .gy8, .g-y-8 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.8), var(--default-gap-maximum));
+}
+
+.row-gap-9, .gap-y-9, .row-gap-9, .gap-row-9,
+.gy-9, .gy9, .g-y-9 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum) * 0.9), var(--default-gap-maximum));
+}
+
+.row-gap-10, .gap-y-10, .row-gap-10, .gap-row-10,
+.gy-10, .gy10, .g-y-10 {
+    row-gap: clamp(var(--default-gap-minimum), calc(var(--default-gap-maximum)), var(--default-gap-maximum));
+}

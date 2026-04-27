@@ -1,0 +1,275 @@
+/* ==============================================
+   NORMALIZE.CSS — Global
+   Aplica identidade tipográfica e visual do projeto.
+   Ordem de prioridade por propriedade:
+     1. var(--nome)           → definido em variables.css
+     2. var(--default-nome)   → fallback de css_default.css
+
+   Duas camadas:
+     - Fora do .folha-abnt → Web/SEO
+     - Dentro do .folha-abnt → ABNT pura (NBR 14724 + NBR 6024)
+   ============================================== */
+
+/* ----------------------------------------------
+   BODY
+---------------------------------------------- */
+body {
+    background-color:   var(--body-background-color,    var(--default-body-background-color));
+    color:              var(--body-color,               var(--default-body-color));
+    font-family:        var(--body-font-family,         var(--default-body-font-family));
+    font-size:          var(--body-font-size,           var(--default-body-font-size));
+    line-height:        var(--body-line-height,         var(--default-body-line-height));
+}
+
+/* ----------------------------------------------
+   TAG: A
+---------------------------------------------- */
+a {
+    text-decoration:    var(--a-text-decoration,        var(--default-a-text-decoration));
+    color:              var(--a-color,                  var(--default-a-color));
+}
+
+a:hover {
+    text-decoration:    var(--a-hover-text-decoration,  var(--default-a-hover-text-decoration));
+    color:              var(--a-hover-color,            var(--default-a-hover-color));
+}
+
+/* ----------------------------------------------
+   HEADINGS — Web/SEO
+   Escala visual com tamanhos distintos
+---------------------------------------------- */
+h1 {
+    font-size:          var(--h1-font-size,             var(--default-font-size-h1));
+    font-weight:        var(--h1-font-weight,           var(--default-font-weight-h1));
+    font-style:         var(--h1-font-style,            var(--default-font-style-h1));
+    line-height:        var(--h1-line-height,           var(--default-line-height-h1));
+    text-transform:     var(--h1-text-transform,        var(--default-text-transform-h1));
+    text-decoration:    var(--h1-text-decoration,       var(--default-text-decoration-h1));
+    text-align:         var(--h1-text-align,            var(--default-text-align-h1));
+    letter-spacing:     var(--h1-letter-spacing);
+    color:              var(--h1-color);
+    font-family:        var(--h1-font-family);
+    margin-top:         24px;
+    margin-bottom:      24px;
+}
+
+h2 {
+    font-size:          var(--h2-font-size,             var(--default-font-size-h2));
+    font-weight:        var(--h2-font-weight,           var(--default-font-weight-h2));
+    font-style:         var(--h2-font-style,            var(--default-font-style-h2));
+    line-height:        var(--h2-line-height,           var(--default-line-height-h2));
+    text-transform:     var(--h2-text-transform,        var(--default-text-transform-h2));
+    text-decoration:    var(--h2-text-decoration,       var(--default-text-decoration-h2));
+    text-align:         var(--h2-text-align,            var(--default-text-align-h2));
+    letter-spacing:     var(--h2-letter-spacing);
+    color:              var(--h2-color);
+    font-family:        var(--h2-font-family);
+    margin-top:         24px;
+    margin-bottom:      12px;
+}
+
+h3 {
+    font-size:          var(--h3-font-size,             var(--default-font-size-h3));
+    font-weight:        var(--h3-font-weight,           var(--default-font-weight-h3));
+    font-style:         var(--h3-font-style,            var(--default-font-style-h3));
+    line-height:        var(--h3-line-height,           var(--default-line-height-h3));
+    text-transform:     var(--h3-text-transform,        var(--default-text-transform-h3));
+    text-decoration:    var(--h3-text-decoration,       var(--default-text-decoration-h3));
+    text-align:         var(--h3-text-align,            var(--default-text-align-h3));
+    letter-spacing:     var(--h3-letter-spacing);
+    color:              var(--h3-color);
+    font-family:        var(--h3-font-family);
+    margin-top:         24px;
+    margin-bottom:      12px;
+}
+
+h4 {
+    font-size:          var(--h4-font-size,             var(--default-font-size-h4));
+    font-weight:        var(--h4-font-weight,           var(--default-font-weight-h4));
+    font-style:         var(--h4-font-style,            var(--default-font-style-h4));
+    line-height:        var(--h4-line-height,           var(--default-line-height-h4));
+    text-transform:     var(--h4-text-transform,        var(--default-text-transform-h4));
+    text-decoration:    var(--h4-text-decoration,       var(--default-text-decoration-h4));
+    text-align:         var(--h4-text-align,            var(--default-text-align-h4));
+    letter-spacing:     var(--h4-letter-spacing);
+    color:              var(--h4-color);
+    font-family:        var(--h4-font-family);
+    margin-top:         24px;
+    margin-bottom:      12px;
+}
+
+h5 {
+    font-size:          var(--h5-font-size,             var(--default-font-size-h5));
+    font-weight:        var(--h5-font-weight,           var(--default-font-weight-h5));
+    font-style:         var(--h5-font-style,            var(--default-font-style-h5));
+    line-height:        var(--h5-line-height,           var(--default-line-height-h5));
+    text-transform:     var(--h5-text-transform,        var(--default-text-transform-h5));
+    text-decoration:    var(--h5-text-decoration,       var(--default-text-decoration-h5));
+    text-align:         var(--h5-text-align,            var(--default-text-align-h5));
+    letter-spacing:     var(--h5-letter-spacing);
+    color:              var(--h5-color);
+    font-family:        var(--h5-font-family);
+    margin-top:         24px;
+    margin-bottom:      12px;
+}
+
+h6 {
+    font-size:          var(--h6-font-size,             var(--default-font-size-h6));
+    font-weight:        var(--h6-font-weight,           var(--default-font-weight-h6));
+    font-style:         var(--h6-font-style,            var(--default-font-style-h6));
+    line-height:        var(--h6-line-height,           var(--default-line-height-h6));
+    text-transform:     var(--h6-text-transform,        var(--default-text-transform-h6));
+    text-decoration:    var(--h6-text-decoration,       var(--default-text-decoration-h6));
+    text-align:         var(--h6-text-align,            var(--default-text-align-h6));
+    letter-spacing:     var(--h6-letter-spacing);
+    color:              var(--h6-color);
+    font-family:        var(--h6-font-family);
+    margin-top:         24px;
+    margin-bottom:      12px;
+}
+
+/* ----------------------------------------------
+   TAG: P — Web/SEO
+---------------------------------------------- */
+p {
+    display:            var(--p-display,                var(--default-display-p));
+    font-size:          var(--p-font-size,              var(--default-font-size-p));
+    line-height:        var(--p-line-height,            var(--default-line-height-p));
+    text-indent:        var(--p-text-indent,            var(--default-text-indent-p));
+    text-align:         var(--p-text-align,             var(--default-text-align-p));
+    margin-bottom:      24px;
+}
+
+/* ==============================================
+   .folha-abnt — ABNT pura
+   Sobrescreve os estilos web para seguir
+   NBR 14724:2024 + NBR 6024:2012
+   ============================================== */
+
+/* ----------------------------------------------
+   Container
+---------------------------------------------- */
+.folha-abnt {
+    width:              clamp(280px, 90%, 794px);
+    margin:             10px auto;
+    padding:            var(--default-margin-page-top)
+                        var(--default-margin-page-right)
+                        var(--default-margin-page-bottom)
+                        var(--default-margin-page-left);
+    background-color:   white;
+    border:             1px solid #e9e9e9;
+    box-shadow:         -10px -10px 5px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------------------------------------
+   HEADINGS dentro do .folha-abnt — ABNT
+   Todos 16px, diferenciados por estilo (NBR 6024)
+---------------------------------------------- */
+.folha-abnt h1 {
+    font-size:          var(--h1-abnt-font-size,        var(--default-abnt-font-size-h1));
+    font-weight:        var(--h1-abnt-font-weight,      var(--default-abnt-font-weight-h1));
+    font-style:         var(--h1-abnt-font-style,       var(--default-abnt-font-style-h1));
+    line-height:        var(--h1-abnt-line-height,      var(--default-abnt-line-height-h1));
+    text-transform:     var(--h1-abnt-text-transform,   var(--default-abnt-text-transform-h1));
+    text-decoration:    var(--h1-abnt-text-decoration,  var(--default-abnt-text-decoration-h1));
+    text-align:         var(--h1-abnt-text-align,       var(--default-abnt-text-align-h1));
+}
+
+.folha-abnt h2 {
+    font-size:          var(--h2-abnt-font-size,        var(--default-abnt-font-size-h2));
+    font-weight:        var(--h2-abnt-font-weight,      var(--default-abnt-font-weight-h2));
+    font-style:         var(--h2-abnt-font-style,       var(--default-abnt-font-style-h2));
+    line-height:        var(--h2-abnt-line-height,      var(--default-abnt-line-height-h2));
+    text-transform:     var(--h2-abnt-text-transform,   var(--default-abnt-text-transform-h2));
+    text-decoration:    var(--h2-abnt-text-decoration,  var(--default-abnt-text-decoration-h2));
+    text-align:         var(--h2-abnt-text-align,       var(--default-abnt-text-align-h2));
+}
+
+.folha-abnt h3 {
+    font-size:          var(--h3-abnt-font-size,        var(--default-abnt-font-size-h3));
+    font-weight:        var(--h3-abnt-font-weight,      var(--default-abnt-font-weight-h3));
+    font-style:         var(--h3-abnt-font-style,       var(--default-abnt-font-style-h3));
+    line-height:        var(--h3-abnt-line-height,      var(--default-abnt-line-height-h3));
+    text-transform:     var(--h3-abnt-text-transform,   var(--default-abnt-text-transform-h3));
+    text-decoration:    var(--h3-abnt-text-decoration,  var(--default-abnt-text-decoration-h3));
+    text-align:         var(--h3-abnt-text-align,       var(--default-abnt-text-align-h3));
+}
+
+.folha-abnt h4 {
+    font-size:          var(--h4-abnt-font-size,        var(--default-abnt-font-size-h4));
+    font-weight:        var(--h4-abnt-font-weight,      var(--default-abnt-font-weight-h4));
+    font-style:         var(--h4-abnt-font-style,       var(--default-abnt-font-style-h4));
+    line-height:        var(--h4-abnt-line-height,      var(--default-abnt-line-height-h4));
+    text-transform:     var(--h4-abnt-text-transform,   var(--default-abnt-text-transform-h4));
+    text-decoration:    var(--h4-abnt-text-decoration,  var(--default-abnt-text-decoration-h4));
+    text-align:         var(--h4-abnt-text-align,       var(--default-abnt-text-align-h4));
+}
+
+.folha-abnt h5 {
+    font-size:          var(--h5-abnt-font-size,        var(--default-abnt-font-size-h5));
+    font-weight:        var(--h5-abnt-font-weight,      var(--default-abnt-font-weight-h5));
+    font-style:         var(--h5-abnt-font-style,       var(--default-abnt-font-style-h5));
+    line-height:        var(--h5-abnt-line-height,      var(--default-abnt-line-height-h5));
+    text-transform:     var(--h5-abnt-text-transform,   var(--default-abnt-text-transform-h5));
+    text-decoration:    var(--h5-abnt-text-decoration,  var(--default-abnt-text-decoration-h5));
+    text-align:         var(--h5-abnt-text-align,       var(--default-abnt-text-align-h5));
+}
+
+.folha-abnt h6 {
+    font-size:          var(--h6-abnt-font-size,        var(--default-abnt-font-size-h6));
+    font-weight:        var(--h6-abnt-font-weight,      var(--default-abnt-font-weight-h6));
+    font-style:         var(--h6-abnt-font-style,       var(--default-abnt-font-style-h6));
+    line-height:        var(--h6-abnt-line-height,      var(--default-abnt-line-height-h6));
+    text-transform:     var(--h6-abnt-text-transform,   var(--default-abnt-text-transform-h6));
+    text-decoration:    var(--h6-abnt-text-decoration,  var(--default-abnt-text-decoration-h6));
+    text-align:         var(--h6-abnt-text-align,       var(--default-abnt-text-align-h6));
+}
+
+/* ----------------------------------------------
+   TAG: P dentro do .folha-abnt — ABNT
+---------------------------------------------- */
+.folha-abnt p {
+    line-height:        var(--p-abnt-line-height,       var(--default-abnt-line-height-p));
+    text-indent:        var(--p-abnt-text-indent,       var(--default-abnt-text-indent-p));
+    text-align:         var(--p-abnt-text-align,        var(--default-abnt-text-align-p));
+}
+
+/* ----------------------------------------------
+   Listas dentro do .folha-abnt — ABNT
+   Sem marcadores visuais, só recuo (NBR 14724)
+---------------------------------------------- */
+.folha-abnt ul,
+.folha-abnt ol {
+    list-style:         var(--list-style,               var(--default-list-style));
+    padding-left:       var(--list-padding-left,        var(--default-list-padding-left));
+}
+
+/* ----------------------------------------------
+   FIGURE: .figura-abnt — Ilustrações (NBR 14724)
+   Identificação acima, fonte abaixo, 10pt
+---------------------------------------------- */
+.figura-abnt {
+    display:            block;
+    width:              fit-content;
+    margin:             24px auto;
+}
+
+.figura-abnt figcaption {
+    font-size:          var(--default-abnt-font-size-small);
+    line-height:        1.5;
+    text-align:         left;
+    margin-bottom:      8px;
+}
+
+.figura-abnt img {
+    display:            block;
+    max-width:          100%;
+}
+
+.figura-abnt footer {
+    font-size:          var(--default-abnt-font-size-small);
+    line-height:        1.5;
+    text-align:         left;
+    margin-top:         8px;
+}
+
