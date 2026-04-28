@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Oficina Simas Turbo - Login</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<style>
+		.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    max-width: 150px
+    width: 100%; 
+    height: auto;
+    margin-bottom: 15p
+	</style>
+</head>
+<body>
+	<div class="card">
+		<img align="left" width="58%" src="img/logo_simas_turbo.png">
+		<h1>Oficina Simas Turbo 🥵🚗💨</h1>
+		<p>Especialistas em carro ruim e barato!</p>
+
+		<form onsubmit="return validarLogin(event)">
+			
+            <label>E-mail do Mecânico</label>
+			<input type="text" id="email" placeholder="exemplo@oficina.com">
+
+			<label>Senha Secreta</label>
+			<input type="password" id="senha" placeholder="Digite sua senha">
+
+			<button type="submit">Entrar na Oficina</button>
+		</form>
+	</div>
+
+	<script>
+		function validarLogin(event) {
+			let inputEmail = document.getElementById('email');
+			let inputSenha = document.getElementById('senha');
+			let valido = true;
+
+			inputEmail.classList.remove("erro");
+			inputSenha.classList.remove("erro");
+
+			let valorEmail = inputEmail.value.trim();
+			if(valorEmail === "" || !valorEmail.includes("@") || !valorEmail.includes(".")) {
+				alert("Ei! Digite um e-mail de verdade (precisa ter @ e .)");
+				inputEmail.classList.add("erro");
+				valido = false;
+			}
+
+			let valorSenha = inputSenha.value.trim();
+			if(valorSenha.length < 6) {
+				alert("A senha está muito fraca! Digite pelo menos 6 caracteres.");
+				inputSenha.classList.add("erro");
+				valido = false;
+			}
+
+			if (!valido) {
+                event.preventDefault(); 
+            } else {
+
+                event.preventDefault(); 
+                alert("Login autorizado! Preparando as chaves de fenda...");
+                window.location.href = "index.html"; 
+            }
+
+			return valido;
+		}
+	</script>
+</body>
+</html>

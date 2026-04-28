@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noticias Peba</title>
+  
+  <style>
+
+  	.noticias{
+  		display: flex;
+  		gap: 20px;
+  	}
+
+  	.noticias article{
+  		flex: 1;
+  		border: 1px solid #ccc;
+  		padding: 10px;
+  	}
+
+	.topo{
+		display: flex;
+		align-items:center;
+		gap: 10px;
+	}  		
+
+	.MenuPrincipal{
+		color:#ff00a2;
+	}
+
+
+    body { font-family: Arial, sans-serif; line-height: 1.5; width: 900px; margin:auto; padding: 1rem; background-color: #000000; color: #ff0000;  }
+    header, nav, main, footer { margin-bottom: 1.25rem; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; }
+    section { padding: 0.5rem 0; border-top: 1px solid #eee; }
+    article { padding: 0.5rem 0; }
+    footer { font-size: 0.9rem; color: #ff00e1; border-top: 1px solid #ddd; padding-top: 0.75rem;}
+    p {color: #ffff}
+
+  </style>
+</head>
+<body>
+
+  <header>
+  	<div class="topo"> 
+    <h1>Noticias Peba</h1>
+    	<img src="https://http2.mlstatic.com/D_NQ_NP_726188-MLB76474930649_052024-O.webp" width="5%" alt="logo">
+    	</div>
+    <p class="site-description">O <b>PIOR</b> portal de noticias da região do Pará</p>
+  	
+
+  </header>
+
+  <nav aria-label="Menu principal">
+    <ul class="MenuPrincipal">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="sec-noticias">
+      <h2>Principais Noticias</h2>
+      <p>Acompanhe as maiores desgraças que aconteceram recentemente na nossa região.</p>
+
+      <div class="noticias">
+
+      <article aria-labelledby="art1-title">
+        <h3 id="art1-title">Enchente em Belém transforma rua em “All You Can Eat” de jacaré</h3>
+        <img src="https://thumbs.dreamstime.com/b/ninho-do-jacar%C3%A9-36167096.jpg" width="80%">
+        <p>Água subiu e levou o mercado inteiro. Agora tem 17 jacarés nadando entre as bancas de peixe. Morador de 62 anos foi comido enquanto tentava salvar o botijão de gás. Vizinho comentou: “Pelo menos ele morreu abraçado com o que mais amava: preço alto”.</p>
+      </article>
+
+      <article aria-labelledby="art2-title">
+        <h3 id="art2-title">Homem de 47 anos morre esmagado por castanha-do-pará de 12 kg em Castanhal</h3>
+        <img src="https://e-jardim.com/adm/fotos/Lecythis%20usitata%20var.%20paraensis%20(1).jpg" width="70%">
+        <p>A castanha caiu da árvore exatamente quando ele passava por baixo falando mal da sogra.</p>
+      </article>
+
+      </div>
+
+    </section>
+
+    <section id="sec-sobre">
+      <h2 align="center">Receita do dia: Tacacá</h2>
+      <img src="https://guiadacozinha.com.br/wp-content/uploads/2023/10/tacaca-768x619.jpg" width="40%" style="display:block; margin:auto;">
+      <p>Para preparar um tacacá autêntico, comece fervendo o tucupi com alho amassado, sal e chicória-do-pará (ou coentro comum) por cerca de 30 minutos; separadamente, hidrate a farinha de mandioca fina em água para fazer um mingau (goma) bem liso e transparente, e cozinhe o jambu em água fervente até que as folhas fiquem macias, mas ainda vibrantes. Para servir, coloque uma concha generosa de tucupi quente em uma cuia, adicione uma porção da goma de mandioca, alguns ramos de jambu e finalize com camarões secos salgados, servindo imediatamente para aproveitar o contraste de temperaturas e a sensação única de dormência provocada pelo jambu.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong id="student-name">João Roberto Hasegawa Voltolini</strong></p>
+    <p>Ano: <span id="year"></span></p>
+    <p>Site criado para aula de HTML.</p>
+  </footer>
+
+  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+;  </script>
+
+</body>
+</html>
+
+<!-- 
+		header 	-> Cabeçalho da página ou da seção
+		nav 	-> Área de navegação (menu)
+		main 	-> Conteúdo principal
+			section -> Seção de conteúdo
+		article -> Conteúdo (noticia, postagem, artigo)
+		footer 	-> Rodapé da página
+	 -->

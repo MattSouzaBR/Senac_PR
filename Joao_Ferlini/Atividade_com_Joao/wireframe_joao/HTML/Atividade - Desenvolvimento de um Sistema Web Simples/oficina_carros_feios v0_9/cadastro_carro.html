@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Carro - Oficina</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+
+	<div class="layout">
+		<menu>
+			<img width="80%" src="img/logo_simas_turbo.png">
+			<h2>Oficina Simas Turbo</h2>
+			<a href="index.html">Início</a>
+			<a href="cadastro_carro.html">Cadastrar Carro</a>
+			<a href="cadastro_cliente.html">Cadastrar Cliente</a>
+			</menu>
+
+		<main>
+			<div class="topo">
+				<h1>Cadastrar Lasanha</h1>
+				<p>Registre a lasanha de problemas sobre quatro rodas que acabou de chegar.</p>
+			</div>
+
+			<section>
+				<form id="formCarro" onsubmit="return validarCadastroCarro(event)">
+					
+					<label>Dono do veículo</label>
+					<input type="text" id="nomeDono" placeholder="Digite o nome do cliente">
+
+					<label>Modelo da bomba</label>
+					<select id="modeloCarro">
+						<option value="">-- Escolha o problema --</option>
+						<option value="uno">Fiat Uno Argentino</option>
+						<option value="galant">Mitsubishi Galant JDM phoda</option>
+						<option value="xtz">Yamaha XTZ 125 manca</option>
+						<option value="outro">Outra aberração não catalogada</option>
+					</select>
+
+					<label>Data de Entrada</label>
+					<input type="date" id="dataEntrada">
+
+					<label>Quantidade de amassados aparentes</label>
+					<input type="number" id="qtdAmassados" min="0" placeholder="Ex: 5">
+
+					<label>O que está acontecendo? (Diagnóstico do cliente)</label>
+					<textarea id="observacoes" placeholder="Ex: Faz um barulho de batedeira quando vira a chave..."></textarea>
+
+					<button type="submit">Dar entrada na oficina</button>
+				</form>
+			</section>
+		</main>
+	</div>
+
+	<script>
+		function validarCadastroCarro(event) {
+			let nome = document.getElementById('nomeDono');
+			let modelo = document.getElementById('modeloCarro');
+			let valido = true;
+
+			nome.classList.remove("erro");
+			modelo.classList.remove("erro");
+
+			if (nome.value.trim() === "") {
+				alert("Aviso: O carro precisa ter um dono cadastrado!");
+				nome.classList.add("erro");
+				nome.focus();
+				valido = false;
+			}
+
+			if (modelo.value === "") {
+				alert("Aviso: Selecione qual é o modelo do carro feio!");
+				modelo.classList.add("erro");
+				valido = false;
+			}
+
+			if (!valido) {
+				event.preventDefault();
+			} else {
+		
+				event.preventDefault(); 
+				alert("Sucesso! Carro cadastrado. O pátio agradece (ou chora)!");
+			}
+
+			return valido;
+		}
+	</script>
+
+</body>
+</html>

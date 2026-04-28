@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Serviço - Oficina</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<div class="layout">
+		<menu>
+			<img width="80%" src="img/logo_simas_turbo.png">
+            <h2>Oficina Simas Turbo</h2>
+			<a href="index.html">Início</a>
+            </menu>
+
+		<main>
+			<div class="topo">
+				<h1>Ordem de Serviço</h1>
+				<p>Descreva o milagre que teremos que fazer.</p>
+			</div>
+
+			<section>
+				<form id="formServico" onsubmit="return validarServico(event)">
+					<label>Tipo de Serviço:</label>
+					<select id="tipoServico">
+						<option value="">-- Escolha o milagre --</option>
+						<option value="alinhamento">Alinhamento Espiritual do Carro</option>
+						<option value="polimento">Polimento com cuspe</option>
+						<option value="motor">Fazer o motor</option>
+					</select>
+
+					<label>Quantidade de peças boas que trocamos por peças usadas:</label>
+					<input type="number" id="quantidade" min="1" value="1">
+
+					<label>Observações do Mecânico:</label>
+					<textarea id="obs" placeholder="Ex: O carro está segurado por dois parafusos e uma promessa."></textarea>
+
+					<button type="submit">Gerar Ordem de Caos</button>
+				</form>
+			</section>
+		</main>
+	</div>
+
+	<script>
+		function validarServico(event) {
+			let tipo = document.getElementById('tipoServico');
+			let qtd = document.getElementById('quantidade');
+			let valido = true;
+
+			tipo.classList.remove("erro");
+			
+			if(tipo.value === "") {
+				alert("Selecione qual serviço será feito!");
+				tipo.classList.add("erro");
+				valido = false;
+			}
+
+			if(!valido) event.preventDefault();
+            else {
+                event.preventDefault();
+                alert("Serviço registrado! Boa sorte para nóis.");
+            }
+			return valido;
+		}
+	</script>
+</body>
+</html>

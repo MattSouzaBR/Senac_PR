@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="card">
+		<h1>Login</h1>
+		<p>Acesse o sistema</p>
+
+		<form onsubmit="return validarFormulario()">
+			<label>E-mail</label>
+			<input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+
+			<label>Senha</label>
+			<input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+
+			<button type="submit">Entrar</button>
+		</form>
+	</div>
+
+	<script>
+		function validarFormulario() {
+			let email = document.getElementById('email');
+			let senha = document.getElementById('senha');
+			let valido = true;
+
+			email.classList.remove("erro");
+			senha.classList.remove("erro");
+
+			if(email.value.trim() === ""){
+				valido = false;
+				// alert("E-mail faltando!");
+				email.classList.add("erro");
+			}
+
+			if(senha.value.trim() === ""){
+				valido = false;
+				// alert("Senha faltando!");
+				senha.classList.add("erro");
+			}
+
+			return valido;
+
+		}
+	</script>
+
+
+</body>
+</html>

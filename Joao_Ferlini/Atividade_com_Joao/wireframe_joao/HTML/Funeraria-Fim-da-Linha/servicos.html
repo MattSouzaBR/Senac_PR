@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funerária Fim da Linha - Serviços</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            color: #333; 
+            line-height: 1.6; 
+            }
+        header { 
+            background-color: #1a1a1a; 
+            color: white; 
+            padding: 20px 0; 
+            }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin: 0; 
+            padding: 0; 
+            }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            }
+        nav a:hover { 
+            color: #8B0000; 
+            }
+        section { 
+            padding: 60px 20px;
+            }
+        h2 { 
+            color: #8B0000; 
+            text-align: center; 
+            margin-bottom: 40px; 
+            }
+        .cards { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            }
+        .card { 
+            max-width: 400px; 
+            background-color: white; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            width: 300px; 
+            padding: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            text-align: center; 
+            }
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            }
+        table { 
+            width: 100%; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            border-collapse: collapse; 
+            }
+        th, td { 
+            padding: 15px; 
+            text-align: left;
+            border-bottom: 1px solid #ddd; 
+            }
+        th { 
+            background-color: #1a1a1a; 
+            color: white; 
+            }
+        .preco { 
+            color: #8B0000; 
+            font-weight: bold; 
+            }
+        footer { 
+            background-color: #1a1a1a; 
+            color: white; 
+            text-align: center; 
+            padding: 20px 0; 
+            font-size: 0.9rem; 
+            }
+        .btn-comprar {
+           display: inline-block;
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%; /* Faz o botão ocupar a largura total do card */
+            box-sizing: border-box;
+            }
+
+        .btn-comprar:hover {
+            background-color: #5a0000; 
+           }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria e Localizações</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/coffindance.jpg" alt="Evento funerário">
+                    <h3>Eventos Funerários</h3>
+                    <p>Organização completa com capela, transporte e cerimônia.</p>
+                </div>
+                <div class="card">
+                    <img src="img/esqueletocaino.gif" alt="Cuidado com o corpo">
+                    <h3>Cuidado com o Corpo</h3>
+                    <p>Preparação, tanatopraxia e conservação com respeito.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top:60px;">Caixões com Preços</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/caixãopp.png" alt="Caixão PP">
+                    <h3>Caixão PP</h3>
+                    <p class="preco">R$ 1.000,00</p>
+                    <p>Modelo simples e elegante.</p> <br>
+                    <a href="https://wa.me/554491717051?text=Olá, tenho interesse em comprar caixões" class="btn-comprar">Comprar Agora</a>
+                </div>
+                <div class="card">
+                    <img src="img/caixãop.png" alt="Caixão P">
+                    <h3>Caixão P</h3>
+                    <p class="preco">R$ 1.500,00</p>
+                    <p>Madeira nobre com acabamento premium.</p>
+                    <a href="https://wa.me/554491717051?text=Olá, tenho interesse em comprar caixões" class="btn-comprar">Comprar Agora</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/caixãom.png" alt="Caixão M">
+                    <h3>Caixão M</h3>
+                    <p class="preco">R$ 2.000,00</p>
+                    <p>Conforto e sofisticação.</p>
+                    <a href="https://wa.me/554491717051?text=Olá, tenho interesse em comprar caixões" class="btn-comprar">Comprar Agora</a>
+                </div>
+                <div class="card">
+                    <img src="img/caixãog.png" alt="Caixão G">
+                    <h3>Caixão G</h3>
+                    <p class="preco">R$ 2.500,00</p>
+                    <p>Conforto e sofisticação para gordos.</p>
+                    <a href="https://wa.me/554491717051?text=Olá, tenho interesse em comprar caixões" class="btn-comprar">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Funerária Fim da Linha - Todos os direitos reservados</p>
+            <p>Telefone: (44) 99181-80151 | Email: funerariafimdalinha@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

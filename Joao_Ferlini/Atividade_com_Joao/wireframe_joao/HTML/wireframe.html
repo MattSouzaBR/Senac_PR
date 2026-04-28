@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Aluno</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'DM Sans', sans-serif; }
+    .wire-box { border: 1.5px solid #000; }
+    .wire-box-dashed { border: 1.5px dashed #999; }
+    .sidebar-link { transition: background 0.15s; }
+    .sidebar-link:hover, .sidebar-link.active { background: #000; color: #fff; }
+    .tab-btn { transition: all 0.15s; }
+    .tab-btn.active { background: #000; color: #fff; }
+    .tab-btn:not(.active):hover { background: #eee; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-white text-black">
+  <div id="app" class="h-full w-full flex overflow-hidden"><!-- Sidebar -->
+   <aside id="sidebar" class="w-56 shrink-0 border-r-2 border-black flex flex-col h-full bg-white">
+    <div class="p-4 border-b-2 border-black">
+     <div class="font-bold text-lg tracking-tight">
+      ☐ ÁREA DO ALUNO
+     </div>
+     <div class="text-xs text-gray-500 mt-1" id="sidebar-course">
+      Engenharia de Software
+     </div>
+    </div>
+    <nav class="flex-1 p-2 space-y-0.5 overflow-auto"><button onclick="navigate('dashboard')" data-nav="dashboard" class="sidebar-link active w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="layout-dashboard" style="width:16px;height:16px"></i> Dashboard </button> <button onclick="navigate('materias')" data-nav="materias" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="book-open" style="width:16px;height:16px"></i> Matérias </button> <button onclick="navigate('boletim')" data-nav="boletim" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="file-text" style="width:16px;height:16px"></i> Boletim </button> <button onclick="navigate('conteudo')" data-nav="conteudo" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="folder" style="width:16px;height:16px"></i> Conteúdo </button> <button onclick="navigate('aulas')" data-nav="aulas" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="video" style="width:16px;height:16px"></i> Aulas Gravadas </button> <button onclick="navigate('presenca')" data-nav="presenca" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="check-circle" style="width:16px;height:16px"></i> Presença </button> <button onclick="navigate('calendario')" data-nav="calendario" class="sidebar-link w-full text-left px-3 py-2 text-sm font-medium flex items-center gap-2 rounded"> <i data-lucide="calendar" style="width:16px;height:16px"></i> Calendário </button>
+    </nav>
+    <div class="p-3 border-t-2 border-black text-xs">
+     <div class="flex items-center gap-2">
+      <div class="w-7 h-7 wire-box rounded-full flex items-center justify-center font-bold text-xs">
+       JS
+      </div>
+      <div>
+       <div class="font-semibold" id="sidebar-name">
+        João Silva
+       </div>
+       <div class="text-gray-400">
+        RA 2024001
+       </div>
+      </div>
+     </div>
+    </div>
+   </aside><!-- Mobile menu button --> <button id="mobile-menu-btn" onclick="toggleSidebar()" class="fixed top-3 left-3 z-50 p-2 wire-box bg-white rounded hidden"> <i data-lucide="menu" style="width:20px;height:20px"></i> </button> <!-- Main -->
+   <main class="flex-1 h-full overflow-auto bg-white">
+    <header class="border-b-2 border-black px-6 py-4 flex items-center justify-between">
+     <div>
+      <h1 class="text-xl font-bold" id="page-title">Dashboard</h1>
+      <p class="text-xs text-gray-400">Semestre 2025.1</p>
+     </div>
+     <div class="flex items-center gap-3"><button class="wire-box rounded p-2 hover:bg-black hover:text-white transition-colors"><i data-lucide="bell" style="width:16px;height:16px"></i></button> <button class="wire-box rounded p-2 hover:bg-black hover:text-white transition-colors"><i data-lucide="settings" style="width:16px;height:16px"></i></button>
+     </div>
+    </header>
+    <div class="p-6" id="content-area"><!-- Content injected by JS -->
+    </div>
+   </main>
+  </div>
+  <script>
+const defaultConfig = {
+  student_name: 'João Silva',
+  course_name: 'Engenharia de Software',
+  background_color: '#ffffff',
+  text_color: '#000000',
+  surface_color: '#f5f5f5',
+  border_color: '#000000',
+  accent_color: '#666666',
+  font_family: 'DM Sans',
+  font_size: 14
+};
+
+let currentPage = 'dashboard';
+
+// Pages content
+const pages = {
+  dashboard() {
+    return `
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        ${[['6','Matérias','book-open'],['7.8','Média Geral','trending-up'],['92%','Frequência','check-circle'],['3','Pendências','alert-circle']].map(([v,l,ic])=>`
+          <div class="wire-box p-4 rounded">
+            <div class="flex items-center gap-2 text-gray-400 text-xs mb-2"><i data-lucide="${ic}" style="width:14px;height:14px"></i>${l}</div>
+            <div class="text-2xl font-bold">${v}</div>
+          </div>`).join('')}
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 space-y-4">
+          <div class="wire-box rounded p-4">
+            <div class="font-semibold text-sm mb-3 flex items-center gap-2"><i data-lucide="clock" style="width:14px;height:14px"></i> Próximas Aulas</div>
+            ${[['Cálculo II','08:00 - Sala 301','Seg'],['Física III','10:00 - Sala 205','Seg'],['Programação','14:00 - Lab 4','Ter']].map(([m,d,day])=>`
+              <div class="flex items-center justify-between py-2 border-b border-gray-200 last:border-0">
+                <div><div class="text-sm font-medium">${m}</div><div class="text-xs text-gray-400">${d}</div></div>
+                <span class="wire-box text-xs px-2 py-0.5 rounded font-medium">${day}</span>
+              </div>`).join('')}
+          </div>
+          <div class="wire-box rounded p-4">
+            <div class="font-semibold text-sm mb-3 flex items-center gap-2"><i data-lucide="alert-circle" style="width:14px;height:14px"></i> Atividades Pendentes</div>
+            ${[['Lista 3 - Cálculo II','Entrega: 15/06'],['Relatório - Física III','Entrega: 18/06'],['Projeto Final - Programação','Entrega: 25/06']].map(([t,d])=>`
+              <div class="flex items-center justify-between py-2 border-b border-gray-200 last:border-0">
+                <div><div class="text-sm font-medium">${t}</div><div class="text-xs text-gray-400">${d}</div></div>
+                <div class="w-3 h-3 rounded-full border-2 border-black"></div>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="wire-box rounded p-4">
+            <div class="font-semibold text-sm mb-3">Desempenho</div>
+            ${[['Cálculo II',8.5],['Física III',7.0],['Programação',9.2],['Estatística',6.8]].map(([m,n])=>`
+              <div class="mb-2">
+                <div class="flex justify-between text-xs mb-1"><span>${m}</span><span class="font-bold">${n}</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-black rounded-full" style="width:${n*10}%"></div></div>
+              </div>`).join('')}
+          </div>
+          <div class="wire-box rounded p-4">
+            <div class="font-semibold text-sm mb-3">Avisos</div>
+            <div class="space-y-2 text-xs text-gray-600">
+              <div class="py-1 border-b border-gray-100">📌 Matrícula 2025.2 aberta</div>
+              <div class="py-1 border-b border-gray-100">📌 Palestra dia 20/06</div>
+              <div class="py-1">📌 Biblioteca: novo horário</div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  },
+  materias() {
+    const materias = [
+      ['Cálculo II','Prof. Ana Costa','Seg/Qua 08:00','Sala 301',85],
+      ['Física III','Prof. Carlos Lima','Seg/Qua 10:00','Sala 205',72],
+      ['Programação','Prof. Maria Santos','Ter/Qui 14:00','Lab 4',95],
+      ['Estatística','Prof. Pedro Rocha','Ter/Qui 08:00','Sala 102',68],
+      ['Álgebra Linear','Prof. Julia Alves','Sex 10:00','Sala 301',78],
+      ['Eng. de Software','Prof. Bruno Dias','Sex 14:00','Lab 2',90],
+    ];
+    return `<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      ${materias.map(([n,p,h,s,freq])=>`
+        <div class="wire-box rounded p-4 hover:bg-gray-50 transition-colors cursor-pointer">
+          <div class="font-semibold text-sm">${n}</div>
+          <div class="text-xs text-gray-400 mt-1">${p}</div>
+          <div class="mt-3 space-y-1 text-xs">
+            <div class="flex items-center gap-1"><i data-lucide="clock" style="width:12px;height:12px"></i> ${h}</div>
+            <div class="flex items-center gap-1"><i data-lucide="map-pin" style="width:12px;height:12px"></i> ${s}</div>
+          </div>
+          <div class="mt-3"><div class="flex justify-between text-xs mb-1"><span>Frequência</span><span class="font-bold">${freq}%</span></div>
+            <div class="h-1.5 bg-gray-200 rounded-full"><div class="h-1.5 bg-black rounded-full" style="width:${freq}%"></div></div>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  },
+  boletim() {
+    const notas = [
+      ['Cálculo II',8.0,7.5,9.0,'—',8.2,'Aprovado'],
+      ['Física III',6.5,7.0,7.5,'—',7.0,'Cursando'],
+      ['Programação',9.0,9.5,9.0,'—',9.2,'Aprovado'],
+      ['Estatística',5.5,7.0,8.0,'—',6.8,'Cursando'],
+      ['Álgebra Linear',7.0,8.0,'—','—',7.5,'Cursando'],
+      ['Eng. de Software',9.0,8.5,'—','—',8.8,'Cursando'],
+    ];
+    return `
+      <div class="wire-box rounded overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b-2 border-black text-left text-xs">
+            <th class="p-3 font-semibold">Matéria</th><th class="p-3 font-semibold text-center">P1</th><th class="p-3 font-semibold text-center">P2</th><th class="p-3 font-semibold text-center">P3</th><th class="p-3 font-semibold text-center">PF</th><th class="p-3 font-semibold text-center">Média</th><th class="p-3 font-semibold text-center">Status</th>
+          </tr></thead>
+          <tbody>
+            ${notas.map(([m,p1,p2,p3,pf,med,st])=>`
+              <tr class="border-b border-gray-200 hover:bg-gray-50">
+                <td class="p-3 font-medium">${m}</td>
+                <td class="p-3 text-center">${p1}</td><td class="p-3 text-center">${p2}</td><td class="p-3 text-center">${p3}</td><td class="p-3 text-center">${pf}</td>
+                <td class="p-3 text-center font-bold">${med}</td>
+                <td class="p-3 text-center"><span class="wire-box text-xs px-2 py-0.5 rounded ${st==='Aprovado'?'bg-black text-white':''}">${st}</span></td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-4 wire-box-dashed rounded p-4 text-center text-xs text-gray-400">
+        <i data-lucide="download" style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Baixar Boletim (PDF) — wireframe
+      </div>`;
+  },
+  conteudo() {
+    const items = [
+      ['Cálculo II',['Lista 1 - Integrais.pdf','Lista 2 - Séries.pdf','Apostila Cap. 5.pdf']],
+      ['Física III',['Roteiro Lab 3.pdf','Slides Aula 8.pdf']],
+      ['Programação',['Projeto Final.zip','Tutorial Git.pdf','Slides POO.pdf']],
+    ];
+    return `<div class="space-y-3">
+      ${items.map(([mat, files])=>`
+        <div class="wire-box rounded p-4">
+          <div class="font-semibold text-sm flex items-center gap-2 mb-3"><i data-lucide="folder" style="width:14px;height:14px"></i> ${mat}</div>
+          <div class="space-y-1">
+            ${files.map(f=>`
+              <div class="flex items-center justify-between py-1.5 px-2 hover:bg-gray-50 rounded cursor-pointer">
+                <div class="flex items-center gap-2 text-sm"><i data-lucide="file-text" style="width:14px;height:14px;color:#999"></i> ${f}</div>
+                <i data-lucide="download" style="width:14px;height:14px;color:#999"></i>
+              </div>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>`;
+  },
+  aulas() {
+    const videos = [
+      ['Cálculo II - Aula 12','Integrais Duplas','01:23:45','12/06'],
+      ['Física III - Aula 10','Ondas Eletromagnéticas','00:58:30','11/06'],
+      ['Programação - Aula 15','Design Patterns','01:45:00','10/06'],
+      ['Estatística - Aula 8','Distribuição Normal','01:10:22','09/06'],
+    ];
+    return `<div class="grid sm:grid-cols-2 gap-3">
+      ${videos.map(([t,sub,dur,dt])=>`
+        <div class="wire-box rounded overflow-hidden cursor-pointer hover:bg-gray-50 transition-colors">
+          <div class="bg-gray-100 h-32 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-full wire-box flex items-center justify-center"><i data-lucide="play" style="width:20px;height:20px"></i></div>
+          </div>
+          <div class="p-3">
+            <div class="font-semibold text-sm">${t}</div>
+            <div class="text-xs text-gray-400">${sub}</div>
+            <div class="flex justify-between text-xs text-gray-400 mt-2">
+              <span><i data-lucide="clock" style="width:11px;height:11px;display:inline-block;vertical-align:middle"></i> ${dur}</span>
+              <span>${dt}</span>
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  },
+  presenca() {
+    const aulas = [
+      ['Cálculo II','14/06 - 08:00',null],
+      ['Física III','14/06 - 10:00',null],
+      ['Cálculo II','12/06 - 08:00',true],
+      ['Programação','11/06 - 14:00',true],
+      ['Física III','11/06 - 10:00',false],
+      ['Estatística','10/06 - 08:00',true],
+    ];
+    return `
+      <div class="wire-box rounded p-4 mb-4 flex items-center justify-between">
+        <div>
+          <div class="font-semibold text-sm">Marcar Presença</div>
+          <div class="text-xs text-gray-400">Aulas de hoje disponíveis para check-in</div>
+        </div>
+        <div class="flex gap-2">
+          ${aulas.filter(a=>a[2]===null).map(([m,d])=>`
+            <button onclick="markPresence(this)" class="wire-box rounded px-3 py-2 text-xs font-medium hover:bg-black hover:text-white transition-colors">
+              ✓ ${m}
+            </button>`).join('')}
+        </div>
+      </div>
+      <div class="wire-box rounded overflow-hidden">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b-2 border-black text-left text-xs">
+            <th class="p-3 font-semibold">Matéria</th><th class="p-3 font-semibold">Data/Hora</th><th class="p-3 font-semibold text-center">Status</th>
+          </tr></thead>
+          <tbody>
+            ${aulas.map(([m,d,s])=>`
+              <tr class="border-b border-gray-200">
+                <td class="p-3 font-medium">${m}</td>
+                <td class="p-3 text-gray-500">${d}</td>
+                <td class="p-3 text-center">
+                  ${s===null?'<span class="wire-box-dashed text-xs px-2 py-0.5 rounded text-gray-400">Pendente</span>':
+                    s?'<span class="wire-box text-xs px-2 py-0.5 rounded bg-black text-white">Presente</span>':
+                    '<span class="wire-box text-xs px-2 py-0.5 rounded">Falta</span>'}
+                </td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+  },
+  calendario() {
+    const days = [];
+    for(let i=1;i<=30;i++) days.push(i);
+    const events = {1:'P1 Cálculo',8:'Entrega Lista',15:'P2 Física',22:'Projeto Final',28:'P3 Estatística'};
+    return `
+      <div class="wire-box rounded p-4">
+        <div class="flex justify-between items-center mb-4">
+          <button class="wire-box rounded px-2 py-1 text-xs">← Anterior</button>
+          <span class="font-bold text-sm">Junho 2025</span>
+          <button class="wire-box rounded px-2 py-1 text-xs">Próximo →</button>
+        </div>
+        <div class="grid grid-cols-7 gap-1 text-center text-xs">
+          ${['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map(d=>`<div class="font-bold p-2">${d}</div>`).join('')}
+          ${Array(6).fill('').map(()=>'<div class="p-2"></div>').join('')}
+          ${days.map(d=>`
+            <div class="p-1.5 rounded ${events[d]?'bg-black text-white':'hover:bg-gray-100'} cursor-pointer">
+              <div class="font-medium">${d}</div>
+              ${events[d]?`<div class="text-[9px] mt-0.5 truncate">${events[d]}</div>`:''}
+            </div>`).join('')}
+        </div>
+      </div>`;
+  }
+};
+
+function navigate(page) {
+  currentPage = page;
+  document.querySelectorAll('[data-nav]').forEach(el => {
+    el.classList.toggle('active', el.dataset.nav === page);
+  });
+  const titles = {dashboard:'Dashboard',materias:'Matérias',boletim:'Boletim',conteudo:'Conteúdo',aulas:'Aulas Gravadas',presenca:'Presença',calendario:'Calendário'};
+  document.getElementById('page-title').textContent = titles[page];
+  document.getElementById('content-area').innerHTML = pages[page]();
+  lucide.createIcons();
+  // close sidebar on mobile
+  if(window.innerWidth < 768) document.getElementById('sidebar').classList.add('-translate-x-full');
+}
+
+function markPresence(btn) {
+  btn.innerHTML = '✓ Presente';
+  btn.classList.add('bg-black','text-white');
+  btn.disabled = true;
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('-translate-x-full');
+}
+
+// Responsive sidebar
+function handleResize() {
+  const sb = document.getElementById('sidebar');
+  const mb = document.getElementById('mobile-menu-btn');
+  if(window.innerWidth < 768) {
+    sb.classList.add('fixed','z-40','-translate-x-full','transition-transform');
+    sb.style.height = '100%';
+    mb.classList.remove('hidden');
+  } else {
+    sb.classList.remove('fixed','z-40','-translate-x-full','transition-transform');
+    sb.style.height = '';
+    mb.classList.add('hidden');
+  }
+}
+window.addEventListener('resize', handleResize);
+handleResize();
+
+// Init
+navigate('dashboard');
+
+// Element SDK
+window.elementSdk.init({
+  defaultConfig,
+  async onConfigChange(config) {
+    const name = config.student_name || defaultConfig.student_name;
+    const course = config.course_name || defaultConfig.course_name;
+    const font = config.font_family || defaultConfig.font_family;
+    const size = config.font_size || defaultConfig.font_size;
+    const bg = config.background_color || defaultConfig.background_color;
+    const text = config.text_color || defaultConfig.text_color;
+    const surface = config.surface_color || defaultConfig.surface_color;
+    const border = config.border_color || defaultConfig.border_color;
+    const accent = config.accent_color || defaultConfig.accent_color;
+
+    document.getElementById('sidebar-name').textContent = name;
+    document.getElementById('sidebar-course').textContent = course;
+
+    document.body.style.fontFamily = `${font}, DM Sans, sans-serif`;
+    document.body.style.fontSize = `${size}px`;
+    document.body.style.backgroundColor = bg;
+    document.body.style.color = text;
+
+    document.querySelectorAll('.wire-box').forEach(el => el.style.borderColor = border);
+    document.getElementById('sidebar').style.borderColor = border;
+  },
+  mapToCapabilities(config) {
+    const make = (key, def) => ({
+      get: () => config[key] || def,
+      set: (v) => { config[key] = v; window.elementSdk.setConfig({[key]: v}); }
+    });
+    return {
+      recolorables: [
+        make('background_color', defaultConfig.background_color),
+        make('surface_color', defaultConfig.surface_color),
+        make('text_color', defaultConfig.text_color),
+        make('border_color', defaultConfig.border_color),
+        make('accent_color', defaultConfig.accent_color),
+      ],
+      borderables: [],
+      fontEditable: make('font_family', defaultConfig.font_family),
+      fontSizeable: make('font_size', defaultConfig.font_size),
+    };
+  },
+  mapToEditPanelValues(config) {
+    return new Map([
+      ['student_name', config.student_name || defaultConfig.student_name],
+      ['course_name', config.course_name || defaultConfig.course_name],
+    ]);
+  }
+});
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9eccaab9c2108bfa',t:'MTc3NjI3NDEwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

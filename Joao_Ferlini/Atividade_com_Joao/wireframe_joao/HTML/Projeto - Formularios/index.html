@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Título do Site</title>
+  <!-- Comentário: remova/edite o <style> abaixo se quiser -->
+  <style>
+    /* Estilização mínima só para deixar a visualização organizada.
+       Você pode apagar todo este bloco se preferir começar sem estilos. */
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 1rem; }
+    header, nav, main, footer { margin-bottom: 1.25rem; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; }
+    section { padding: 0.5rem 0; border-top: 1px solid #eee; }
+    article { padding: 0.5rem 0; }
+    footer { font-size: 0.9rem; color: #333; border-top: 1px solid #ddd; padding-top: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Nome do Site</h1>
+    <p class="site-description">Uma pequena descrição do site — o que ele faz ou para quem é.</p>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção 1: contém os artigos -->
+    <section id="sec-noticias">
+      <h2>Seção 1 — Notícias</h2>
+      <p>Breve introdução ou resumo desta seção.</p>
+
+      <!-- Artigo 1 -->
+      <article aria-labelledby="art1-title">
+        <h3 id="art1-title">Artigo 1 — Tecnologia</h3>
+        <p>Parágrafo curto com o conteúdo do artigo sobre tecnologia.</p>
+      </article>
+
+      <!-- Artigo 2 -->
+      <article aria-labelledby="art2-title">
+        <h3 id="art2-title">Artigo 2 — Jogos</h3>
+        <p>Parágrafo curto com o conteúdo do artigo sobre jogos.</p>
+      </article>
+    </section>
+
+    <!-- Seção 2 -->
+    <section id="sec-sobre">
+      <h2>Seção 2 — Sobre</h2>
+      <p>Pequeno texto desta segunda seção (pode ser sobre o site, objetivos, ou outro tema).</p>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Nome do aluno: <strong id="student-name">Nome do Aluno</strong></p>
+    <p>Ano: <span id="year"></span></p>
+    <p>Site criado para aula de HTML.</p>
+  </footer>
+
+  <!-- Script para preencher o ano atual automaticamente -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Se preferir, substitua o conteúdo de #student-name pelo nome real aqui:
+    // document.getElementById('student-name').textContent = 'Seu Nome Aqui';
+  </script>
+
+</body>
+</html>

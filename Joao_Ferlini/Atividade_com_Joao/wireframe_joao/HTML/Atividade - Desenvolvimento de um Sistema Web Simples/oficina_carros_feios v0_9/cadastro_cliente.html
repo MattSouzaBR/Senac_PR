@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Vítima - Oficina</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+
+	<div class="layout">
+		<menu>
+			<img width="80%" src="img/logo_simas_turbo.png">
+			<h2> Oficina Simas Turbo</h2>
+			<a href="index.html">Início</a>
+			<a href="cadastro_carro.html">Cadastrar Carro</a>
+			<a href="cadastro_cliente.html">Cadastrar Cliente</a>
+			<a href="cadastro_servico.html">Cadastrar Serviço</a>
+			<a href="relatorio_carro.html">Carros no Pátio</a>
+			<a href="relatorio_cliente.html">Histórico de Clientes</a>
+			<a href="relatorio_servico.html">Serviços Realizados</a>
+			<a href="perfil.html">Meu Perfil</a>
+			<a href="ajuda.html">Ajuda / Socorro</a>
+		</menu>
+
+		<main>
+			<div class="topo">
+				<h1>Cadastrar Nova Vítima (Cliente)</h1>
+				<p>Anote os dados do otario que vai pagar o pato.</p>
+			</div>
+
+			<section>
+				<form id="formCliente" onsubmit="return validarCliente(event)">
+					<label>Nome Completo</label>
+					<input type="text" id="nome" placeholder="Ex: Xxx_Pedrinho666Matador_xxX">
+
+					<label>E-mail para cobrança</label>
+					<input type="text" id="email" placeholder="email@exemplo.com">
+
+					<label>Telefone (com DDD)</label>
+					<input type="text" id="telefone" placeholder="4499999999" maxlength="11">
+
+					<label>Cidade</label>
+					<select id="cidade">
+						<option value="">-- Onde o tonto se encontra? --</option>
+						<option value="maringa">Maringá</option>
+						<option value="sarandi">Sarandi</option>
+						<option value="paicandu">Paiçandu</option>
+					</select>
+
+					<button type="submit">💀Selar o destino do cliente💀</button>
+				</form>
+			</section>
+		</main>
+	</div>
+
+	<script>
+		function validarCliente(event) {
+			let nome = document.getElementById('nome');
+			let email = document.getElementById('email');
+			let tel = document.getElementById('telefone');
+			let cidade = document.getElementById('cidade');
+			let valido = true;
+
+			[nome, email, tel, cidade].forEach(el => el.classList.remove("erro"));
+
+			if(nome.value.trim() === "") {
+				alert("O cliente precisa de um nome para a nota fiscal!");
+				nome.classList.add("erro");
+				valido = false;
+			}
+
+			if(!email.value.includes("@") || !email.value.includes(".")) {
+				alert("E-mail inválido! Como vamos mandar o boleto?");
+				email.classList.add("erro");
+				valido = false;
+			}
+
+			if(tel.value.length < 10) {
+				alert("Telefone muito curto! Digite o DDD + Número.");
+				tel.classList.add("erro");
+				valido = false;
+			}
+
+            if(cidade.value === "") {
+                alert("Selecione uma cidade!");
+                cidade.classList.add("erro");
+                valido = false;
+            }
+
+			if(!valido) event.preventDefault();
+			else {
+				event.preventDefault();
+				alert("Cliente cadastrado! Não deixe ele fugir.");
+			}
+			return valido;
+		}
+	</script>
+</body>
+</html>
