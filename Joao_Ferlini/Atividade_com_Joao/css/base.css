@@ -12,11 +12,12 @@
 
     main#dashboard {
         display: grid;
+        flex-direction: row;
         grid-template-areas: 
-        "title" "title" "title" "buttons"
-        "materiais" "media-geral" "frequencia" "pendencias"
-        "proximas-aulas" "proximas-aulas" "proximas-aulas" "desempenho"
-        "atividades-pendentes" "atividades-pendentes" "atividades-pendentes" "avisos";
+        "title title title buttons"
+        "materiais media-geral frequencia pendencias"
+        "proximas-aulas proximas-aulas proximas-aulas desempenho"
+        "atividades-pendentes atividades-pendentes atividades-pendentes avisos";
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
