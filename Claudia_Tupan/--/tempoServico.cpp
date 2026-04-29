@@ -19,14 +19,20 @@
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
-   	system ("title Modelo");
     system ("cls"); // Limpar a tela (clear screen)
     
+	int anoAdmissao, anoAtual, tempoServ, tempoServ2050;
+	printf ("Informe o ano atual e o ano de admissão: ");
+	scanf ("%i %i", &anoAtual, &anoAdmissao);
 	
+	tempoServ = anoAtual - anoAdmissao;
+	tempoServ2050 = 2050 - anoAdmissao;
+	
+	printf("Tempo Serviço Atual: %i\nTempo Serviço 2050: %i", tempoServ, tempoServ2050);
    
     system("echo. & pause"); // Pausar a tela (pause screen)
 
-    // Apenas vai & em número, não em strings, porque o nome da variável já são o endereço da string.
+    // Apenas vai & em nÃºmeros, nÃ£o em strings, porque o nome da variÃ¡vel jÃ¡ Ã© o endereÃ§o de memÃ³ria da string.
     
     // Existe diferença entre %i e %d? 
 	/*
@@ -41,16 +47,11 @@ main() {
         char nome[50];
         
     Input:
-    	scanf ("%d", &idade); 							// Apenas 1 variável (número)
-    	scanf ("%i %i", &anoAtual, &anoAdmissao); 		// Mais de uma variável
-    	scanf ("%s", nome);
-    	
-    	
+    	scanf("%d", &idade);
+    	scanf("%s", nome);
 	Output:
 		Apenas texto:
 			printf ("Mensagem");
-			printf ("A variável %s é aplicada assim", nome);
-			printf ("Potência: %i \nRaiz quadrada: %.4f\n", potencia, raizQuadrada);
 			
 	(||) 	- (Disjunção) - (OU)
 	(&&) 	- (Conjunção) - (E)

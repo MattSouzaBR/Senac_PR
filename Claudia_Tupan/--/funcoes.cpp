@@ -19,10 +19,19 @@
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
-   	system ("title Modelo");
+   	system ("title Funções");
     system ("cls"); // Limpar a tela (clear screen)
     
+    int numero, potencia;
+    float raizQuadrada;
+    
+	printf ("Olá, Ludovico! Por favor, informe o número inteiro: ");
+	scanf ("%i", &numero);
 	
+	potencia = pow(numero, 2);
+	raizQuadrada = (float) sqrt (numero);
+	
+	printf ("Potência: %i \nRaiz quadrada: %.4f\n", potencia, raizQuadrada);
    
     system("echo. & pause"); // Pausar a tela (pause screen)
 
@@ -50,7 +59,6 @@ main() {
 		Apenas texto:
 			printf ("Mensagem");
 			printf ("A variável %s é aplicada assim", nome);
-			printf ("Potência: %i \nRaiz quadrada: %.4f\n", potencia, raizQuadrada);
 			
 	(||) 	- (Disjunção) - (OU)
 	(&&) 	- (Conjunção) - (E)
