@@ -19,12 +19,33 @@
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
-   	system ("title Modelo");
+   	system ("title Mirante");
     system ("cls"); // Limpar a tela (clear screen)
     
+    // Declare viable
+    float alturaMirante, valorMetro, valorTotalMetro;
+    
+	// Initialize viable
+    
+    // Input
+    	printf ("Por favor, informe a altura: ");
+    	scanf ("%f", &alturaMirante);
+    	
+    // Processing
+    	if (alturaMirante <= 2.00) {
+    		valorMetro = 1550.00;
+		} else {
+			valorMetro = 2750.00;
+		}
+		
+		valorTotalMetro = alturaMirante * valorMetro;
+		
+    // Output
+    	printf ("Com a altura de %.2f o valor total será: R$ %.2f. \nO valor do metro ficou por: R$ %.2f.", alturaMirante, valorTotalMetro, valorMetro);
+    	
 	
    
-    system("echo. & pause"); // Pausar a tela (pause screen)
+    system("echo. & echo. & pause & exit"); // Pausar a tela (pause screen)
 
     // Apenas vai & em número, não em strings, porque o nome da variável já são o endereço da string.
     
@@ -44,7 +65,17 @@ main() {
     	scanf ("%d", &idade); 							// Apenas 1 variável (número)
     	scanf ("%i %i", &anoAtual, &anoAdmissao); 		// Mais de uma variável
     	scanf ("%s", nome);
-    	
+    
+    Processing: 
+    	// Estrutura condicional
+    	if (expressão) {
+    		comando1;
+    		comando2;
+    	}
+    	else { // O 'else' é opcional
+    		comando3;
+    		comando4;
+    	}
     	
 	Output:
 		Apenas texto:
