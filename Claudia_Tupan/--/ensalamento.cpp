@@ -7,18 +7,37 @@
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
-   	system ("title Modelo");
+   	system ("title Ensalamento");
     system ("cls"); // Limpar a tela (clear screen)
     
 	// Declare variable
+		char nomeAluno[40], laboratorio[21];
 		
 	// Initialize variable
 		
 	// Input
-	
+		printf ("Informe o nome do aluno: ");
+		gets(nomeAluno);
+		strupr(nomeAluno);
+		
 	// Processing
-   
+   		if (nomeAluno[0] >= 'A' && nomeAluno[0] <= 'D') {
+   			strcpy(laboratorio, "Laboratório 1");
+		}
+		else if (nomeAluno[0] >= 'E' && nomeAluno[0] <= 'H') {
+   			strcpy(laboratorio, "Laboratório 2");			
+		}
+		else if (nomeAluno[0] >= 'I' && nomeAluno[0] <= 'L') {
+   			strcpy(laboratorio, "Laboratório 3");			
+		}
+		else if (nomeAluno[0] >= 'M' && nomeAluno[0] <= 'P') {
+   			strcpy(laboratorio, "Laboratório 4");			
+		}
+		else if (nomeAluno[0] >= 'Q' && nomeAluno[0] <= 'Z') {
+   			strcpy(laboratorio, "Laboratório 5");			
+		}
     // Output
+    	printf ("O aluno %s ficará no %s.", nomeAluno, laboratorio);
    	
     system("echo. & echo. & pause"); // Pausar a tela (pause screen)
 	
@@ -86,15 +105,11 @@ main() {
 		definir diretamente num vetor um texto, como no caso, nome="ana". Para isso você tem que usar o strcpy
 		strcpy(nome, "ana");
 		
-		Nas condicionais, a comparação de 1 caractere te que ser com aspas simples
+	Resumo:
+	'gets' substitui o 'scanf'
+	'strcpy' substitui o 'x = y'
 		
-		Resumo:
-			'gets' substitui o 'scanf'
-			'strcpy' substitui o 'x = y'
-			
-			char nomeAluno[40], laboratorio[21];
-			printf ("O aluno %s ficará no %s.", nomeAluno, laboratorio);
-	
+	Nas condicionais, a comparação de 1 caractere te que ser com aspas simples
 	toupper - Esse deixa os caracteres em maíuscula. Depende da biblioteca 'ctype.h';
 	strupr - Deixa os caracteres em maíuscula Dependa da biblioteca 'string.h';
 		
