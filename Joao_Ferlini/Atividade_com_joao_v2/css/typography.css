@@ -1,0 +1,43 @@
+
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: var(--font-family);
+    color: var(--color);
+    letter-spacing: var(--letter-spacing);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: var(--heading-margin);
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    font-size: var(--font-size);
+    margin: var(--paragraph-margin);
+    line-height: var(--line-height);
+}
+
+h1 {
+    font-size: calc(var(--font-size) * 2);
+}
+
+h2 {
+    font-size: calc(var(--font-size) * 1.75);
+}
+
+h3 {
+    font-size: calc(var(--font-size) * 1.5);
+}
+h4 {
+    font-size: calc(var(--font-size) * 1.25);
+}
+
+h5 {
+    font-size: calc(var(--font-size) * 1.10);
+}
+
+h6 {
+    font-size: calc(var(--font-size) * 1.025);
+}
