@@ -2,40 +2,47 @@
 #include <locale.h> // Equivalente ao UTF-8
 #include <stdlib.h> // Permitir comandos de Terminal (CMD)
 #include <string.h>
-//#include <math.h>
-// Procedure - não retorna valor
-// function - retorna um valor
-
-//Procedure
-void procedureExemplo() {
-	printf ("=== RESTAURANTE TEC003===\n"
-			"1 - Raviolini - Camarões com batatas gratinadas\n"
-			"2 - Rondelli - 4queijos com filé a molho madeira \n"
-			"3 - Sacotini - Ricota com espinafre \n"
-			"4 - Somentino - Bacalhai com azeitonas pretas\n"
-			"Escolha uma opção: ");
-}
-
-// Function
-float functionExemplo(float valor, int qtde) {
-	return valor * qtde;
-}
+#include <ctype.h>
 
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
-   	system ("title Modelo");
+   	system ("title Mega Power");
     system ("cls"); // Limpar a tela (clear screen)
- 
- 	// Declare variable & Initialize variable
+    
+	// Declare variable
+		float vendasRealizadas, totalComissaoVendedor, totalReceberVendedor;
+		char setorCalcados;
+		
+	// Initialize variable
 	
 	// Processing
+		printf ("-------------------------------\nMEGA POWER");
+		printf ("Informe as vendas e o setor de calçados e acessórios!\n-------------------------------\n");
+		printf ("Informe o setor (R, C, A): ");
+		scanf (" %c", &setorCalcados);
+		printf ("Informe o valor das vendas realizadas: ");
+		scanf ("%f", &vendasRealizadas);
 		
-    // Output   
+		switch (toupper(setorCalcados)) {
+			case 'R':
+				totalComissaoVendedor = vendasRealizadas * .04;
+				break;
+			case 'C':
+				totalComissaoVendedor = vendasRealizadas * .03;
+				break;
+			case 'A':
+				totalComissaoVendedor = vendasRealizadas * .07;
+				break;
+			default:
+				printf("ERRO - Setor inválido!\n");
+				system ("pause");
+		}
+		printf ("Comissão: R$ %.2f\n", totalComissaoVendedor);
+   
+    // Output
    	
     system("echo. & echo. & pause"); // Pausar a tela (pause screen)
-}
-
 	
 	// Coloque 'return 0' se quiser encerrar o programa ali ou use exit(0)  (Requer <stdlib.h>);
     // Apenas vai & em número, não em strings, porque o nome da variável já são o endereço da string.
@@ -91,11 +98,6 @@ main() {
 			printf ("Mensagem");
 			printf ("A variável %s é aplicada assim", nome);
 			printf ("Potência: %i \nRaiz quadrada: %.4f\n", potencia, raizQuadrada);
-			
-			Se char for char variavel[x];
-				printf ("Texto: %s", variavel);
-			Se char for char variavel;
-				printf ("Texto: %c", variavel);
 	
 	Atribuição
 	+= (x += y equivale ao x = x + y)
@@ -128,7 +130,6 @@ main() {
 			printf ("O aluno %s ficará no %s.", nomeAluno, laboratorio);
 	
 	toupper - Esse deixa os caracteres em maíuscula. Depende da biblioteca 'ctype.h';
-		uso: variavel = toupper(variavel);
 	strupr - Deixa os caracteres em maíuscula Dependa da biblioteca 'string.h';
 		
 		
@@ -148,3 +149,4 @@ main() {
 	
 		Funcionou, mas quando salva na variável e usa ele não coloca em utf-8
 	*/
+}

@@ -7,20 +7,19 @@
 // function - retorna um valor
 
 //Procedure
-void procedureExemplo() {
+void menu() {
 	printf ("=== RESTAURANTE TEC003===\n"
 			"1 - Raviolini - Camarões com batatas gratinadas\n"
 			"2 - Rondelli - 4queijos com filé a molho madeira \n"
 			"3 - Sacotini - Ricota com espinafre \n"
 			"4 - Somentino - Bacalhai com azeitonas pretas\n"
-			"Escolha uma opção: ");
+			"\nEscolha uma opção: ");
 }
 
 // Function
-float functionExemplo(float valor, int qtde) {
+float calculoTotal(float valor, int qtde) {
 	return valor * qtde;
 }
-
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
@@ -28,10 +27,43 @@ main() {
     system ("cls"); // Limpar a tela (clear screen)
  
  	// Declare variable & Initialize variable
+		int opcao, qtdePratos;
+		float valorTotal = 0.0, precoUnitario;
+		char prato[50];
 	
 	// Processing
+		menu(); // chamada do procedure
+		scanf("%i", &opcao);
+		printf ("Quantos pratos deseja?: ");
+		scanf("%i", &qtdePratos);
+		
+		switch (opcao){
+			case 1:
+				valorTotal = calculoTotal(63.50, qtdePratos);
+				strcpy (prato, "Raviolini - Camarões com batatas gratinadas");
+				break;
+			case 2: 
+				valorTotal = calculoTotal(48.50, qtdePratos);
+				strcpy (prato, "Rondelli - 4queijos com filé a molho madeira");
+				break;
+			case 3:
+				valorTotal = calculoTotal(57.90, qtdePratos);
+				strcpy (prato, "Sacotini - Ricota com espinafre");
+				break;
+			case 4:
+				valorTotal = calculoTotal(55.50, qtdePratos);
+				strcpy (prato, "Somentino - Bacalhai com azeitonas pretas");
+				break;
+			default:
+				printf ("Opção inválida!\n");
+				system("pause");
+				exit(0);
+		}
+		
+		precoUnitario = valorTotal / qtdePratos;
 		
     // Output   
+    	printf ("\nVocê escolheu %i prato(s) de %s.\nPreço Unitário: R$ %.2f\nTotal: R$ %.2f", qtdePratos, prato, precoUnitario, valorTotal);
    	
     system("echo. & echo. & pause"); // Pausar a tela (pause screen)
 }

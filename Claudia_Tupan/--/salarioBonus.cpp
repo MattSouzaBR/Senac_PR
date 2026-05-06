@@ -3,39 +3,81 @@
 #include <stdlib.h> // Permitir comandos de Terminal (CMD)
 #include <string.h>
 //#include <math.h>
-// Procedure - não retorna valor
-// function - retorna um valor
-
-//Procedure
-void procedureExemplo() {
-	printf ("=== RESTAURANTE TEC003===\n"
-			"1 - Raviolini - Camarões com batatas gratinadas\n"
-			"2 - Rondelli - 4queijos com filé a molho madeira \n"
-			"3 - Sacotini - Ricota com espinafre \n"
-			"4 - Somentino - Bacalhai com azeitonas pretas\n"
-			"Escolha uma opção: ");
-}
-
-// Function
-float functionExemplo(float valor, int qtde) {
-	return valor * qtde;
-}
 
 main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
    	system ("chcp 1252 > nul"); // Configurar o console para UTF-8
    	system ("title Modelo");
     system ("cls"); // Limpar a tela (clear screen)
- 
- 	// Declare variable & Initialize variable
-	
-	// Processing
+    
+	// Declare variable
+		float salario = 0.0;
+		int classe;
+		char nivel[10];
+		bool erro;
 		
-    // Output   
+	// Initialize variable
+		
+	// Processing
+		printf ("Informe o código da classe do jogador e seu salário!");
+		printf ("\nCódigo de classe do jogador: ");
+		scanf ("%i", &classe);
+		printf ("\nInforme o salário: ");
+		scanf ("%f", &salario);
+		
+		if (classe < 1 || classe > 5) {
+			printf ("Classe inválida!\n");
+			system ("pause");
+			return 0;
+		}
+		
+		switch (classe) {
+			case 5:
+				salario *= 2;
+				// ou 'salario += salario * 1;'
+				// ou 'salario = salario * 2;'
+				// ou 'salario = salario + salario * 0.75;'
+				strcpy (nivel, "Excelente");
+				break;
+			case 4:
+				salario *= 1.75;
+				// ou 'salario += salario * 0.75;'
+				// ou 'salario = salario + salario * 0.75;'
+				strcpy (nivel, "Bom");
+				break;
+			case 3:
+				salario *= 1.30;
+				// ou 'salario += salario * 0.30;'
+				// ou 'salario = salario + salario * 0.30;'
+				strcpy (nivel, "Regular");
+				break;
+			case 2:
+				salario *= 1.05;
+				// ou 'salario += salario * 0.05;'
+				// ou 'salario = salario + salario * 0.05;'
+				strcpy (nivel, "Te cuida");
+				break;
+			case 1: 
+				// ou 'salario *= 1;'
+				// ou 'salario += salario * 0.0;'
+				// ou 'salario = salario + salario * 0.0;'
+				// ou 'salario += salario;'
+				// ou 'salario = salario;
+				strcpy (nivel, "Bora trabalhar");
+				break;
+			default:
+				printf ("ERRO - Classe inválida!");
+				erro = true;
+		}
+		
+		if (!erro) {
+			system ("cls");
+			printf ("Nivel: %s \nSalário: R$ %.2f", nivel, salario);
+		}
+   
+    // Output
    	
     system("echo. & echo. & pause"); // Pausar a tela (pause screen)
-}
-
 	
 	// Coloque 'return 0' se quiser encerrar o programa ali ou use exit(0)  (Requer <stdlib.h>);
     // Apenas vai & em número, não em strings, porque o nome da variável já são o endereço da string.
@@ -91,11 +133,6 @@ main() {
 			printf ("Mensagem");
 			printf ("A variável %s é aplicada assim", nome);
 			printf ("Potência: %i \nRaiz quadrada: %.4f\n", potencia, raizQuadrada);
-			
-			Se char for char variavel[x];
-				printf ("Texto: %s", variavel);
-			Se char for char variavel;
-				printf ("Texto: %c", variavel);
 	
 	Atribuição
 	+= (x += y equivale ao x = x + y)
@@ -121,14 +158,12 @@ main() {
 		
 		Resumo:
 			'gets' substitui o 'scanf' (uso: gets(variavel);)
-				Pode se usar o 'scanf(" %c"; &variavel);' se o conteúdo do char for apenas 1 caracter.
 			'strcpy' substitui o 'x = y' (uso: strcpy(variavel, "conteudo");)
 			
 			char nomeAluno[40], laboratorio[21];
 			printf ("O aluno %s ficará no %s.", nomeAluno, laboratorio);
 	
 	toupper - Esse deixa os caracteres em maíuscula. Depende da biblioteca 'ctype.h';
-		uso: variavel = toupper(variavel);
 	strupr - Deixa os caracteres em maíuscula Dependa da biblioteca 'string.h';
 		
 		
@@ -148,3 +183,4 @@ main() {
 	
 		Funcionou, mas quando salva na variável e usa ele não coloca em utf-8
 	*/
+}
