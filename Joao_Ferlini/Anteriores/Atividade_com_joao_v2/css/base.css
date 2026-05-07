@@ -1,0 +1,33 @@
+/* First Mobile Styles */
+    #header_title               {grid-area: title;}
+    #header_buttons             {grid-area: buttons;}
+    #card_materiais             {grid-area: materiais;}
+    #card_media-geral           {grid-area: media-geral;}
+    #card_frequencia            {grid-area: frequencia;}
+    #card_pendencias            {grid-area: pendencias;}
+    #card_proximas-aulas        {grid-area: proximas-aulas;}
+    #card_desempenho            {grid-area: desempenho;}
+    #card_atividades-pendentes  {grid-area: atividades-pendentes;}
+    #card_avisos                {grid-area: avisos;}
+
+    main#dashboard {
+        display: grid;
+        flex-direction: row;
+        grid-template-areas: 
+        "title title title buttons"
+        "materiais media-geral frequencia pendencias"
+        "proximas-aulas proximas-aulas proximas-aulas desempenho"
+        "atividades-pendentes atividades-pendentes atividades-pendentes avisos";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+/* Then Desktop Styles */
+@media (min-width: 768px) {
+    
+}
+
+/* Ultrawide Styles */
+@media (min-width: 2560px) {
+    
+}
