@@ -20,9 +20,9 @@ void perguntarCategoriaEmpresa() {
 }
 
 // Function
-float categorizarEmpresa() {
+int categorizarEmpresa() {
 	if (categoriaEmpresa == 1) /* 1: Comércio e Serviços */ {
-		if (qtdFuncionarios >=1 && qtdFuncionarios <= 9) {
+		if (qtdFuncionarios >= 1 && qtdFuncionarios <= 9) {
 			strcpy (tipoEmpresa, "Microempresa (ME)");
 		} else if (qtdFuncionarios >= 10 && qtdFuncionarios <= 49) {
 			strcpy (tipoEmpresa, "Empresa de Pequeno Porte (EPP)");
@@ -34,13 +34,13 @@ float categorizarEmpresa() {
 			strcpy (tipoEmpresa, "");
 		}
 	} else if (categoriaEmpresa == 2) /* 2: Indústria */ {
-		if (qtdFuncionarios >=1 && qtdFuncionarios <= 9) {
+		if (qtdFuncionarios >= 1 && qtdFuncionarios <= 19) {
 			strcpy (tipoEmpresa, "Microempresa (ME)");
-		} else if (qtdFuncionarios >= 10 && qtdFuncionarios <= 49) {
+		} else if (qtdFuncionarios >= 20 && qtdFuncionarios <= 99) {
 			strcpy (tipoEmpresa, "Empresa de Pequeno Porte (EPP)");
-		} else if (qtdFuncionarios >= 50 && qtdFuncionarios <= 99) {
+		} else if (qtdFuncionarios >= 100 && qtdFuncionarios <= 499) {
 			strcpy (tipoEmpresa, "Empresa de médio porte");
-		} else if (qtdFuncionarios >= 100) {
+		} else if (qtdFuncionarios >= 500) {
 			strcpy (tipoEmpresa, "Grandes empresas");
 		} else {
 			strcpy (tipoEmpresa, "");
@@ -106,7 +106,7 @@ main() {
 		    		comando4;
 		    	}
 	    	
-	    	//switch
+	    	//switch - Use-o preferencialmente em casos de escolhas pré-definidas, como ID.
 	    		switch(variavel) {
 	    			case valor1:
 	    				bloco de instrucoes;
