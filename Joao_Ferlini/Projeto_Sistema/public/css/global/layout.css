@@ -1,16 +1,16 @@
-header {grid-area: header;}
-aside {grid-area: aside;}
-main {grid-area: main;}
-footer{grid-area: footer;}
+grid > header {grid-area: header;}
+grid > aside {grid-area: aside;}
+grid > main {grid-area: main;}
+grid > footer{grid-area: footer;}
 
-body {
+grid {
     background-color: var(--background-color);
     min-height: 100vh;
     display: grid;
 }
 
 /* Mobile sem aside */
-body:not(:has(> aside)) {
+grid:not(:has(> aside)) {
     grid-template-areas:
         "header"
         "main"
@@ -20,7 +20,7 @@ body:not(:has(> aside)) {
 }
 
 /* Mobile com aside */
-body:has(> aside) {
+grid:has(> aside) {
     grid-template-areas:
         "header"
         "aside"
@@ -32,17 +32,17 @@ body:has(> aside) {
 
 /* Desktop sem aside */
 @media (min-width: 768px) {
-    body:not(:has(> aside)) {
+    grid:not(:has(> aside)) {
         grid-template-areas:
-            "header main"
-            "header main"
-            "footer main";
+            "header header"
+            "main main"
+            "footer footer";
         grid-template-columns: minmax(200px, 15%) 1fr;
         grid-template-rows: auto 1fr auto;
     }
 
     /* Desktop com aside */
-    body:has(> aside) {
+    grid:has(> aside) {
         grid-template-areas:
             "header main"
             "footer footer";
@@ -53,7 +53,7 @@ body:has(> aside) {
 
 /* Ultrawide */
 @media (min-width: 2560px) {
-    body {
+    grid {
         grid-template-areas:
             "header aside main footer";
         grid-template-columns: auto auto 1fr auto;

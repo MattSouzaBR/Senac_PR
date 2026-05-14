@@ -13,6 +13,10 @@ strong {
     font-weight: 700;
 }
 
+em {
+    font-style: italic;
+}
+
 p {
     font-size: var(--font-size);
     margin: var(--paragraph-margin);
