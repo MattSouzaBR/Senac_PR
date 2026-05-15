@@ -10,7 +10,19 @@ void bootstrap(){
     system ("cls"); 
 }
 
-void encerrar() {
-    system("echo. & pause");
+void pausar (){
+	system("echo. & pause");
+}
+
+void encerrar(int codigo = 3) {
+	if (codigo = 1){
+		system("echo.");
+		exit(0);
+	} else if (codigo = 2){
+    	system("echo. & pause");
+		exit(0);
+	} else {
+		exit(0);
+	}
 }
 
