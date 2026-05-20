@@ -13,6 +13,10 @@ void bootstrap(const char* titulo = "title Modelo"){
     system ("cls"); 
 }
 
+void title (const char* titulo = "title Título vazio!") {
+	system (titulo);
+}
+
 void printl (const char* texto) {
 	printf ("%s\n", texto);
 }

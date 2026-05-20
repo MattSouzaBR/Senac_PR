@@ -2,6 +2,9 @@
 #include <locale.h> // Equivalente ao UTF-8
 #include <stdlib.h> // Permitir comandos de Terminal (CMD)
 #include <string.h>
+
+#define VEND 5 <<<<<<<<<<< ASSIM QUE SE FAZ CONSTANTE!!!
+
 float valor;
 //#include <math.h>
 void bootstrap(){
