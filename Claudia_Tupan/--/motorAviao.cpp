@@ -31,7 +31,7 @@ main() {
 		}
 	}
 	
-		printf ("Peça %i mais pesada - %.1f \nPeça %i mais leve - %.1f",
+		printf ("Peça nº %i é a mais pesada. Peso: %.1f \nPeça nº %i é a mais leve. Peso: %.1f",
 				pecaPesada +1, pesoPesado, pecaLeve +1, pesoLeve);
   encerrar(); 
 }
