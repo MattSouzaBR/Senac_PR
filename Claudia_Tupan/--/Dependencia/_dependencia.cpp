@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include <stdbool.h>
 
 void bootstrap(const char* titulo = "title Modelo"){
 	char title[50];
@@ -24,7 +25,9 @@ void printl (const char* texto) {
 void pausar (){
 	system("echo. & pause");
 }
-
+void pause (){
+	system("echo. & pause");
+}
 void encerrar(int codigo = 99) {
 	if (codigo == 1){
 		system("echo.");
