@@ -44,7 +44,10 @@ void br(){
 	printf ("\n");
 }
 
-void cls(){
-	system("cls");
+void cls() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }
-
