@@ -2,14 +2,19 @@
 main() { 
   bootstrap("title Modelos");
   	#define QTD_ALUNOS 15
-  	int qtde[QTD_ALUNOS], total = 0, i;
+  	//int qtde[QTD_ALUNOS], total = 0, i;
+  	int total = 0;
+  	char qtde[QTD_ALUNOS], nomeAluno[QTD_ALUNOS][30];
   	float media;
   	
   	printf ("Digite a quantidade de Salgados\n");
   	// Coleta as informações
-  	for (i = 0; i < QTD_ALUNOS; i++){
-  		printf ("Aluno %i/%i: ", i + 1, QTD_ALUNOS);
+  	for (int i = 0, j = 1; i < QTD_ALUNOS; i++, j++){
+  		printf ("Aluno %i/%i: ", j, QTD_ALUNOS);
   		scanf ("%i", &qtde[i]);
+  		
+  		printf ("Nome deste aluno: ");
+  		scanf (" %s", nomeAluno[i]);
   		total += qtde[i];
 	}
 	
@@ -18,8 +23,8 @@ main() {
 	cls();
 	
 	// Apresenta informação
-	for (i = 0; i < QTD_ALUNOS; i++){
-		printf("Aluno %i - %i;\n", i + 1, qtde[i]);
+	for (int i = 0, j = 1; i < QTD_ALUNOS; i++, j++){
+		printf("Aluno %i - %s: %i;\n", j, nomeAluno[i], qtde[i]);
 	}
 	
 	printf ("\nTotal: %i"
